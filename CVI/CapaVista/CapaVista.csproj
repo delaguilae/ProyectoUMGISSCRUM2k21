@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3511697-9B82-468D-B378-B7CCC1B10827}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaVista</RootNamespace>
+    <AssemblyName>CapaVista</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaControlador">
+      <HintPath>..\CapaControlador\bin\Debug\CapaControlador.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaNavegador">
+      <HintPath>..\..\Navegador\CapaVista\bin\Debug\CapaVistaNavegador.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaVistaSeguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mantenimientos\frmMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMantenimiento.Designer.cs">
+      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIPrincipal.Designer.cs">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Cotizaciones\frmCotizaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Cotizaciones\frmCotizaciones.Designer.cs">
+      <DependentUpon>frmCotizaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Cotizaciones\frmModificarCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Cotizaciones\frmModificarCotizacion.Designer.cs">
+      <DependentUpon>frmModificarCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Cotizaciones\frmNuevaCotizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Cotizaciones\frmNuevaCotizacion.Designer.cs">
+      <DependentUpon>frmNuevaCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Entregas\frmConfirmacionEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Entregas\frmConfirmacionEntrega.Designer.cs">
+      <DependentUpon>frmConfirmacionEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Entregas\frmNuevaEntrega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Entregas\frmNuevaEntrega.Designer.cs">
+      <DependentUpon>frmNuevaEntrega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Entregas\frmEntregas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Entregas\frmEntregas.Designer.cs">
+      <DependentUpon>frmEntregas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Facturacion\frmFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Facturacion\frmFactura.Designer.cs">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Facturacion\frmFacturaBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Facturacion\frmFacturaBusqueda.Designer.cs">
+      <DependentUpon>frmFacturaBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmConfirmacionOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmConfirmacionOrden.Designer.cs">
+      <DependentUpon>frmConfirmacionOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmInventarios.Designer.cs">
+      <DependentUpon>frmInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Saldos\frmSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Saldos\frmSaldos.Designer.cs">
+      <DependentUpon>frmSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmDetalleOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmDetalleOrdenes.Designer.cs">
+      <DependentUpon>frmDetalleOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmModificarOrden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmModificarOrden.Designer.cs">
+      <DependentUpon>frmModificarOrden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmOrdenes.Designer.cs">
+      <DependentUpon>frmOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmDetallesPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmDetallesPedido.Designer.cs">
+      <DependentUpon>frmDetallesPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmImpresionPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmImpresionPedido.Designer.cs">
+      <DependentUpon>frmImpresionPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmModificarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmModificarPedido.Designer.cs">
+      <DependentUpon>frmModificarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmNuevoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmNuevoPedido.Designer.cs">
+      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\PedidosCompraMP\frmPedidos.Designer.cs">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\frmMantenimiento.resx">
+      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Cotizaciones\frmCotizaciones.resx">
+      <DependentUpon>frmCotizaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Cotizaciones\frmNuevaCotizacion.resx">
+      <DependentUpon>frmNuevaCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Entregas\frmEntregas.resx">
+      <DependentUpon>frmEntregas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Entregas\frmNuevaEntrega.resx">
+      <DependentUpon>frmNuevaEntrega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Facturacion\frmFactura.resx">
+      <DependentUpon>frmFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Facturacion\frmFacturaBusqueda.resx">
+      <DependentUpon>frmFacturaBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Inventarios\frmConfirmacionOrden.resx">
+      <DependentUpon>frmConfirmacionOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Inventarios\frmInventarios.resx">
+      <DependentUpon>frmInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
+      <DependentUpon>frmSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmDetalleOrdenes.resx">
+      <DependentUpon>frmDetalleOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmModificarOrden.resx">
+      <DependentUpon>frmModificarOrden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmOrdenes.resx">
+      <DependentUpon>frmOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmDetallesPedido.resx">
+      <DependentUpon>frmDetallesPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmImpresionPedido.resx">
+      <DependentUpon>frmImpresionPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmModificarPedido.resx">
+      <DependentUpon>frmModificarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmNuevoPedido.resx">
+      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmPedidos.resx">
+      <DependentUpon>frmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
