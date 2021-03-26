@@ -65,6 +65,12 @@
     <Compile Include="MDIPrincipal.Designer.cs">
       <DependentUpon>MDIPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Cobradores\frmAsignarCobrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Cobradores\frmAsignarCobrador.Designer.cs">
+      <DependentUpon>frmAsignarCobrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Cotizaciones\frmCotizaciones.cs">
       <SubType>Form</SubType>
     </Compile>
