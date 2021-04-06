@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="CapaControlador">
       <HintPath>..\CapaControlador\bin\Debug\CapaControlador.dll</HintPath>
     </Reference>
@@ -41,9 +44,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -186,6 +191,11 @@
       <DependentUpon>frmPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mantenimientos\frmMantenimiento.resx">
@@ -194,11 +204,20 @@
     <EmbeddedResource Include="MDIPrincipal.resx">
       <DependentUpon>MDIPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Cobradores\frmAsignarCobrador.resx">
+      <DependentUpon>frmAsignarCobrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Cotizaciones\frmCotizaciones.resx">
       <DependentUpon>frmCotizaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Cotizaciones\frmModificarCotizacion.resx">
+      <DependentUpon>frmModificarCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Cotizaciones\frmNuevaCotizacion.resx">
       <DependentUpon>frmNuevaCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Entregas\frmConfirmacionEntrega.resx">
+      <DependentUpon>frmConfirmacionEntrega.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Entregas\frmEntregas.resx">
       <DependentUpon>frmEntregas.cs</DependentUpon>
@@ -244,6 +263,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\PedidosCompraMP\frmPedidos.resx">
       <DependentUpon>frmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

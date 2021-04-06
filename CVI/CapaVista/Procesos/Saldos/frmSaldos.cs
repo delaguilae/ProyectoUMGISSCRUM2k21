@@ -16,5 +16,10 @@ namespace CapaVista.Procesos
         {
             InitializeComponent();
         }
+
+        private void frmSaldos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
