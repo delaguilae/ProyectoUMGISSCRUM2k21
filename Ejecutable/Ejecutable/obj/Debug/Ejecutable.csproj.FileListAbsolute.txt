@@ -317,3 +317,30 @@ C:\Users\jmora\Desktop\Git\Modelo-MVC\Ejecutable\Ejecutable\obj\Debug\Ejecutable
 C:\Users\jmora\Desktop\Git\Modelo-MVC\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
 C:\Users\jmora\Desktop\Git\Modelo-MVC\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
 C:\Users\jmora\Desktop\Git\Modelo-MVC\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Ejecutable.exe.config
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Ejecutable.exe
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Ejecutable.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaNavegador.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControlador.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorNavegador.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModelo.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloNavegador.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVista.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaNavegador.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControlador.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorNavegador.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModelo.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloNavegador.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csprojAssemblyReference.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.Properties.Resources.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.GenerateResource.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CoreCompileInputs.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
