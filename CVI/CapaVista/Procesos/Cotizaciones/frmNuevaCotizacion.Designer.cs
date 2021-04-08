@@ -49,7 +49,7 @@ namespace CapaVista.Procesos.Cotizaciones
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1067, 47);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(748, 47);
             this.bunifuGradientPanel1.TabIndex = 36;
             // 
             // label8
@@ -77,14 +77,14 @@ namespace CapaVista.Procesos.Cotizaciones
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 47);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(31, 507);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(31, 440);
             this.bunifuGradientPanel2.TabIndex = 37;
             // 
             // frmNuevaCotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(748, 487);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);

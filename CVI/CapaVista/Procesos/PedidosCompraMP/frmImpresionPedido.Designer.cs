@@ -33,6 +33,7 @@ namespace CapaVista.Procesos.Pedidos
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@ namespace CapaVista.Procesos.Pedidos
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(547, 47);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(926, 47);
             this.bunifuGradientPanel1.TabIndex = 36;
             // 
             // label8
@@ -77,15 +78,25 @@ namespace CapaVista.Procesos.Pedidos
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 47);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(31, 464);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(31, 564);
             this.bunifuGradientPanel2.TabIndex = 37;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(366, 271);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 17);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "SE IMPRIME :V";
             // 
             // frmImpresionPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(547, 511);
+            this.ClientSize = new System.Drawing.Size(926, 611);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -95,6 +106,7 @@ namespace CapaVista.Procesos.Pedidos
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -103,5 +115,6 @@ namespace CapaVista.Procesos.Pedidos
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
+        private System.Windows.Forms.Label label1;
     }
 }

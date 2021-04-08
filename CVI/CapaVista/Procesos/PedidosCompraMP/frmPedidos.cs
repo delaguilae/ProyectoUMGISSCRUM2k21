@@ -16,5 +16,10 @@ namespace CapaVista.Procesos.Pedidos
         {
             InitializeComponent();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
