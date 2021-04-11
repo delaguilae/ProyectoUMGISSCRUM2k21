@@ -29,6 +29,7 @@ namespace CapaModelo
             }
 
         }
+        //Funcion obtener datos combobox
         public DataTable funcObtenerCamposCombobox(string Comando)
         {
             try

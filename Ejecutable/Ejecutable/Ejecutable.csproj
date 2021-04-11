@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CapaVista">
-      <HintPath>..\..\MVC\CapaVista\bin\Debug\CapaVista.dll</HintPath>
+    <Reference Include="CapaVista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CVI\CapaVista\bin\Debug\CapaVista.dll</HintPath>
     </Reference>
     <Reference Include="CapaVistaNavegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
