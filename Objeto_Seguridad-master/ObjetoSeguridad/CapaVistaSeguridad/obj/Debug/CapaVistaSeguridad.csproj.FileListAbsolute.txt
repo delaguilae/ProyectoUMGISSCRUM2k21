@@ -402,3 +402,27 @@ C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoS
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.dll
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csprojAssemblyReference.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.frmAsignacionDeAplicaciones.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.frmAsignarAplicacionesAPerfil.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.frmLogin.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmMantenimientoUsuario.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmAgregarAplicacion.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmAplicativo.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmConsultarPerfil.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmMantenimientoPerfil.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmModificarPermisos.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmModulo.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.frmCambioContraseña.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Properties.Resources.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.GenerateResource.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.pdb

@@ -25,3 +25,12 @@ C:\Users\jmora\Desktop\Git\Modelo-MVC\CVI\CapaControlador\obj\Debug\CapaControla
 C:\Users\jmora\Desktop\Git\Modelo-MVC\CVI\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
 C:\Users\jmora\Desktop\Git\Modelo-MVC\CVI\CapaControlador\obj\Debug\CapaControlador.dll
 C:\Users\jmora\Desktop\Git\Modelo-MVC\CVI\CapaControlador\obj\Debug\CapaControlador.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\bin\Debug\CapaControlador.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\bin\Debug\CapaControlador.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\bin\Debug\CapaModelo.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\bin\Debug\CapaModelo.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\obj\Debug\CapaControlador.csprojAssemblyReference.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\obj\Debug\CapaControlador.csproj.CoreCompileInputs.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\obj\Debug\CapaControlador.csproj.CopyComplete
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\obj\Debug\CapaControlador.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaControlador\obj\Debug\CapaControlador.pdb

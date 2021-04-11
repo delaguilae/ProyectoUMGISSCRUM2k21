@@ -344,3 +344,5 @@ C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutabl
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVista.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Bunifu_UI_v1.5.3.dll

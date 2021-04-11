@@ -115,3 +115,12 @@ C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoS
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
 C:\Users\jmora\Desktop\Git\Pasaporte\SGP_Equipo1\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csprojAssemblyReference.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.csproj.CopyComplete
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaControladorSeguridad\obj\Debug\CapaControladorSeguridad.pdb
