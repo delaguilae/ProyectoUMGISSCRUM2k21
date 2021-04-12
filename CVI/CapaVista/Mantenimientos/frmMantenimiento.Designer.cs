@@ -29,7 +29,6 @@ namespace CapaVista
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantenimiento));
             this.navegador1 = new CapaVistaNavegador.Navegador();
             this.cmb_pais = new System.Windows.Forms.ComboBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -71,6 +70,7 @@ namespace CapaVista
             this.cmb_pais.Size = new System.Drawing.Size(132, 28);
             this.cmb_pais.TabIndex = 36;
             this.cmb_pais.Tag = "saltar";
+            this.cmb_pais.SelectedIndexChanged += new System.EventHandler(this.cmb_pais_SelectedIndexChanged);
             // 
             // txtEstado
             // 
@@ -107,7 +107,7 @@ namespace CapaVista
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(23, 451);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
@@ -119,7 +119,7 @@ namespace CapaVista
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(23, 402);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -132,7 +132,7 @@ namespace CapaVista
             this.rbDeshabilitado.AutoSize = true;
             this.rbDeshabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbDeshabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDeshabilitado.ForeColor = System.Drawing.Color.White;
+            this.rbDeshabilitado.ForeColor = System.Drawing.Color.Black;
             this.rbDeshabilitado.Location = new System.Drawing.Point(27, 539);
             this.rbDeshabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbDeshabilitado.Name = "rbDeshabilitado";
@@ -147,7 +147,7 @@ namespace CapaVista
             this.rbHabilitado.AutoSize = true;
             this.rbHabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbHabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHabilitado.ForeColor = System.Drawing.Color.White;
+            this.rbHabilitado.ForeColor = System.Drawing.Color.Black;
             this.rbHabilitado.Location = new System.Drawing.Point(27, 507);
             this.rbHabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbHabilitado.Name = "rbHabilitado";
@@ -196,6 +196,7 @@ namespace CapaVista
             this.txtPais.Size = new System.Drawing.Size(132, 27);
             this.txtPais.TabIndex = 26;
             this.txtPais.Tag = "fkIdPais";
+            this.txtPais.TextChanged += new System.EventHandler(this.txtPais_TextChanged);
             // 
             // txtProveedor
             // 
@@ -212,7 +213,7 @@ namespace CapaVista
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(23, 360);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
@@ -225,7 +226,7 @@ namespace CapaVista
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(23, 316);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
@@ -238,7 +239,7 @@ namespace CapaVista
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(23, 271);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -251,7 +252,7 @@ namespace CapaVista
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(23, 228);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -264,7 +265,7 @@ namespace CapaVista
             this.lblId.AutoSize = true;
             this.lblId.BackColor = System.Drawing.Color.Transparent;
             this.lblId.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.White;
+            this.lblId.ForeColor = System.Drawing.Color.Black;
             this.lblId.Location = new System.Drawing.Point(23, 181);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
@@ -277,7 +278,6 @@ namespace CapaVista
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1446, 595);
             this.Controls.Add(this.cmb_pais);
             this.Controls.Add(this.txtEstado);

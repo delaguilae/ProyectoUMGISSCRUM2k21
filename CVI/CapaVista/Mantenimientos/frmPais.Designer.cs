@@ -29,7 +29,6 @@ namespace CapaVista.Mantenimientos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPais));
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.dgvPais = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,7 +69,7 @@ namespace CapaVista.Mantenimientos
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(48, 329);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 20);
@@ -82,7 +81,7 @@ namespace CapaVista.Mantenimientos
             this.rbDeshabilitado.AutoSize = true;
             this.rbDeshabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbDeshabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDeshabilitado.ForeColor = System.Drawing.Color.White;
+            this.rbDeshabilitado.ForeColor = System.Drawing.Color.Black;
             this.rbDeshabilitado.Location = new System.Drawing.Point(52, 417);
             this.rbDeshabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbDeshabilitado.Name = "rbDeshabilitado";
@@ -97,7 +96,7 @@ namespace CapaVista.Mantenimientos
             this.rbHabilitado.AutoSize = true;
             this.rbHabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbHabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbHabilitado.ForeColor = System.Drawing.Color.White;
+            this.rbHabilitado.ForeColor = System.Drawing.Color.Black;
             this.rbHabilitado.Location = new System.Drawing.Point(52, 385);
             this.rbHabilitado.Margin = new System.Windows.Forms.Padding(4);
             this.rbHabilitado.Name = "rbHabilitado";
@@ -142,7 +141,7 @@ namespace CapaVista.Mantenimientos
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(48, 284);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -155,7 +154,7 @@ namespace CapaVista.Mantenimientos
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(48, 241);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -168,7 +167,7 @@ namespace CapaVista.Mantenimientos
             this.lblId.AutoSize = true;
             this.lblId.BackColor = System.Drawing.Color.Transparent;
             this.lblId.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.White;
+            this.lblId.ForeColor = System.Drawing.Color.Black;
             this.lblId.Location = new System.Drawing.Point(48, 194);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
@@ -190,7 +189,6 @@ namespace CapaVista.Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1497, 503);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txtEstado);
