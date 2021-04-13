@@ -78,19 +78,31 @@ namespace CapaVista.Mantenimientos
             rbHabilitado.Checked = true;
             rbDeshabilitado.Checked = false;
         }
+        private void frmMunicipio_Load(object sender, EventArgs e)
+        {
+        }
 
         private void cmbDepar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
             if (cmbDepar.SelectedIndex != -1)
             {
                 txtDepar.Text = cmbDepar.SelectedValue.ToString();
             }
         }
 
-        private void frmMunicipio_Load(object sender, EventArgs e)
+        private void txtNombre_TextChanged(object sender, EventArgs e)
         {
+            txtEstado.Text = "1";
+        }
 
+        private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "0";
+        }
+
+        private void rbHabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
         }
     }
 }

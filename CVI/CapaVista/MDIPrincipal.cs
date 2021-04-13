@@ -84,7 +84,7 @@ namespace CapaVista
             {
                 bit.user(txtusuario.Text);
                 bit.insert("Ingreso A Mantenimiento Aplicaciones", 3);
-                frmMantenimiento mantenimiento = new frmMantenimiento(txtusuario.Text);
+                frmProveedores mantenimiento = new frmProveedores(txtusuario.Text);
                 mantenimiento.MdiParent = this;
                 mantenimiento.Show();
             }
