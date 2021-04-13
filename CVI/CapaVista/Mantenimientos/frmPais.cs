@@ -67,5 +67,20 @@ namespace CapaVista.Mantenimientos
             rbHabilitado.Checked = true;
             rbDeshabilitado.Checked = false;
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
+        }
+
+        private void rbHabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
+        }
+
+        private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "0";
+        }
     }
 }

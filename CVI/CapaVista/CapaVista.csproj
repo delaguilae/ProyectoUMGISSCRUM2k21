@@ -70,11 +70,11 @@
     <Compile Include="Mantenimientos\frmDepartamento.Designer.cs">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\frmMantenimiento.cs">
+    <Compile Include="Mantenimientos\frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mantenimientos\frmMantenimiento.Designer.cs">
-      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    <Compile Include="Mantenimientos\frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimientos\frmPais.cs">
       <SubType>Form</SubType>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="Mantenimientos\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmMantenimiento.resx">
-      <DependentUpon>frmMantenimiento.cs</DependentUpon>
+    <EmbeddedResource Include="Mantenimientos\frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmMunicipio.resx">
       <DependentUpon>frmMunicipio.cs</DependentUpon>
