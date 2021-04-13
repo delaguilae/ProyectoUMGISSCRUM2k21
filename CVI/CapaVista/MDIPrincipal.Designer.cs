@@ -37,6 +37,7 @@ namespace CapaVista
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoPaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,8 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.mantenimientoPaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoDepartamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoMunicipioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -112,7 +114,9 @@ namespace CapaVista
             // 
             this.mantenimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mantenimientoToolStripMenuItem,
-            this.mantenimientoPaisToolStripMenuItem});
+            this.mantenimientoPaisToolStripMenuItem,
+            this.mantenimientoDepartamentoToolStripMenuItem,
+            this.mantenimientoMunicipioToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.mantenimientosToolStripMenuItem.Text = "Catalogos";
@@ -120,9 +124,16 @@ namespace CapaVista
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento Proveedores";
             this.mantenimientoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoToolStripMenuItem_Click);
+            // 
+            // mantenimientoPaisToolStripMenuItem
+            // 
+            this.mantenimientoPaisToolStripMenuItem.Name = "mantenimientoPaisToolStripMenuItem";
+            this.mantenimientoPaisToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.mantenimientoPaisToolStripMenuItem.Text = "Mantenimiento Pais";
+            this.mantenimientoPaisToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoPaisToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -302,12 +313,19 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(132, 22);
             this.txtusuario.TabIndex = 4;
             // 
-            // mantenimientoPaisToolStripMenuItem
+            // mantenimientoDepartamentoToolStripMenuItem
             // 
-            this.mantenimientoPaisToolStripMenuItem.Name = "mantenimientoPaisToolStripMenuItem";
-            this.mantenimientoPaisToolStripMenuItem.Size = new System.Drawing.Size(279, 26);
-            this.mantenimientoPaisToolStripMenuItem.Text = "Mantenimiento Pais";
-            this.mantenimientoPaisToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoPaisToolStripMenuItem_Click);
+            this.mantenimientoDepartamentoToolStripMenuItem.Name = "mantenimientoDepartamentoToolStripMenuItem";
+            this.mantenimientoDepartamentoToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.mantenimientoDepartamentoToolStripMenuItem.Text = "Mantenimiento Departamento";
+            this.mantenimientoDepartamentoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoDepartamentoToolStripMenuItem_Click);
+            // 
+            // mantenimientoMunicipioToolStripMenuItem
+            // 
+            this.mantenimientoMunicipioToolStripMenuItem.Name = "mantenimientoMunicipioToolStripMenuItem";
+            this.mantenimientoMunicipioToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.mantenimientoMunicipioToolStripMenuItem.Text = "Mantenimiento Municipio ";
+            this.mantenimientoMunicipioToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoMunicipioToolStripMenuItem_Click);
             // 
             // MDIPrincipal
             // 
@@ -367,6 +385,8 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem mantenimiendoAplicacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoPaisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoDepartamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoMunicipioToolStripMenuItem;
     }
 }
 
