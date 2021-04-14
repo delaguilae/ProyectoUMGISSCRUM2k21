@@ -36,7 +36,7 @@ namespace CapaVista.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 301;
+            navegador1.aplicacion = 502;
             navegador1.tbl = "marcaproducto";
             navegador1.campoEstado = "estadoMarcaPro";
 
@@ -94,6 +94,11 @@ namespace CapaVista.Mantenimientos
         private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "0";
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
         }
     }
 }

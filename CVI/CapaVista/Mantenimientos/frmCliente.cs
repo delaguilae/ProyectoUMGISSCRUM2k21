@@ -46,7 +46,7 @@ namespace CapaVista.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 301;
+            navegador1.aplicacion = 2501;
             navegador1.tbl = "cliente";
             navegador1.campoEstado = "estadoCliente";
 
@@ -112,6 +112,11 @@ namespace CapaVista.Mantenimientos
             {
                 txtMuni.Text = cmbMuni.SelectedValue.ToString();
             }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            txtEstado.Text = "1";
         }
     }
 }

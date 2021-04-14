@@ -82,3 +82,9 @@ C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-mas
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\bin\Debug\CapaModeloSeguridad.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csprojAssemblyReference.cache
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.csproj.CoreCompileInputs.cache
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaModeloSeguridad\obj\Debug\CapaModeloSeguridad.pdb

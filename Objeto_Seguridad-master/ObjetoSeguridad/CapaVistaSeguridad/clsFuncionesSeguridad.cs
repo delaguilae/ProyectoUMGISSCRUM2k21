@@ -21,15 +21,18 @@ namespace CapaVistaSeguridad
                 strPermisos = obtenerPermisos.funcPermisosPorAplicacion(strAplicacion, strUsuario);
                 if (strPermisos == null)
                 {
+                    Console.WriteLine("Tiene los siguientes permisos " + strPermisos);
                     return "0,0,0,0,0";
                 }
                 else
                 {
+                    Console.WriteLine("Tiene los siguientes permisos " + strPermisos);
                     return strPermisos;
                 }
             }
             else
             {
+                Console.WriteLine("Tiene los siguientes permisos " + strPermisos);
                 return strPermisos;
             }
         }
@@ -38,11 +41,11 @@ namespace CapaVistaSeguridad
         public int PermisosAcceso(string strIdAplicacion, string strUsuario)
         {
             int permisos = obtenerPermisos.funcAccesoAplicacionPerfil(strIdAplicacion, strUsuario);
-            Console.WriteLine(permisos);
+            Console.WriteLine("Tiene permiso por perfil "+permisos);
             if (permisos == 0)
             { 
                 permisos = obtenerPermisos.funcAccesoAplicacion(strIdAplicacion, strUsuario);
-                Console.WriteLine(permisos);
+                Console.WriteLine("Tiene permiso por aplicacion "+permisos);
                 if (permisos == 0)
                 {
                     return 0;
