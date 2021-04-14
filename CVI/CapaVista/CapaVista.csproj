@@ -58,6 +58,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mantenimientos\frmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmCliente.Designer.cs">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmLineaProduc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmLineaProduc.Designer.cs">
+      <DependentUpon>frmLineaProduc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMarcaPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimientos\frmMarcaPro.Designer.cs">
+      <DependentUpon>frmMarcaPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenimientos\frmMunicipio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,8 +234,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Mantenimientos\frmCliente.resx">
+      <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmLineaProduc.resx">
+      <DependentUpon>frmLineaProduc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimientos\frmMarcaPro.resx">
+      <DependentUpon>frmMarcaPro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
