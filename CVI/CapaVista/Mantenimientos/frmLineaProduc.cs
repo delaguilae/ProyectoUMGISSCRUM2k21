@@ -37,7 +37,7 @@ namespace CapaVista.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 301;
+            navegador1.aplicacion = 501;
             navegador1.tbl = "lineaproducto";
             navegador1.campoEstado = "estadoLineaPro";
 
@@ -97,59 +97,9 @@ namespace CapaVista.Mantenimientos
             }
         }
 
-        private void dgvLineaP_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtEstado_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtEmpresa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtProveedor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblId_Click(object sender, EventArgs e)
-        {
-
+            txtEstado.Text = "1";
         }
     }
 }

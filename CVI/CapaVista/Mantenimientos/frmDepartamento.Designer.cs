@@ -29,7 +29,6 @@ namespace CapaVista.Mantenimientos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepartamento));
             this.navegador1 = new CapaVistaNavegador.Navegador();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.dgvDepartamento = new System.Windows.Forms.DataGridView();
@@ -186,7 +185,7 @@ namespace CapaVista.Mantenimientos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::CapaVista.Properties.Resources.Mantenimiento_Centro_1141515;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1083, 414);
             this.Controls.Add(this.txtEstado);
