@@ -73,8 +73,8 @@ namespace CapaVista.Mantenimientos
             navegador1.DatosActualizar = dgvLineaP;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "HTML/Ayudas.chm";
-            navegador1.ruta = "Ayuda_Mantenimiento_Centros.html";
+            navegador1.ayudaRuta = "Ayudas/MSantizo.chm";
+            navegador1.ruta = "AyudaLineaProducto.html";
             rbHabilitado.Checked = true;
             rbDeshabilitado.Checked = false;
         }
