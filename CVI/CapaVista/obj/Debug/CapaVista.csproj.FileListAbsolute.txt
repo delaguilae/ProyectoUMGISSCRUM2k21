@@ -86,7 +86,6 @@ C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\De
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaModeloSeguridad.pdb
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaModeloNavegador.pdb
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.csprojAssemblyReference.cache
-C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.frmMantenimiento.resources
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.MDIPrincipal.resources
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Cotizaciones.frmCotizaciones.resources
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Cotizaciones.frmNuevaCotizacion.resources
@@ -219,3 +218,18 @@ D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmLineaProduc.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmMarcaPro.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmSucursal.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmCliente.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmDepartamento.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmEmpresa.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmLineaProduc.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmMarcaPro.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmProducto.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.frmProveedores.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmMunicipio.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmPais.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmSucursal.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Cobradores.frmAsignarCobrador.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Cotizaciones.frmModificarCotizacion.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Entregas.frmConfirmacionEntrega.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Properties.Resources.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmBodega.resources
