@@ -103,6 +103,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtEmpresa.Text = cmbEmpresa.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void txtEmpresa_TextChanged(object sender, EventArgs e)
@@ -143,6 +144,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtSucursal.Text = cmbSucursal.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void txtDepartamento_TextChanged(object sender, EventArgs e)
@@ -183,6 +185,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtDepartamento.Text = cmbDepartamento.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void cmbMunicipio_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,6 +194,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtMunicipio.Text = cmbMunicipio.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void rbHabilitado_CheckedChanged(object sender, EventArgs e)

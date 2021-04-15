@@ -191,8 +191,9 @@ namespace CapaVista.Mantenimientos
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(175, 258);
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(209, 23);
+            this.txtDescripcion.Size = new System.Drawing.Size(209, 68);
             this.txtDescripcion.TabIndex = 13;
             this.txtDescripcion.Tag = "descripcionBodega";
             // 
@@ -210,7 +211,7 @@ namespace CapaVista.Mantenimientos
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(175, 286);
+            this.txtDireccion.Location = new System.Drawing.Point(175, 332);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(209, 23);
             this.txtDireccion.TabIndex = 15;
@@ -221,7 +222,7 @@ namespace CapaVista.Mantenimientos
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(58, 293);
+            this.label7.Location = new System.Drawing.Point(58, 339);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 16);
             this.label7.TabIndex = 14;
@@ -230,7 +231,7 @@ namespace CapaVista.Mantenimientos
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(175, 313);
+            this.txtTelefono.Location = new System.Drawing.Point(175, 361);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(209, 23);
             this.txtTelefono.TabIndex = 17;
@@ -242,7 +243,7 @@ namespace CapaVista.Mantenimientos
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(58, 320);
+            this.label8.Location = new System.Drawing.Point(58, 368);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 16);
             this.label8.TabIndex = 16;
@@ -254,7 +255,7 @@ namespace CapaVista.Mantenimientos
             this.rbDeshabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbDeshabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDeshabilitado.ForeColor = System.Drawing.Color.Black;
-            this.rbDeshabilitado.Location = new System.Drawing.Point(253, 354);
+            this.rbDeshabilitado.Location = new System.Drawing.Point(257, 390);
             this.rbDeshabilitado.Name = "rbDeshabilitado";
             this.rbDeshabilitado.Size = new System.Drawing.Size(114, 21);
             this.rbDeshabilitado.TabIndex = 93;
@@ -269,7 +270,7 @@ namespace CapaVista.Mantenimientos
             this.rbHabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbHabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbHabilitado.ForeColor = System.Drawing.Color.Black;
-            this.rbHabilitado.Location = new System.Drawing.Point(155, 354);
+            this.rbHabilitado.Location = new System.Drawing.Point(159, 390);
             this.rbHabilitado.Name = "rbHabilitado";
             this.rbHabilitado.Size = new System.Drawing.Size(92, 21);
             this.rbHabilitado.TabIndex = 92;
@@ -282,7 +283,7 @@ namespace CapaVista.Mantenimientos
             // 
             this.txtEstado.Enabled = false;
             this.txtEstado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(155, 381);
+            this.txtEstado.Location = new System.Drawing.Point(159, 420);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(26, 23);
             this.txtEstado.TabIndex = 91;
@@ -294,7 +295,7 @@ namespace CapaVista.Mantenimientos
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(58, 354);
+            this.label9.Location = new System.Drawing.Point(62, 390);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(58, 16);
             this.label9.TabIndex = 90;

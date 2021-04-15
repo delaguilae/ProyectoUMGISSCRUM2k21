@@ -113,6 +113,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtEmpresa.Text = cmbEmpresa.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void txtEmpresa_TextChanged(object sender, EventArgs e)
@@ -137,6 +138,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtLinea.Text = cmbLinea.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,6 +147,7 @@ namespace CapaVista.Mantenimientos
             {
                 txtMarca.Text = cmbMarca.SelectedValue.ToString();
             }
+            txtEstado.Text = "1";
         }
 
         private void txtMarca_TextChanged(object sender, EventArgs e)
