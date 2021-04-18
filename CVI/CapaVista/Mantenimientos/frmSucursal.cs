@@ -101,8 +101,8 @@ namespace CapaVista.Mantenimientos
             navegador1.DatosActualizar = dgvSucursal;
             navegador1.procActualizarData();
             navegador1.procCargar();
-            navegador1.ayudaRuta = "HTML/Ayudas.chm";
-            navegador1.ruta = "Ayuda_Mantenimiento_Centros.html";
+            navegador1.ayudaRuta = "AyudaES/AyudasES.chm";
+            navegador1.ruta = "AyudaSucursal.html";
             rbHabilitado.Checked = true;
             rbDeshabilitado.Checked = false;
         }
