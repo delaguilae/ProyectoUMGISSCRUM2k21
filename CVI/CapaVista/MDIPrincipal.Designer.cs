@@ -50,6 +50,8 @@ namespace CapaVista
             this.mantenimientoLineaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoMarcaDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoBodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeInventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,8 +73,7 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.bodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientoBodegaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -237,6 +238,21 @@ namespace CapaVista
             this.mantenimientoProductoToolStripMenuItem.Text = "0303-Mantenimiento Producto";
             this.mantenimientoProductoToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoProductoToolStripMenuItem_Click);
             // 
+            // bodegaToolStripMenuItem
+            // 
+            this.bodegaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mantenimientoBodegaToolStripMenuItem});
+            this.bodegaToolStripMenuItem.Name = "bodegaToolStripMenuItem";
+            this.bodegaToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.bodegaToolStripMenuItem.Text = "Bodega";
+            // 
+            // mantenimientoBodegaToolStripMenuItem
+            // 
+            this.mantenimientoBodegaToolStripMenuItem.Name = "mantenimientoBodegaToolStripMenuItem";
+            this.mantenimientoBodegaToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.mantenimientoBodegaToolStripMenuItem.Text = "0304-Mantenimiento Bodega";
+            this.mantenimientoBodegaToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoBodegaToolStripMenuItem_Click);
+            // 
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -250,6 +266,8 @@ namespace CapaVista
             // 
             // gestionDeInventariosToolStripMenuItem
             // 
+            this.gestionDeInventariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visualizarToolStripMenuItem});
             this.gestionDeInventariosToolStripMenuItem.Name = "gestionDeInventariosToolStripMenuItem";
             this.gestionDeInventariosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.gestionDeInventariosToolStripMenuItem.Text = "Gestion De Inventarios";
@@ -388,20 +406,12 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 4;
             // 
-            // bodegaToolStripMenuItem
+            // visualizarToolStripMenuItem
             // 
-            this.bodegaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mantenimientoBodegaToolStripMenuItem});
-            this.bodegaToolStripMenuItem.Name = "bodegaToolStripMenuItem";
-            this.bodegaToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.bodegaToolStripMenuItem.Text = "Bodega";
-            // 
-            // mantenimientoBodegaToolStripMenuItem
-            // 
-            this.mantenimientoBodegaToolStripMenuItem.Name = "mantenimientoBodegaToolStripMenuItem";
-            this.mantenimientoBodegaToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.mantenimientoBodegaToolStripMenuItem.Text = "0304-Mantenimiento Bodega";
-            this.mantenimientoBodegaToolStripMenuItem.Click += new System.EventHandler(this.mantenimientoBodegaToolStripMenuItem_Click);
+            this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualizarToolStripMenuItem.Text = "Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
             // 
             // MDIPrincipal
             // 
@@ -471,6 +481,7 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem mantenimientoProductoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBodegaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
     }
 }
 

@@ -1,5 +1,5 @@
-create database if not exists dbCVIERP;
-use dbCVIERP;
+create database if not exists dbCVIERPDatos;
+use dbCVIERPDatos;
 #Base de datos Seguridad-----------------------------------------------------------------------------------
 create table if not exists LOGIN(
 	pk_id_login 						int(10) auto_increment,
@@ -273,17 +273,17 @@ alter table PRODUCTO add constraint fk_producto_categoriaProducto foreign key(fk
 create table if not exists EXISTENCIA(
 	pkIdExis 					int(10),
     fkIdEmpresa					int(10),
-    fkIdSucursal				int(10),
     fkIdBodega 					int(10)not null,
     fkIdPro 					int(10)not null,
     cantidad_existencia 		int(10)not null,
+    existenica_minima   		int(10)not null,
+	existenica_maxima  		    int(10)not null,
     estado_existencia 			int(1)not null,
-    primary key(pkIdExis,fkIdEmpresa,fkIdSucursal,fkIdBodega,fkIdPro)
+    primary key(pkIdExis,fkIdEmpresa,fkIdBodega,fkIdPro)
 );
 alter table EXISTENCIA add constraint fk_existencia_empresa foreign key(fkIdEmpresa) references EMPRESA(pkIdEmpresa);
-alter table EXISTENCIA add constraint fk_existencia_sucursal foreign key(fkIdSucursal) references SUCURSAL(pkIdSucursal);
-alter table EXISTENCIA add constraint fk_existencia_producto foreign key(fkIdBodega) references PRODUCTO(pkIdProducto);
-alter table EXISTENCIA add constraint fk_existencia_bodega foreign key(fkIdPro) references BODEGA(pkIdBodega);
+alter table EXISTENCIA add constraint fk_existencia_producto foreign key(fkIdPro) references PRODUCTO(pkIdProducto);
+alter table EXISTENCIA add constraint fk_existencia_bodega foreign key(fkIdBodega) references BODEGA(pkIdBodega);
 #------------------------------------------------------------------------------------------------------------------------------------
 #Puestos de bodegas
 create table if not exists PUESTO(
@@ -538,3 +538,19 @@ create table if not exists COBRO(
 alter table COBRO add constraint fk_cobro_cuentas foreign key(fkIdRegistroCuenta) references CUENTAS(pkIdRegistroCuentas);
 alter table COBRO add constraint fk_cobro_empleado foreign key(fkIdEmpleado) references EMPLEADO(pkIdEmpleado);
 alter table COBRO add constraint fk_cobro_metodopago foreign key(fkIdMetodoPago) references METODOPAGO(pkIdMetodoPago);
+
+
+#### VALORES
+INSERT INTO `PAIS` VALUES (1,'pais1','capital1',1),(2,'pais2','capital2',1);
+INSERT INTO `DEPARTAMENTO` VALUES (1,'DEPARTA1','DESCRIPCION1',1),(2,'DEPART2','DESCRIP2',1);
+INSERT INTO `MUNICIPIO` VALUES (1,1,'MUNICIPIO1','DESCRI1',1),(2,1,'MUNICIPIO2','DESCRI2',1);
+INSERT INTO `EMPRESA` VALUES (1,'EMPRESA1',1,'DIRECCION1',1,1,1),(2,'EMPRESA2',1,'DIRECCION2',1,1,1);
+INSERT INTO `SUCURSAL` VALUES (1,1,'SUCURSAL1',1,'DIRECCION2',1,1,1),(2,1,'SUCURSAL2',1,'DIRECCION2',1,1,1);
+INSERT INTO `BODEGA` VALUES (1,1,1,1,1,'DESCRIPCION1','DIRECCION1',12345678,1),(2,2,1,1,1,'DESCRIPCION2','DIRECCION2',12345678,1);
+INSERT INTO `LINEAPRODUCTO` VALUES (1,1,'LINEA1','DESCRIPCION1',1),(2,2,'LINEA2','DESCRIPCION2',1);
+INSERT INTO `MARCAPRODUCTO` VALUES (1,1,'NOMBRE1','DESCRIPCION1',1),(2,2,'NOMBRE2','DESCRIPCION2',1);
+INSERT INTO `PRODUCTO` VALUES (1,1,1,1,'NOMBRE1',20.50,'DESCRIPCION1',1),(2,1,1,1,'NOMBRE2',287.50,'DESCRIPCION2',1);
+INSERT INTO `EXISTENCIA` VALUES (1,1,1,1,10,2,20,1),(2,1,2,1,15,2,20,1),(3,1,1,2,150,5,200,1);
+
+
+
