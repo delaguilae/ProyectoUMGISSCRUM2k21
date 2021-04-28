@@ -196,6 +196,12 @@
     <Compile Include="Procesos\Inventarios\frmInventarios.Designer.cs">
       <DependentUpon>frmInventarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Inventarios\frmInventarioTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmInventarioTotal.Designer.cs">
+      <DependentUpon>frmInventarioTotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Saldos\frmSaldos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Inventarios\frmInventarios.resx">
       <DependentUpon>frmInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Inventarios\frmInventarioTotal.resx">
+      <DependentUpon>frmInventarioTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
       <DependentUpon>frmSaldos.cs</DependentUpon>

@@ -239,3 +239,4 @@ C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\De
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmSucursal.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmBodega.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmProducto.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Inventarios.frmInventarioTotal.resources
