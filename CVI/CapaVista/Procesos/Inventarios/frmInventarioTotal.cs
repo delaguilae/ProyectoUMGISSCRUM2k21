@@ -9,11 +9,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace CapaVista.Procesos.Inventarios
 {
     public partial class frmInventarioTotal : Form
     {
+        clsValidaciones validaciones = new clsValidaciones();
         ControladorJM con = new ControladorJM();
         int controlseleccion = 0;
         public frmInventarioTotal()
@@ -63,7 +63,7 @@ namespace CapaVista.Procesos.Inventarios
                 }
                 if (Convert.ToInt32(Myrow.Cells[3].Value) >= Convert.ToInt32(Myrow.Cells[4].Value))
                 {
-                    Myrow.DefaultCellStyle.BackColor = Color.Cyan;
+                    Myrow.DefaultCellStyle.BackColor = Color.Green;
                 }
             }
         }
@@ -183,7 +183,7 @@ namespace CapaVista.Procesos.Inventarios
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -193,7 +193,7 @@ namespace CapaVista.Procesos.Inventarios
 
         private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
+            validaciones.CamposNumerosYLetras(e);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -226,6 +226,36 @@ namespace CapaVista.Procesos.Inventarios
                 lblEmpresa.Text = cmbEmpresa.SelectedValue.ToString();
             }
             bodega();
+        }
+
+        private void cmbEmpresa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbBodega_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbExistencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbBodega_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cbExistencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayudas/MSantizo2.chm", "AyudaInventario.html");
         }
     }
 }
