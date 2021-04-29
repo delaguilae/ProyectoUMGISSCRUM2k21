@@ -15,12 +15,11 @@ namespace CapaVista.Procesos.Inventarios
     public partial class frmInventarioTotal : Form
     {
         ControladorJM con = new ControladorJM();
+        int controlseleccion = 0;
         public frmInventarioTotal()
         {
             InitializeComponent();
             CargarComboboxEmpresa();
-            CargarDetalles();
-            color();
         }
         public void CargarComboboxEmpresa()
         {
@@ -29,23 +28,24 @@ namespace CapaVista.Procesos.Inventarios
             cmbEmpresa.ValueMember = "pkIdEmpresa";
             cmbEmpresa.DataSource = con.FieldCombobox("pkIdEmpresa", "nombreEmpresa", "empresa", "estadoEmpresa");
             cmbEmpresa.SelectedIndex = -1;
+        }
+        private void bodega()
+        {
             //llenado de combobox de bodega
             cmbBodega.DisplayMember = "descripcionBodega";
             cmbBodega.ValueMember = "pkIdBodega";
-            cmbBodega.DataSource = con.FieldCombobox("pkIdBodega", "descripcionBodega", "bodega", "estadoBodega");
+            cmbBodega.DataSource = con.FieldComboboxCondition("pkIdBodega", "descripcionBodega", "bodega", "fkIdEmpresa", lblEmpresa.Text,"estadoBodega");
             cmbBodega.SelectedIndex = -1;
         }
-        public void CargarDetalles()
+        public void CargarTotal()
         {
                 dgvInventarioT.Rows.Clear();
-
                 OdbcDataReader mostrar = con.funcSelectAll();
                 try
                 {
                     while (mostrar.Read())
                     {
                         dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
-
                     }
                 }
                 catch (Exception err)
@@ -66,7 +66,166 @@ namespace CapaVista.Procesos.Inventarios
                     Myrow.DefaultCellStyle.BackColor = Color.Cyan;
                 }
             }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CargarTotal();
+            controlseleccion = 0;
+        }
+   
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (rbProducto.Checked == true && txtProducto.Text != null && controlseleccion==1)
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInvproduct(lblEmpresa.Text, cmbBodega.Text,txtProducto.Text);
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+            if (rbProducto.Checked == true && txtProducto.Text != null && controlseleccion == 0)
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInvproductotal(txtProducto.Text);
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+            /*Existencia MINIMA*/
+            if (rbExistencia.Checked == true && cbExistencia.Text=="MINIMA" && controlseleccion == 1)
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInvproductminima(lblEmpresa.Text, cmbBodega.Text);
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+            if (rbExistencia.Checked == true && cbExistencia.Text == "MINIMA" && controlseleccion == 0)
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInvproductotalminima();
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+            /*Existencia MAXIMA*/
+            if (rbExistencia.Checked == true && cbExistencia.Text == "MAXIMA" && controlseleccion == 1)
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInvproductmaxima(lblEmpresa.Text, cmbBodega.Text);
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+            if (rbExistencia.Checked == true && cbExistencia.Text == "MAXIMA" && controlseleccion == 0)
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInvproductotalmaxima();
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            color();
+        }
+
+        private void txtProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (cmbEmpresa.Text != null && cmbBodega.Text != null) 
+            {
+                dgvInventarioT.Rows.Clear();
+                OdbcDataReader mostrar = con.funcSelectSearchInv(lblEmpresa.Text, cmbBodega.Text);
+                try
+                {
+                    while (mostrar.Read())
+                    {
+                        dgvInventarioT.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5));
+                        controlseleccion = 1;
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine(err.Message);
+                }
+            }
+        }
+        private void lblEmpresa_Click(object sender, EventArgs e)
+        {
+        }
+        private void cmbEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEmpresa.SelectedIndex != -1)
+            {
+                lblEmpresa.Text = cmbEmpresa.SelectedValue.ToString();
+            }
+            bodega();
         }
     }
 }
