@@ -396,5 +396,12 @@ namespace CapaVista
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Procesos.Inventarios.frmInventarioTotal frm = new Procesos.Inventarios.frmInventarioTotal();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
