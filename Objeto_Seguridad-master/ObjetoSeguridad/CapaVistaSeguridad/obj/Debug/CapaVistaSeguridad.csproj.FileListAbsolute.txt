@@ -450,3 +450,12 @@ D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.csproj.CopyComplete
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.dll
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaEncriptar.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorEncriptar.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorNavegador.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloNavegador.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaEncriptar.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorEncriptar.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaControladorNavegador.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaModeloNavegador.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Objeto_Seguridad-master\ObjetoSeguridad\CapaVistaSeguridad\obj\Debug\CapaVistaSeguridad.Formularios.Mantenimientos.frmMantenimientoAplicacion.resources

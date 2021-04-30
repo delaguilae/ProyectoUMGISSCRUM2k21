@@ -50,52 +50,56 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(29, 230);
+            this.lblCodigo.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(124, 165);
             this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(112, 17);
+            this.lblCodigo.Size = new System.Drawing.Size(121, 17);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código usuario:";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(29, 286);
+            this.lblUsuario.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(176, 218);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(60, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(66, 17);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Location = new System.Drawing.Point(29, 327);
+            this.lblContraseña.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(151, 262);
             this.lblContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(85, 17);
+            this.lblContraseña.Size = new System.Drawing.Size(93, 17);
             this.lblContraseña.TabIndex = 2;
             this.lblContraseña.Text = "Contraseña:";
             // 
             // lblNombreCompleto
             // 
             this.lblNombreCompleto.AutoSize = true;
-            this.lblNombreCompleto.Location = new System.Drawing.Point(29, 385);
+            this.lblNombreCompleto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCompleto.Location = new System.Drawing.Point(103, 320);
             this.lblNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(133, 17);
+            this.lblNombreCompleto.Size = new System.Drawing.Size(144, 17);
             this.lblNombreCompleto.TabIndex = 4;
             this.lblNombreCompleto.Text = "Nombre Completo:\r\n";
             // 
             // dtlRegistroUsuario
             // 
             this.dtlRegistroUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtlRegistroUsuario.Location = new System.Drawing.Point(596, 220);
+            this.dtlRegistroUsuario.Location = new System.Drawing.Point(560, 143);
             this.dtlRegistroUsuario.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtlRegistroUsuario.Name = "dtlRegistroUsuario";
             this.dtlRegistroUsuario.RowHeadersWidth = 51;
             this.dtlRegistroUsuario.RowTemplate.Height = 24;
-            this.dtlRegistroUsuario.Size = new System.Drawing.Size(582, 251);
+            this.dtlRegistroUsuario.Size = new System.Drawing.Size(832, 316);
             this.dtlRegistroUsuario.TabIndex = 10;
             this.dtlRegistroUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtl_registro_usuario_CellContentClick);
             // 
@@ -104,7 +108,7 @@
             this.gbxEstado.Controls.Add(this.rbtnDesabilitado);
             this.gbxEstado.Controls.Add(this.rbtnHabilitado);
             this.gbxEstado.Font = new System.Drawing.Font("Rockwell", 9.75F);
-            this.gbxEstado.Location = new System.Drawing.Point(125, 456);
+            this.gbxEstado.Location = new System.Drawing.Point(127, 366);
             this.gbxEstado.Margin = new System.Windows.Forms.Padding(4);
             this.gbxEstado.Name = "gbxEstado";
             this.gbxEstado.Padding = new System.Windows.Forms.Padding(4);
@@ -142,17 +146,19 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(269, 227);
+            this.txtCodigo.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(269, 162);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(66, 23);
+            this.txtCodigo.Size = new System.Drawing.Size(66, 25);
             this.txtCodigo.TabIndex = 1;
             this.txtCodigo.Tag = "pk_id_login";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(269, 280);
+            this.txtUsuario.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(269, 215);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(168, 23);
+            this.txtUsuario.Size = new System.Drawing.Size(168, 25);
             this.txtUsuario.TabIndex = 2;
             this.txtUsuario.Tag = "usuario_login";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
@@ -160,9 +166,10 @@
             // txtEncriptado
             // 
             this.txtEncriptado.Enabled = false;
-            this.txtEncriptado.Location = new System.Drawing.Point(269, 353);
+            this.txtEncriptado.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEncriptado.Location = new System.Drawing.Point(269, 288);
             this.txtEncriptado.Name = "txtEncriptado";
-            this.txtEncriptado.Size = new System.Drawing.Size(168, 23);
+            this.txtEncriptado.Size = new System.Drawing.Size(168, 25);
             this.txtEncriptado.TabIndex = 3;
             this.txtEncriptado.Tag = "contraseña_login";
             this.txtEncriptado.Visible = false;
@@ -170,16 +177,17 @@
             // 
             // txtNombreCompleto
             // 
-            this.txtNombreCompleto.Location = new System.Drawing.Point(269, 382);
+            this.txtNombreCompleto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCompleto.Location = new System.Drawing.Point(269, 317);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
-            this.txtNombreCompleto.Size = new System.Drawing.Size(168, 23);
+            this.txtNombreCompleto.Size = new System.Drawing.Size(168, 25);
             this.txtNombreCompleto.TabIndex = 4;
             this.txtNombreCompleto.Tag = "nombreCompleto_login";
             // 
             // txtEstado
             // 
             this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(25, 456);
+            this.txtEstado.Location = new System.Drawing.Point(25, 390);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(64, 23);
             this.txtEstado.TabIndex = 5;
@@ -188,10 +196,11 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(269, 324);
+            this.txtPassword.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(269, 259);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(168, 23);
+            this.txtPassword.Size = new System.Drawing.Size(168, 25);
             this.txtPassword.TabIndex = 17;
             this.txtPassword.Tag = "saltar";
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
@@ -199,8 +208,8 @@
             // navegadorMUsuario
             // 
             this.navegadorMUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.navegadorMUsuario.Location = new System.Drawing.Point(13, 33);
-            this.navegadorMUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navegadorMUsuario.Location = new System.Drawing.Point(13, 13);
+            this.navegadorMUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.navegadorMUsuario.Name = "navegadorMUsuario";
             this.navegadorMUsuario.Size = new System.Drawing.Size(1404, 124);
             this.navegadorMUsuario.TabIndex = 18;

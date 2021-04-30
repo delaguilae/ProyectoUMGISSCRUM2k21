@@ -404,3 +404,7 @@ C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutabl
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.dll
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.pdb
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.pdb
