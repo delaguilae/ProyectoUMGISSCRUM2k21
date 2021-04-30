@@ -81,8 +81,8 @@ namespace CapaVista
         //Herramientas De Seguridad--------------------------------
         private void cambioDeContrasenaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMantenimientoAplicacion frmCambioContraseña = new frmMantenimientoAplicacion(txtusuario.Text);
-            //frmCambioContraseña frmCambioContraseña = new frmCambioContraseña(txtusuario.Text);
+            //frmMantenimientoAplicacion frmCambioContraseña = new frmMantenimientoAplicacion(txtusuario.Text);
+            frmCambioContraseña frmCambioContraseña = new frmCambioContraseña(txtusuario.Text);
             frmCambioContraseña.MdiParent = this;
             frmCambioContraseña.Show();
             bit.user(txtusuario.Text);
