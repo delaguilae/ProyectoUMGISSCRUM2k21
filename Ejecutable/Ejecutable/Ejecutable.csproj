@@ -37,6 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\CVI\CapaVista\bin\Debug\CapaVista.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaEncriptar">
+      <HintPath>..\..\ObjetoEncriptar\CapaVistaEncriptar\bin\Debug\CapaVistaEncriptar.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVistaNavegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Navegador\CapaVista\bin\Debug\CapaVistaNavegador.dll</HintPath>

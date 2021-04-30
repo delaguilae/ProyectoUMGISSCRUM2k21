@@ -34,6 +34,9 @@
     <Reference Include="CapaControladorSeguridad">
       <HintPath>..\CapaControladorSeguridad\bin\Debug\CapaControladorSeguridad.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaEncriptar">
+      <HintPath>..\..\..\ObjetoEncriptar\CapaVistaEncriptar\bin\Debug\CapaVistaEncriptar.dll</HintPath>
+    </Reference>
     <Reference Include="CapaVistaNavegador">
       <HintPath>..\..\Navegador-main\Navegador\Navegador\CapaVista\bin\Debug\CapaVistaNavegador.dll</HintPath>
     </Reference>
@@ -49,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsFuncionesAyudas.cs" />
     <Compile Include="clsFuncionesSeguridad.cs" />
     <Compile Include="clsVistaBitacora.cs" />
     <Compile Include="Formularios\frmAsignacionDeAplicaciones.cs">
@@ -92,6 +96,12 @@
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmConsultarPerfil.Designer.cs">
       <DependentUpon>frmConsultarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmMantenimientoAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Mantenimientos\frmMantenimientoAplicacion.Designer.cs">
+      <DependentUpon>frmMantenimientoAplicacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Mantenimientos\frmMantenimientoPerfil.cs">
       <SubType>Form</SubType>
@@ -148,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmConsultarPerfil.resx">
       <DependentUpon>frmConsultarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Mantenimientos\frmMantenimientoAplicacion.resx">
+      <DependentUpon>frmMantenimientoAplicacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Mantenimientos\frmMantenimientoPerfil.resx">
       <DependentUpon>frmMantenimientoPerfil.cs</DependentUpon>

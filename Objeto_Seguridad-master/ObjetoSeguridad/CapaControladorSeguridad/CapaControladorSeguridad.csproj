@@ -45,8 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsAplicacionMantenimiento.cs" />
     <Compile Include="clsControlCodAplicacion.cs" />
-    <Compile Include="clsEncriptar.cs" />
     <Compile Include="clsControladorBitacora.cs" />
     <Compile Include="clsControladorPerfil.cs" />
     <Compile Include="clsControlAplicativo.cs" />

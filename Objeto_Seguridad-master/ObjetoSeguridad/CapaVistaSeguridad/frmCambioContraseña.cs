@@ -1,4 +1,5 @@
 ﻿using CapaControladorSeguridad;
+using CapaVistaEncriptar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace CapaVistaSeguridad
     public partial class frmCambioContraseña : Form
     {
         string Usuario = "";
+        clsRecepcion Encriptar = new clsRecepcion();
         public frmCambioContraseña(string User)
         {
             InitializeComponent();
@@ -22,8 +24,6 @@ namespace CapaVistaSeguridad
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            var key = "b14ca5898a4e4133bbce2ea2315a1916";
-            clsEncriptar encriptar = new clsEncriptar();
             clsControladorPerfil controladorPerfil = new clsControladorPerfil();
             if (txtNuevaContraseña.Text == "" || txtConfirmarContraseña.Text == "")
             {
@@ -33,7 +33,7 @@ namespace CapaVistaSeguridad
             {
                 if(txtNuevaContraseña.Text == txtConfirmarContraseña.Text)
                 {
-                    string password = encriptar.funcEncryptString(key, txtConfirmarContraseña.Text);
+                    string password = Encriptar.funcEncryp(txtConfirmarContraseña.Text);
                     controladorPerfil.funcModificar_Contraseña(Usuario, password);
                     MessageBox.Show("Contraseña Actualizada Exitozamente");
                     txtNuevaContraseña.Text = "";

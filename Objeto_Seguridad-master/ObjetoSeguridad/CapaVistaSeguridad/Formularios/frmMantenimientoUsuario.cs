@@ -10,28 +10,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaControladorSeguridad;
+using CapaVistaEncriptar;
 
 namespace CapaVistaSeguridad.Formularios.Mantenimientos
 {
     public partial class frmMantenimientoUsuario : Form
     {
         String ap = "aplicacion";
-
         string UsuarioAplicacion;
-
+        clsRecepcion Encriptar = new clsRecepcion();
         public frmMantenimientoUsuario(string usuario)
         {
-            InitializeComponent();
-            
-            rbtnHabilitado.Checked = true;
-            
+            InitializeComponent();           
+            rbtnHabilitado.Checked = true;           
             UsuarioAplicacion = usuario;
             navegadorMUsuario.Usuario = UsuarioAplicacion;
         }
 
-     
-
-        
         private void dtl_registro_usuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
@@ -75,11 +70,8 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
 
                         }
                     }
-                    //  MessageBox.Show(""+C.Name)
-                    
+                    //  MessageBox.Show(""+C.Name)                   
                 }
-
-
             }
 
             navegadorMUsuario.control = lista;
@@ -119,10 +111,8 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         {
            if(txtPassword.Text != "")
             {
-                var key = "b14ca5898a4e4133bbce2ea2315a1916";
-                clsEncriptar encriptar = new clsEncriptar();
-                string Encriptado = encriptar.funcEncryptString(key, txtPassword.Text);
-                txtEncriptado.Text = Encriptado;
+                string password = Encriptar.funcEncryp(txtPassword.Text);
+                txtEncriptado.Text = password;
             }
             
         }
@@ -131,10 +121,8 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
         {
             if(txtEncriptado.Text != "")
             {
-                var key = "b14ca5898a4e4133bbce2ea2315a1916";
-                clsEncriptar encriptar = new clsEncriptar();
-                string Desencriptado = encriptar.funcDecryptString(key, txtEncriptado.Text);
-                txtPassword.Text = Desencriptado;
+                string password = Encriptar.funcDesencryp(txtPassword.Text);
+                txtPassword.Text = password;
             }
             
         }

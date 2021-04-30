@@ -23,7 +23,7 @@ namespace CapaModeloSeguridad
             {
                 string strUsuarioDB = "";
                 string strContrasenaDB = "";
-               Comm = new OdbcCommand("SELECT usuario_login, contraseña_login FROM login WHERE usuario_login ='" + strUsuario + "' AND contraseña_login ='" + strContrasena + "' AND estado_login = 1 ;", cn.conexion());
+               Comm = new OdbcCommand("call sp_Login('" + strUsuario + "','" + strContrasena + "');", cn.conexion());
                 OdbcDataReader reader = Comm.ExecuteReader();
                 reader.Read();
                 strUsuarioDB = reader.GetString(0);

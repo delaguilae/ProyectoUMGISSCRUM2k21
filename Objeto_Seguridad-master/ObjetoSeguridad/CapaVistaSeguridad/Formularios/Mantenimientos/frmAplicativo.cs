@@ -401,6 +401,11 @@ namespace CapaVistaSeguridad.Formularios.Mantenimientos
             validaciones.CampoNumerico(e);
         }
 
+        private void frmAplicativo_Load(object sender, EventArgs e)
+        {
+
+        }
+
         public bool funcValidarCodigo()
         {
             

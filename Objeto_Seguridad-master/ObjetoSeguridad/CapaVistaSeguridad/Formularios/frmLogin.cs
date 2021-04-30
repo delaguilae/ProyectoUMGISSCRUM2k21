@@ -1,14 +1,14 @@
-﻿
-using CapaControladorSeguridad;
+﻿using CapaControladorSeguridad;
 using System;
 using System.Data.Odbc;
 using System.Drawing;
 using System.Windows.Forms;
+using CapaVistaEncriptar;
 namespace CapaVistaSeguridad
 {
     public partial class frmLogin : Form
     {
-
+        clsRecepcion Encriptar = new clsRecepcion();
         clsControladorPerfil controlador = new clsControladorPerfil();
         clsVistaBitacora cn = new clsVistaBitacora();
         public frmLogin()
@@ -16,7 +16,6 @@ namespace CapaVistaSeguridad
             InitializeComponent();
             //CODIFICACION PARA EL TEXTFIELD DE CONTRASEÑA
             txtPassword.PasswordChar = '*';
-
         }
 
 
@@ -40,11 +39,9 @@ namespace CapaVistaSeguridad
         
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            var key = "b14ca5898a4e4133bbce2ea2315a1916";
             if (contador <= 3)
             {
-                clsEncriptar encriptar = new clsEncriptar();
-                string password = encriptar.funcEncryptString(key, txtPassword.Text);
+                string password = Encriptar.funcEncryp(txtPassword.Text);
                 Console.WriteLine(password);
                 if (controlador.funcLogin(txtUsuario.Text, password) == 1)
                 {
