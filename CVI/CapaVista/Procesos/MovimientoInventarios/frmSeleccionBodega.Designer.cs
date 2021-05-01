@@ -136,6 +136,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.dgvBodega.Name = "dgvBodega";
             this.dgvBodega.Size = new System.Drawing.Size(433, 165);
             this.dgvBodega.TabIndex = 4;
+            this.dgvBodega.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBodega_CellContentClick);
             // 
             // label2
             // 

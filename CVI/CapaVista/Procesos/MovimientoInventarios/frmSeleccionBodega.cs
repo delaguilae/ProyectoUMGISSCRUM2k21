@@ -103,5 +103,10 @@ namespace CapaVista.Procesos.MovimientoInventarios
         {
             this.Dispose();
         }
+
+        private void dgvBodega_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

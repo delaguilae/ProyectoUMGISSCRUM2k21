@@ -40,6 +40,10 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtDirecBodegaOrigen = new System.Windows.Forms.TextBox();
             this.btnBuscarBodegaOrigen = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbVentas = new System.Windows.Forms.RadioButton();
+            this.rbDevClientes = new System.Windows.Forms.RadioButton();
+            this.rbMovimientoBodegaBodega = new System.Windows.Forms.RadioButton();
             this.btnRealizarCambios = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtIdEmpresaDestino = new System.Windows.Forms.TextBox();
@@ -64,8 +68,11 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtAcciones = new System.Windows.Forms.TextBox();
+            this.txtIdMovimiento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMover)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -136,6 +143,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.dgvMover.Name = "dgvMover";
             this.dgvMover.Size = new System.Drawing.Size(672, 169);
             this.dgvMover.TabIndex = 8;
+            this.dgvMover.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMover_CellClick);
             // 
             // txtCodBodegaOrigen
             // 
@@ -174,6 +182,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtIdMovimiento);
+            this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.btnRealizarCambios);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -188,6 +198,53 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mover Productos de Bodega a Bodega";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.txtAcciones);
+            this.groupBox5.Controls.Add(this.rbVentas);
+            this.groupBox5.Controls.Add(this.rbDevClientes);
+            this.groupBox5.Controls.Add(this.rbMovimientoBodegaBodega);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(386, 216);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(286, 126);
+            this.groupBox5.TabIndex = 22;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Acciones";
+            // 
+            // rbVentas
+            // 
+            this.rbVentas.AutoSize = true;
+            this.rbVentas.Location = new System.Drawing.Point(21, 78);
+            this.rbVentas.Name = "rbVentas";
+            this.rbVentas.Size = new System.Drawing.Size(170, 19);
+            this.rbVentas.TabIndex = 2;
+            this.rbVentas.Text = "Movimiento De Ventas";
+            this.rbVentas.UseVisualStyleBackColor = true;
+            this.rbVentas.CheckedChanged += new System.EventHandler(this.rbVentas_CheckedChanged);
+            // 
+            // rbDevClientes
+            // 
+            this.rbDevClientes.AutoSize = true;
+            this.rbDevClientes.Location = new System.Drawing.Point(21, 53);
+            this.rbDevClientes.Name = "rbDevClientes";
+            this.rbDevClientes.Size = new System.Drawing.Size(173, 19);
+            this.rbDevClientes.TabIndex = 1;
+            this.rbDevClientes.Text = "Devolucion De Clientes";
+            this.rbDevClientes.UseVisualStyleBackColor = true;
+            this.rbDevClientes.CheckedChanged += new System.EventHandler(this.rbDevClientes_CheckedChanged);
+            // 
+            // rbMovimientoBodegaBodega
+            // 
+            this.rbMovimientoBodegaBodega.AutoSize = true;
+            this.rbMovimientoBodegaBodega.Location = new System.Drawing.Point(21, 28);
+            this.rbMovimientoBodegaBodega.Name = "rbMovimientoBodegaBodega";
+            this.rbMovimientoBodegaBodega.Size = new System.Drawing.Size(234, 19);
+            this.rbMovimientoBodegaBodega.TabIndex = 0;
+            this.rbMovimientoBodegaBodega.Text = "Movimiento De Bodega a Bodega";
+            this.rbMovimientoBodegaBodega.UseVisualStyleBackColor = true;
+            this.rbMovimientoBodegaBodega.CheckedChanged += new System.EventHandler(this.rbMovimientoBodegaBodega_CheckedChanged);
             // 
             // btnRealizarCambios
             // 
@@ -319,7 +376,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.txtCantMover);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(141, 216);
+            this.groupBox4.Location = new System.Drawing.Point(6, 216);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(374, 126);
             this.groupBox4.TabIndex = 20;
@@ -449,11 +506,26 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.label4.TabIndex = 14;
             this.label4.Text = "ID Empresa";
             // 
+            // txtAcciones
+            // 
+            this.txtAcciones.Location = new System.Drawing.Point(21, 98);
+            this.txtAcciones.Name = "txtAcciones";
+            this.txtAcciones.Size = new System.Drawing.Size(100, 23);
+            this.txtAcciones.TabIndex = 3;
+            // 
+            // txtIdMovimiento
+            // 
+            this.txtIdMovimiento.Location = new System.Drawing.Point(23, 354);
+            this.txtIdMovimiento.Name = "txtIdMovimiento";
+            this.txtIdMovimiento.Size = new System.Drawing.Size(100, 23);
+            this.txtIdMovimiento.TabIndex = 23;
+            // 
             // frmMovimientoInventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo2;
+            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(709, 597);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMover);
@@ -466,6 +538,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.Load += new System.EventHandler(this.frmMovimientoInventarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMover)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -512,5 +587,11 @@ namespace CapaVista.Procesos.MovimientoInventarios
         private System.Windows.Forms.Button btnBuscarProducto;
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Button btnRealizarCambios;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton rbVentas;
+        private System.Windows.Forms.RadioButton rbDevClientes;
+        private System.Windows.Forms.RadioButton rbMovimientoBodegaBodega;
+        private System.Windows.Forms.TextBox txtAcciones;
+        private System.Windows.Forms.TextBox txtIdMovimiento;
     }
 }

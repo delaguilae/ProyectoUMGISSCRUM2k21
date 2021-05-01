@@ -558,3 +558,64 @@ DELIMITER ;
 #Cambio en la tabla de aplicacion
 #alter table APLICACION add archivoCHM varchar(100) after descripcion_aplicacion;
 #alter table APLICACION add archivoHTML varchar(100) after archivoCHM;
+
+create table if not exists MOVIMIENTOINVENTARIO(
+pkmovimiento int(10)not null auto_increment,
+fkidproducto int(10)not null,
+fkbodegaorigen int(10)not null,
+fkbodegadestino int(10),
+cantidad int(50)not null,
+razon varchar(250)not null,
+fkencargado int(10),
+primary key(pkmovimiento)
+);
+alter table MOVIMIENTOINVENTARIO add constraint fk_producto foreign key(fkidproducto) references PRODUCTO(pkIdProducto);
+alter table MOVIMIENTOINVENTARIO add constraint fk_bodega_origen foreign key(fkbodegaorigen) references bodega(pkIdBodega);
+alter table MOVIMIENTOINVENTARIO add constraint fk_bodega_destino foreign key(fkbodegadestino) references bodega(pkIdBodega);
+alter table MOVIMIENTOINVENTARIO add constraint fk_bodega_encargado foreign key(fkencargado) references login(pk_id_login);
+
+-- Procedimiento para Mover Inventarios
+DELIMITER $$
+CREATE PROCEDURE sp_MovimientoInventario(
+	in idMovmiento int,
+    in idEmpresaOrigen int,
+    in idSucursalOrigen int,
+    in idBodegaOrigen int,
+    
+    in idEmpresaDestino int,
+    in idSucursalDestino int,
+    in idBodegaDestino int,
+    
+    in idProducto int,
+    in CantidadMover int,
+    in Razon varchar(100),
+    in idUsuario int,
+    in Accion int#1agregar, 2Eliminar Movimiento
+)
+BEGIN
+if (select cantidad_existencia from existencia where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto) > CantidadMover and Accion = 1 then
+	update existencia set cantidad_existencia = cantidad_existencia - CantidadMover where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto;
+    update existencia set cantidad_existencia = cantidad_existencia + CantidadMover where fkIdEmpresa=idEmpresaDestino and fkIdSucursal=idSucursalDestino and fkIdBodega=idBodegaDestino and fkIdPro=idProducto;
+    INSERT INTO `dbcvierp`.`movimientoinventario` (`fkidproducto`, `fkbodegaorigen`, `fkbodegadestino`, `cantidad`, `razon`, `fkencargado`) VALUES (idProducto, idBodegaOrigen, idBodegaDestino, CantidadMover, Razon, idUsuario);
+
+else
+	update existencia set cantidad_existencia = cantidad_existencia + CantidadMover where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto;
+    update existencia set cantidad_existencia = cantidad_existencia - CantidadMover where fkIdEmpresa=idEmpresaDestino and fkIdSucursal=idSucursalDestino and fkIdBodega=idBodegaDestino and fkIdPro=idProducto;
+    DELETE FROM `dbcvierp`.`movimientoinventario` WHERE (`pkmovimiento` = idMovmiento);
+end if;
+END$$
+DELIMITER ;
+-- Procedimiento Para Verificar Existencia
+DELIMITER $$
+CREATE PROCEDURE sp_ExistenciaProducto (
+	in IdEmpresa int,
+    in IdSucursal int,
+    in IdBodega int,
+    in Producto int
+)
+BEGIN
+	select cantidad_existencia from existencia where fkIdEmpresa=IdEmpresa and fkIdSucursal=IdSucursal and fkIdBodega=IdBodega and fkIdPro=Producto;
+END$$
+DELIMITER ;
+
+
