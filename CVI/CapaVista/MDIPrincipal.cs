@@ -404,5 +404,12 @@ namespace CapaVista
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void movimientoDeInventariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Procesos.MovimientoInventarios.frmMovimientoInventarios MovInventario = new Procesos.MovimientoInventarios.frmMovimientoInventarios();
+            MovInventario.MdiParent = this;
+            MovInventario.Show();
+        }
     }
 }
