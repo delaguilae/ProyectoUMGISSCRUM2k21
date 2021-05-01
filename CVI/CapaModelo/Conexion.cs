@@ -36,5 +36,13 @@ namespace CapaModelo
                 Console.WriteLine("No Conectó");
             }
         }
+
+        public Tuple<OdbcConnection, OdbcTransaction> ObtenerConexion()
+        {
+            OdbcConnection conectar = new OdbcConnection("Dsn=BD_LabClinico");
+            conectar.Open();
+            OdbcTransaction transaction = conectar.BeginTransaction();
+            return Tuple.Create(conectar, transaction);
+        }
     }
 }

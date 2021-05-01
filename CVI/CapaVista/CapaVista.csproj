@@ -205,6 +205,24 @@
     <Compile Include="Procesos\Inventarios\frmInventarioTotal.Designer.cs">
       <DependentUpon>frmInventarioTotal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmMovimientoInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmMovimientoInventarios.Designer.cs">
+      <DependentUpon>frmMovimientoInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionBodega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionBodega.Designer.cs">
+      <DependentUpon>frmSeleccionBodega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProducto.Designer.cs">
+      <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Saldos\frmSaldos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +357,15 @@
     <EmbeddedResource Include="Procesos\Inventarios\frmInventarioTotal.resx">
       <DependentUpon>frmInventarioTotal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\MovimientoInventarios\frmMovimientoInventarios.resx">
+      <DependentUpon>frmMovimientoInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionBodega.resx">
+      <DependentUpon>frmSeleccionBodega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionProducto.resx">
+      <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
       <DependentUpon>frmSaldos.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,6 +400,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Mantenimiento_Centro_1141515.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprobar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consultar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
