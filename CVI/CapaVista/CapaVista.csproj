@@ -187,6 +187,12 @@
     <Compile Include="Procesos\Facturacion\frmFacturaBusqueda.Designer.cs">
       <DependentUpon>frmFacturaBusqueda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\Inventarios\frmBusquedaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmBusquedaInventario.Designer.cs">
+      <DependentUpon>frmBusquedaInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Inventarios\frmConfirmacionOrden.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,29 +229,17 @@
     <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProducto.Designer.cs">
       <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmCompraEnca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmCompraEnca.Designer.cs">
+      <DependentUpon>frmCompraEnca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Saldos\frmSaldos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\Saldos\frmSaldos.Designer.cs">
       <DependentUpon>frmSaldos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmDetalleOrdenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmDetalleOrdenes.Designer.cs">
-      <DependentUpon>frmDetalleOrdenes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmModificarOrden.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmModificarOrden.Designer.cs">
-      <DependentUpon>frmModificarOrden.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmOrdenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmOrdenes.Designer.cs">
-      <DependentUpon>frmOrdenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\PedidosCompraMP\frmDetallesPedido.cs">
       <SubType>Form</SubType>
@@ -348,6 +342,9 @@
     <EmbeddedResource Include="Procesos\Facturacion\frmFacturaBusqueda.resx">
       <DependentUpon>frmFacturaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Inventarios\frmBusquedaInventario.resx">
+      <DependentUpon>frmBusquedaInventario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Inventarios\frmConfirmacionOrden.resx">
       <DependentUpon>frmConfirmacionOrden.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,17 +363,11 @@
     <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionProducto.resx">
       <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmCompraEnca.resx">
+      <DependentUpon>frmCompraEnca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
       <DependentUpon>frmSaldos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\OrdenesCompra\frmDetalleOrdenes.resx">
-      <DependentUpon>frmDetalleOrdenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\OrdenesCompra\frmModificarOrden.resx">
-      <DependentUpon>frmModificarOrden.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\OrdenesCompra\frmOrdenes.resx">
-      <DependentUpon>frmOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\PedidosCompraMP\frmDetallesPedido.resx">
       <DependentUpon>frmDetallesPedido.cs</DependentUpon>

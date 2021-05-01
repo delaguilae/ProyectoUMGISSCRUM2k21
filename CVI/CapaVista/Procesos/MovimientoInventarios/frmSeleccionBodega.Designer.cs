@@ -59,9 +59,11 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox1.Controls.Add(this.txtEmpresa);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(445, 360);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(901, 371);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione Una Bodega";
@@ -69,17 +71,19 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 89);
+            this.label3.Location = new System.Drawing.Point(35, 111);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 15);
+            this.label3.Size = new System.Drawing.Size(166, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Codigo De Bodega";
             // 
             // txtIdBodega
             // 
-            this.txtIdBodega.Location = new System.Drawing.Point(222, 86);
+            this.txtIdBodega.Location = new System.Drawing.Point(206, 107);
+            this.txtIdBodega.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdBodega.Name = "txtIdBodega";
-            this.txtIdBodega.Size = new System.Drawing.Size(100, 23);
+            this.txtIdBodega.Size = new System.Drawing.Size(132, 27);
             this.txtIdBodega.TabIndex = 7;
             this.txtIdBodega.TextChanged += new System.EventHandler(this.txtIdBodega_TextChanged);
             // 
@@ -89,9 +93,10 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = global::CapaVista.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(228, 285);
+            this.btnCancelar.Location = new System.Drawing.Point(739, 39);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(95, 59);
+            this.btnCancelar.Size = new System.Drawing.Size(127, 73);
             this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -104,9 +109,10 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnSeleccionar.ForeColor = System.Drawing.Color.Black;
             this.btnSeleccionar.Image = global::CapaVista.Properties.Resources.comprobar;
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSeleccionar.Location = new System.Drawing.Point(102, 285);
+            this.btnSeleccionar.Location = new System.Drawing.Point(571, 39);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(95, 59);
+            this.btnSeleccionar.Size = new System.Drawing.Size(127, 73);
             this.btnSeleccionar.TabIndex = 5;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -127,59 +133,66 @@ namespace CapaVista.Procesos.MovimientoInventarios
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBodega.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBodega.Location = new System.Drawing.Point(6, 114);
+            this.dgvBodega.Location = new System.Drawing.Point(8, 140);
+            this.dgvBodega.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBodega.Name = "dgvBodega";
-            this.dgvBodega.Size = new System.Drawing.Size(433, 165);
+            this.dgvBodega.RowHeadersWidth = 51;
+            this.dgvBodega.Size = new System.Drawing.Size(862, 203);
             this.dgvBodega.TabIndex = 4;
             this.dgvBodega.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBodega_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 60);
+            this.label2.Location = new System.Drawing.Point(23, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 15);
+            this.label2.Size = new System.Drawing.Size(176, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Codigo De Sucursal";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 31);
+            this.label1.Location = new System.Drawing.Point(25, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 15);
+            this.label1.Size = new System.Drawing.Size(178, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Codigo De Empresa";
             // 
             // txtSucursal
             // 
-            this.txtSucursal.Location = new System.Drawing.Point(222, 57);
+            this.txtSucursal.Location = new System.Drawing.Point(206, 71);
+            this.txtSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSucursal.Name = "txtSucursal";
-            this.txtSucursal.Size = new System.Drawing.Size(100, 23);
+            this.txtSucursal.Size = new System.Drawing.Size(132, 27);
             this.txtSucursal.TabIndex = 1;
             this.txtSucursal.TextChanged += new System.EventHandler(this.txtSucursal_TextChanged);
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(222, 28);
+            this.txtEmpresa.Location = new System.Drawing.Point(206, 35);
+            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(100, 23);
+            this.txtEmpresa.Size = new System.Drawing.Size(132, 27);
             this.txtEmpresa.TabIndex = 0;
             this.txtEmpresa.TextChanged += new System.EventHandler(this.txtEmpresa_TextChanged);
             // 
             // frmSeleccionBodega
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo2;
-            this.ClientSize = new System.Drawing.Size(468, 392);
+            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
+            this.ClientSize = new System.Drawing.Size(947, 418);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSeleccionBodega";
