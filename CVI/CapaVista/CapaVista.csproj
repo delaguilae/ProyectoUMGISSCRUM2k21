@@ -187,11 +187,19 @@
     <Compile Include="Procesos\Facturacion\frmFacturaBusqueda.Designer.cs">
       <DependentUpon>frmFacturaBusqueda.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Procesos\Inventarios\frmBusquedaInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\Inventarios\frmBusquedaInventario.Designer.cs">
       <DependentUpon>frmBusquedaInventario.cs</DependentUpon>
+=======
+    <Compile Include="Procesos\Inventarios\frmBodegaProdcuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmBodegaProdcuto.Designer.cs">
+      <DependentUpon>frmBodegaProdcuto.cs</DependentUpon>
+>>>>>>> 7331ed1840c599909cf3d51437e32fc31f8e786c
     </Compile>
     <Compile Include="Procesos\Inventarios\frmConfirmacionOrden.cs">
       <SubType>Form</SubType>
@@ -210,6 +218,12 @@
     </Compile>
     <Compile Include="Procesos\Inventarios\frmInventarioTotal.Designer.cs">
       <DependentUpon>frmInventarioTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmVistaMovimientoInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\Inventarios\frmVistaMovimientoInventario.Designer.cs">
+      <DependentUpon>frmVistaMovimientoInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\MovimientoInventarios\frmMovimientoInventarios.cs">
       <SubType>Form</SubType>
@@ -342,8 +356,13 @@
     <EmbeddedResource Include="Procesos\Facturacion\frmFacturaBusqueda.resx">
       <DependentUpon>frmFacturaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Procesos\Inventarios\frmBusquedaInventario.resx">
       <DependentUpon>frmBusquedaInventario.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Procesos\Inventarios\frmBodegaProdcuto.resx">
+      <DependentUpon>frmBodegaProdcuto.cs</DependentUpon>
+>>>>>>> 7331ed1840c599909cf3d51437e32fc31f8e786c
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Inventarios\frmConfirmacionOrden.resx">
       <DependentUpon>frmConfirmacionOrden.cs</DependentUpon>
@@ -353,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Inventarios\frmInventarioTotal.resx">
       <DependentUpon>frmInventarioTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\Inventarios\frmVistaMovimientoInventario.resx">
+      <DependentUpon>frmVistaMovimientoInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\MovimientoInventarios\frmMovimientoInventarios.resx">
       <DependentUpon>frmMovimientoInventarios.cs</DependentUpon>

@@ -408,7 +408,14 @@ D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bi
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.dll
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.pdb
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.pdb
+<<<<<<< HEAD
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.dll
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.dll
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.pdb
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.pdb
+=======
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.dll
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.dll
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.pdb
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.pdb
+>>>>>>> 7331ed1840c599909cf3d51437e32fc31f8e786c

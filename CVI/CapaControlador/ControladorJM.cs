@@ -35,42 +35,52 @@ namespace CapaControlador
         }
         public OdbcDataReader funcSelectAll ()
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega= ex.fkIdBodega inner join producto pro on pro.pkIdProducto= ex.fkIdPro) where estado_existencia = 1;";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega= ex.fkIdBodega inner join producto pro on pro.pkIdProducto= ex.fkIdPro) where estado_existencia = 1;";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInv(string empresa, string bodega)
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = "+empresa+" AND bo.descripcionBodega = '"+bodega+"' AND ex.estado_existencia = 1;";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa+" AND bo.descripcionBodega = '"+bodega+"' AND ex.estado_existencia = 1;";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInvproduct(string empresa, string bodega, string product)
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa + " AND bo.descripcionBodega = '" + bodega + "' AND ex.estado_existencia = 1 AND pro.nombrePro LIKE '%"+product+"%';";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa + " AND bo.descripcionBodega = '" + bodega + "' AND ex.estado_existencia = 1 AND pro.nombrePro LIKE '%"+product+"%';";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInvproductotal(string product)
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND pro.nombrePro LIKE '%" + product + "%';";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND pro.nombrePro LIKE '%" + product + "%';";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInvproductminima(string empresa, string bodega)
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa + " AND bo.descripcionBodega = '" + bodega + "' AND ex.estado_existencia = 1 AND ex.existenica_minima >= cantidad_existencia;";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa + " AND bo.descripcionBodega = '" + bodega + "' AND ex.estado_existencia = 1 AND ex.existencia_minima >= cantidad_existencia;";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInvproductotalminima()
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND ex.existenica_minima >= cantidad_existencia;";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND ex.existencia_minima >= cantidad_existencia;";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInvproductmaxima(string empresa, string bodega)
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa + " AND bo.descripcionBodega = '" + bodega + "' AND ex.estado_existencia = 1 AND existenica_maxima < cantidad_existencia;";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.fkidEmpresa = " + empresa + " AND bo.descripcionBodega = '" + bodega + "' AND ex.estado_existencia = 1 AND existencia_maxima < cantidad_existencia;";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcSelectSearchInvproductotalmaxima()
         {
-            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existenica_maxima as maxima, ex.existenica_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND existenica_maxima < cantidad_existencia;";
+            string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND existencia_maxima < cantidad_existencia;";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvMovimiento()
+        {
+            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado;";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvMovimientofiltro(string campo, string dato)
+        {
+            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado WHERE "+campo+"= "+dato+";";
             return Modelo.funcConsulta(Consulta);
         }
     }
