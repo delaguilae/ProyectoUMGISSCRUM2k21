@@ -41,7 +41,7 @@ namespace CapaVista.Procesos.Inventarios
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Filtros = new System.Windows.Forms.GroupBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.rbUsuario = new System.Windows.Forms.RadioButton();
             this.txtBodega = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@ namespace CapaVista.Procesos.Inventarios
             this.rbProducto = new System.Windows.Forms.RadioButton();
             this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimiento)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.Filtros.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMovimiento
@@ -67,56 +67,75 @@ namespace CapaVista.Procesos.Inventarios
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvMovimiento.Location = new System.Drawing.Point(12, 113);
+            this.dgvMovimiento.Location = new System.Drawing.Point(16, 139);
+            this.dgvMovimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMovimiento.Name = "dgvMovimiento";
-            this.dgvMovimiento.Size = new System.Drawing.Size(1193, 379);
+            this.dgvMovimiento.RowHeadersWidth = 51;
+            this.dgvMovimiento.Size = new System.Drawing.Size(1591, 466);
             this.dgvMovimiento.TabIndex = 0;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "ID MOVIMIENTO";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "ID PRODUCTO";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "NOMBRE PRODUCTO";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "ID BODEGA";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "ID BODEGA DESTINO";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "CANTIDAD";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "RAZON";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "ENCARGADO";
+            this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(730, 509);
+            this.btnPrint.Location = new System.Drawing.Point(973, 626);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(105, 32);
+            this.btnPrint.Size = new System.Drawing.Size(140, 39);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "Imprimir";
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -124,9 +143,10 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(614, 509);
+            this.btnActualizar.Location = new System.Drawing.Point(819, 626);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(105, 32);
+            this.btnActualizar.Size = new System.Drawing.Size(140, 39);
             this.btnActualizar.TabIndex = 2;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -134,45 +154,53 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(497, 509);
+            this.btnLimpiar.Location = new System.Drawing.Point(663, 626);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(105, 32);
+            this.btnLimpiar.Size = new System.Drawing.Size(140, 39);
             this.btnLimpiar.TabIndex = 3;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // groupBox1
+            // Filtros
             // 
-            this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Controls.Add(this.rbUsuario);
-            this.groupBox1.Controls.Add(this.txtBodega);
-            this.groupBox1.Controls.Add(this.rbBodega);
-            this.groupBox1.Controls.Add(this.txtRazon);
-            this.groupBox1.Controls.Add(this.rbRazon);
-            this.groupBox1.Controls.Add(this.txtProducto);
-            this.groupBox1.Controls.Add(this.rbProducto);
-            this.groupBox1.Location = new System.Drawing.Point(12, 21);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1193, 86);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtros";
+            this.Filtros.BackColor = System.Drawing.Color.Transparent;
+            this.Filtros.Controls.Add(this.txtUsuario);
+            this.Filtros.Controls.Add(this.rbUsuario);
+            this.Filtros.Controls.Add(this.txtBodega);
+            this.Filtros.Controls.Add(this.rbBodega);
+            this.Filtros.Controls.Add(this.txtRazon);
+            this.Filtros.Controls.Add(this.rbRazon);
+            this.Filtros.Controls.Add(this.txtProducto);
+            this.Filtros.Controls.Add(this.rbProducto);
+            this.Filtros.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filtros.ForeColor = System.Drawing.Color.White;
+            this.Filtros.Location = new System.Drawing.Point(16, 26);
+            this.Filtros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Filtros.Name = "Filtros";
+            this.Filtros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Filtros.Size = new System.Drawing.Size(1591, 106);
+            this.Filtros.TabIndex = 4;
+            this.Filtros.TabStop = false;
+            this.Filtros.Text = "Filtros";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(407, 46);
+            this.txtUsuario.Location = new System.Drawing.Point(543, 57);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(132, 27);
             this.txtUsuario.TabIndex = 7;
             this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // rbUsuario
             // 
             this.rbUsuario.AutoSize = true;
-            this.rbUsuario.Location = new System.Drawing.Point(407, 23);
+            this.rbUsuario.Location = new System.Drawing.Point(543, 28);
+            this.rbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbUsuario.Name = "rbUsuario";
-            this.rbUsuario.Size = new System.Drawing.Size(61, 17);
+            this.rbUsuario.Size = new System.Drawing.Size(91, 24);
             this.rbUsuario.TabIndex = 6;
             this.rbUsuario.TabStop = true;
             this.rbUsuario.Text = "Usuario";
@@ -180,18 +208,20 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // txtBodega
             // 
-            this.txtBodega.Location = new System.Drawing.Point(292, 46);
+            this.txtBodega.Location = new System.Drawing.Point(389, 57);
+            this.txtBodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBodega.Name = "txtBodega";
-            this.txtBodega.Size = new System.Drawing.Size(100, 20);
+            this.txtBodega.Size = new System.Drawing.Size(132, 27);
             this.txtBodega.TabIndex = 5;
             this.txtBodega.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBodega_KeyPress);
             // 
             // rbBodega
             // 
             this.rbBodega.AutoSize = true;
-            this.rbBodega.Location = new System.Drawing.Point(292, 23);
+            this.rbBodega.Location = new System.Drawing.Point(389, 28);
+            this.rbBodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbBodega.Name = "rbBodega";
-            this.rbBodega.Size = new System.Drawing.Size(62, 17);
+            this.rbBodega.Size = new System.Drawing.Size(89, 24);
             this.rbBodega.TabIndex = 4;
             this.rbBodega.TabStop = true;
             this.rbBodega.Text = "Bodega";
@@ -199,18 +229,20 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // txtRazon
             // 
-            this.txtRazon.Location = new System.Drawing.Point(169, 46);
+            this.txtRazon.Location = new System.Drawing.Point(225, 57);
+            this.txtRazon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRazon.Name = "txtRazon";
-            this.txtRazon.Size = new System.Drawing.Size(100, 20);
+            this.txtRazon.Size = new System.Drawing.Size(132, 27);
             this.txtRazon.TabIndex = 3;
             this.txtRazon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRazon_KeyPress);
             // 
             // rbRazon
             // 
             this.rbRazon.AutoSize = true;
-            this.rbRazon.Location = new System.Drawing.Point(169, 23);
+            this.rbRazon.Location = new System.Drawing.Point(225, 28);
+            this.rbRazon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbRazon.Name = "rbRazon";
-            this.rbRazon.Size = new System.Drawing.Size(56, 17);
+            this.rbRazon.Size = new System.Drawing.Size(77, 24);
             this.rbRazon.TabIndex = 2;
             this.rbRazon.TabStop = true;
             this.rbRazon.Text = "Razon";
@@ -218,18 +250,20 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(43, 46);
+            this.txtProducto.Location = new System.Drawing.Point(57, 57);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(100, 20);
+            this.txtProducto.Size = new System.Drawing.Size(132, 27);
             this.txtProducto.TabIndex = 1;
             this.txtProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProducto_KeyPress);
             // 
             // rbProducto
             // 
             this.rbProducto.AutoSize = true;
-            this.rbProducto.Location = new System.Drawing.Point(43, 23);
+            this.rbProducto.Location = new System.Drawing.Point(57, 28);
+            this.rbProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbProducto.Name = "rbProducto";
-            this.rbProducto.Size = new System.Drawing.Size(68, 17);
+            this.rbProducto.Size = new System.Drawing.Size(101, 24);
             this.rbProducto.TabIndex = 0;
             this.rbProducto.TabStop = true;
             this.rbProducto.Text = "Producto";
@@ -237,9 +271,10 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(386, 509);
+            this.btnFiltrar.Location = new System.Drawing.Point(515, 626);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(105, 32);
+            this.btnFiltrar.Size = new System.Drawing.Size(140, 39);
             this.btnFiltrar.TabIndex = 5;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
@@ -247,21 +282,23 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // frmVistaMovimientoInventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1217, 553);
+            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
+            this.ClientSize = new System.Drawing.Size(1623, 681);
             this.Controls.Add(this.btnFiltrar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Filtros);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.dgvMovimiento);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmVistaMovimientoInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVistaMovimientoInventario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimiento)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Filtros.ResumeLayout(false);
+            this.Filtros.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,7 +309,7 @@ namespace CapaVista.Procesos.Inventarios
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Filtros;
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.RadioButton rbProducto;
         private System.Windows.Forms.Button btnFiltrar;

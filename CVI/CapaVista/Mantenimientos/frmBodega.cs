@@ -58,7 +58,7 @@ namespace CapaVista.Mantenimientos
             //llenado de  parametros para la aplicacion 
             navegador1.aplicacion = 303;
             navegador1.tbl = "bodega";
-            navegador1.campoEstado = "estadoBodega";
+            navegador1.campoEstado = "estado";
             //se agregan los componentes del formulario a la lista tipo control
             foreach (Control C in this.Controls)
             {
@@ -210,6 +210,16 @@ namespace CapaVista.Mantenimientos
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.CampoNumerico(e);
+        }
+
+        private void txtDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
