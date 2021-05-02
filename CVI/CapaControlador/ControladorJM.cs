@@ -73,5 +73,15 @@ namespace CapaControlador
             string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND existencia_maxima < cantidad_existencia;";
             return Modelo.funcConsulta(Consulta);
         }
+        public OdbcDataReader funcSelectllenardgvMovimiento()
+        {
+            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado;";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvMovimientofiltro(string campo, string dato)
+        {
+            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado WHERE "+campo+"= "+dato+";";
+            return Modelo.funcConsulta(Consulta);
+        }
     }
 }

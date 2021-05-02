@@ -75,6 +75,7 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.visualizarMovimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -269,7 +270,8 @@ namespace CapaVista
             // 
             this.gestionDeInventariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visualizarToolStripMenuItem,
-            this.movimientoDeInventariosToolStripMenuItem});
+            this.movimientoDeInventariosToolStripMenuItem,
+            this.visualizarMovimientosToolStripMenuItem});
             this.gestionDeInventariosToolStripMenuItem.Name = "gestionDeInventariosToolStripMenuItem";
             this.gestionDeInventariosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.gestionDeInventariosToolStripMenuItem.Text = "Gestion De Inventarios";
@@ -422,6 +424,13 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 4;
             // 
+            // visualizarMovimientosToolStripMenuItem
+            // 
+            this.visualizarMovimientosToolStripMenuItem.Name = "visualizarMovimientosToolStripMenuItem";
+            this.visualizarMovimientosToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.visualizarMovimientosToolStripMenuItem.Text = "Visualizar movimientos";
+            this.visualizarMovimientosToolStripMenuItem.Click += new System.EventHandler(this.visualizarMovimientosToolStripMenuItem_Click);
+            // 
             // MDIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,6 +501,7 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movimientoDeInventariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem visualizarMovimientosToolStripMenuItem;
     }
 }
 
