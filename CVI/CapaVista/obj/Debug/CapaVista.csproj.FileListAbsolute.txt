@@ -258,3 +258,14 @@ C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\De
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionProducto.resources
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Inventarios.frmVistaMovimientoInventario.resources
 C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Inventarios.frmBodegaProdcuto.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaVistaEncriptar.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaControladorEncriptar.dll
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaVistaEncriptar.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaControladorEncriptar.pdb
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmMovimientoInventario.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Inventarios.frmBodegaProdcuto.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Inventarios.frmVistaMovimientoInventario.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmMovimientoInventarios.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionBodega.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionProducto.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmExistencia.resources

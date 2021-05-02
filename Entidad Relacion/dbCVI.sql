@@ -572,6 +572,7 @@ fkbodegadestino int(10),
 cantidad int(50)not null,
 razon varchar(250)not null,
 fkencargado int(10),
+estado int(1) not null,
 primary key(pkmovimiento)
 );
 alter table MOVIMIENTOINVENTARIO add constraint fk_producto foreign key(fkidproducto) references PRODUCTO(pkIdProducto);
