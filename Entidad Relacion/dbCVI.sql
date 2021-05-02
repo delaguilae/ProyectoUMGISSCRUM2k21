@@ -1,5 +1,5 @@
-create database if not exists dbCVIERP;
-use dbCVIERP;
+create database if not exists dbCVIERP2;
+use dbCVIERP2;
 #Base de datos Seguridad-----------------------------------------------------------------------------------
 create table if not exists LOGIN(
 	pk_id_login 						int(10) auto_increment,
@@ -130,6 +130,7 @@ alter table REPORTE_APLICATIVO add constraint fk_reporte_aplicativo_reporte fore
 alter table REPORTE_APLICATIVO add constraint fk_reporte_aplicativo_modulo foreign key(fk_id_modulo) references MODULO(pk_id_modulo);
 alter table REPORTE_APLICATIVO add constraint fk_report_aplicativo foreign key(fk_id_aplicacion) references APLICACION(pk_id_aplicacion);
 #DATOS DE SEGURIDAD----------------------------------------------------------------------------------------
+#DATOS DE SEGURIDAD----------------------------------------------------------------------------------------
 INSERT INTO `login` VALUES (1,'sistema','bi0PL96rbxVRPKJQsLJJAg==','Usuario de prueba',1),
 (2,'admin','T+4Ai6O3CR0kJYxCgXy2jA==','Administrador',1),(3,'morataya','5g2jpUc7tYd0Q0iop9+lfA==','Julio Morataya',1);
 
@@ -139,7 +140,8 @@ INSERT INTO `modulo` VALUES (1,'Seguridad','Aplicaciones de seguridad',1),(2,'Co
 (3,'Reporteador','Aplicaciones de Reporteador',1),(4,'Inventarios','Sistema de Gestion Inventarios',1),
 (5,'Compras','Sistema De Gestion Compras',1),(6,'Ventas','Sistema de Gestion Ventas',1),(7,'Cobros','Sistema De Gestion Cobros',1);
 
-INSERT INTO `aplicacion` VALUES (1,1,'Login','Ventana de Ingreso',1),(2,1,'Mantenimiento Usuario','Mantenimientos de usuario',1),
+INSERT INTO `aplicacion` (`pk_id_aplicacion`, `fk_id_modulo`, `nombre_aplicacion`, `descripcion_aplicacion`, `estado_aplicacion`) 
+VALUES (1,1,'Login','Ventana de Ingreso',1),(2,1,'Mantenimiento Usuario','Mantenimientos de usuario',1),
 (3,1,'Mantenimiento Aplicacion','ABC de las Aplicaciones',1),(4,1,'Mantenimiento Perfil','ABC de perfiles',1),
 (5,1,'Asignacion de Aplicaciones a Perfil','Asignacion Aplicacion y perfil',1),(6,1,'Asignacaion de Aplicaciones','Asignacion especificas a un usuario',1),
 (7,1,'Consulta Aplicacion','Mantenimiento de Aplicaciones',1),(8,1,'Agregar Modulo','Mantenimientos de Modulos',1),
@@ -151,6 +153,7 @@ INSERT INTO `aplicacion` VALUES (1,1,'Login','Ventana de Ingreso',1),(2,1,'Mante
 (307,4,'Modificar Cita','Proceso para la modificacion de citas',1),(308,4,'Proceso Verificacion de datos','Para nuevos y renovacion de pasaporte',1),
 (309,4,'Proceso Primer pasaporte','Proceso para renovar o nuevo pasaporte',1),(310,4,'Impresion de pasaporte','Impresion de pasaporte',1),
 (311,4,'Reporte De Citas','Reporte De Citas',1),(312,4,'Reporte De Pasaportes','Reporte De Pasaportes',1);
+
 
 INSERT INTO `permiso` VALUES (1,1,1,1,1,1),(2,1,1,1,1,1),(3,1,1,1,0,0),(4,1,1,1,1,1),(5,1,1,1,1,1),(6,1,1,1,1,1),(7,1,1,1,1,1),
 (8,1,0,1,1,1),(9,1,1,1,1,1),(10,1,1,1,1,1),(11,1,1,1,1,1),(12,1,1,1,1,1),(13,1,1,1,1,1),(14,1,1,1,1,1),(15,1,1,1,1,1),(16,1,1,1,1,1),
@@ -274,19 +277,21 @@ alter table PRODUCTO add constraint fk_producto_lineaProducto foreign key(fkIdLi
 alter table PRODUCTO add constraint fk_producto_categoriaProducto foreign key(fkIdMarcaPro) references MARCAPRODUCTO(pkIdMarcaPro);
 
 create table if not exists EXISTENCIA(
-	pkIdExis 					int(10),
+    pkIdExis 					int(10),
     fkIdEmpresa					int(10),
     fkIdSucursal				int(10),
     fkIdBodega 					int(10)not null,
     fkIdPro 					int(10)not null,
     cantidad_existencia 		int(10)not null,
+    existencia_minima	 		int(10)not null,
+    existencia_maxima	 		int(10)not null,
     estado_existencia 			int(1)not null,
-    primary key(pkIdExis,fkIdEmpresa,fkIdSucursal,fkIdBodega,fkIdPro)
+    primary key(pkIdExis,fkIdEmpresa,fkIdBodega,fkIdPro)
 );
 alter table EXISTENCIA add constraint fk_existencia_empresa foreign key(fkIdEmpresa) references EMPRESA(pkIdEmpresa);
 alter table EXISTENCIA add constraint fk_existencia_sucursal foreign key(fkIdSucursal) references SUCURSAL(pkIdSucursal);
-alter table EXISTENCIA add constraint fk_existencia_producto foreign key(fkIdBodega) references PRODUCTO(pkIdProducto);
-alter table EXISTENCIA add constraint fk_existencia_bodega foreign key(fkIdPro) references BODEGA(pkIdBodega);
+alter table EXISTENCIA add constraint fk_existencia_producto foreign key(fkIdPro) references PRODUCTO(pkIdProducto);
+alter table EXISTENCIA add constraint fk_existencia_bodega foreign key(fkIdBodega) references BODEGA(pkIdBodega);
 #------------------------------------------------------------------------------------------------------------------------------------
 #Puestos de bodegas
 create table if not exists PUESTO(
@@ -545,7 +550,7 @@ alter table COBRO add constraint fk_cobro_metodopago foreign key(fkIdMetodoPago)
 #PROCEDIMIENTO ALMACENADO LOGIN --------------------------------------------------------------------------------------------------------------------------
 DROP procedure IF EXISTS sp_Login;
 DELIMITER $$
-USE dbcvierp$$
+USE dbcvierp2$$
 CREATE PROCEDURE sp_Login(
 	in UserLogin varchar(45),
 	in PassLogin varchar(45)
@@ -618,4 +623,15 @@ BEGIN
 END$$
 DELIMITER ;
 
-
+-- #### VALORES
+INSERT INTO `PAIS` VALUES (1,'pais1','capital1',1),(2,'pais2','capital2',1);
+INSERT INTO `DEPARTAMENTO` VALUES (1,'DEPARTA1','DESCRIPCION1',1),(2,'DEPART2','DESCRIP2',1);
+INSERT INTO `MUNICIPIO` VALUES (1,1,'MUNICIPIO1','DESCRI1',1),(2,1,'MUNICIPIO2','DESCRI2',1);
+INSERT INTO `EMPRESA` VALUES (1,'EMPRESA1',1,'DIRECCION1',1,1,1),(2,'EMPRESA2',1,'DIRECCION2',1,1,1);
+INSERT INTO `SUCURSAL` VALUES (1,1,'SUCURSAL1',1,'DIRECCION2',1,1,1),(2,1,'SUCURSAL2',1,'DIRECCION2',1,1,1);
+INSERT INTO `BODEGA` VALUES (1,1,1,1,1,'DESCRIPCION1','DIRECCION1',12345678,1),(2,2,1,1,1,'DESCRIPCION2','DIRECCION2',12345678,1);
+INSERT INTO `LINEAPRODUCTO` VALUES (1,1,'LINEA1','DESCRIPCION1',1),(2,2,'LINEA2','DESCRIPCION2',1);
+INSERT INTO `MARCAPRODUCTO` VALUES (1,1,'NOMBRE1','DESCRIPCION1',1),(2,2,'NOMBRE2','DESCRIPCION2',1);
+INSERT INTO `PRODUCTO` VALUES (1,1,1,1,'NOMBRE1',20.50,'DESCRIPCION1',1),(2,1,1,1,'NOMBRE2',287.50,'DESCRIPCION2',1);
+INSERT INTO `existencia` (`pkIdExis`, `fkIdEmpresa`, `fkIdSucursal`, `fkIdBodega`, `fkIdPro`, `cantidad_existencia`, `existencia_minima`, `existencia_maxima`, `estado_existencia`) 
+VALUES ('1', '1', '1', '1', '1', '10', '50', '100', '1'), ('1', '1', '1', '1', '2', '50', '25', '50', '1'), ('1', '1', '1', '2', '1', '100', '50', '150', '1');
