@@ -66,11 +66,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(990, 371);
+            this.groupBox1.Size = new System.Drawing.Size(444, 368);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccion De Producto";
@@ -78,10 +76,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // txtNomProducto
             // 
             this.txtNomProducto.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomProducto.Location = new System.Drawing.Point(192, 103);
-            this.txtNomProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNomProducto.Location = new System.Drawing.Point(144, 84);
             this.txtNomProducto.Name = "txtNomProducto";
-            this.txtNomProducto.Size = new System.Drawing.Size(205, 27);
+            this.txtNomProducto.Size = new System.Drawing.Size(155, 23);
             this.txtNomProducto.TabIndex = 12;
             this.txtNomProducto.TextChanged += new System.EventHandler(this.txtNomProducto_TextChanged);
             // 
@@ -89,10 +86,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 107);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(28, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(148, 20);
+            this.label5.Size = new System.Drawing.Size(110, 16);
             this.label5.TabIndex = 11;
             this.label5.Text = "Nombre Producto";
             // 
@@ -103,10 +99,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnCancelar.ForeColor = System.Drawing.Color.Black;
             this.btnCancelar.Image = global::CapaVista.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCancelar.Location = new System.Drawing.Point(807, 45);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(226, 293);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(127, 73);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 59);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -120,10 +115,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnSeleccionar.ForeColor = System.Drawing.Color.Black;
             this.btnSeleccionar.Image = global::CapaVista.Properties.Resources.comprobar;
             this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSeleccionar.Location = new System.Drawing.Point(639, 45);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(100, 293);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(127, 73);
+            this.btnSeleccionar.Size = new System.Drawing.Size(95, 59);
             this.btnSeleccionar.TabIndex = 9;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -136,55 +130,49 @@ namespace CapaVista.Procesos.MovimientoInventarios
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProducto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvProducto.Location = new System.Drawing.Point(8, 139);
-            this.dgvProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvProducto.Location = new System.Drawing.Point(6, 113);
             this.dgvProducto.Name = "dgvProducto";
-            this.dgvProducto.RowHeadersWidth = 51;
-            this.dgvProducto.Size = new System.Drawing.Size(974, 203);
+            this.dgvProducto.Size = new System.Drawing.Size(432, 165);
             this.dgvProducto.TabIndex = 8;
             // 
             // txtIdMarca
             // 
             this.txtIdMarca.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdMarca.Location = new System.Drawing.Point(407, 68);
-            this.txtIdMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdMarca.Location = new System.Drawing.Point(305, 55);
             this.txtIdMarca.Name = "txtIdMarca";
-            this.txtIdMarca.Size = new System.Drawing.Size(132, 27);
+            this.txtIdMarca.Size = new System.Drawing.Size(100, 23);
             this.txtIdMarca.TabIndex = 7;
             this.txtIdMarca.TextChanged += new System.EventHandler(this.txtIdMarca_TextChanged);
             // 
             // txtIdLinea
             // 
             this.txtIdLinea.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdLinea.Location = new System.Drawing.Point(407, 32);
-            this.txtIdLinea.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdLinea.Location = new System.Drawing.Point(305, 26);
             this.txtIdLinea.Name = "txtIdLinea";
-            this.txtIdLinea.Size = new System.Drawing.Size(132, 27);
+            this.txtIdLinea.Size = new System.Drawing.Size(100, 23);
             this.txtIdLinea.TabIndex = 6;
             this.txtIdLinea.TextChanged += new System.EventHandler(this.txtIdLinea_TextChanged);
             // 
             // txtIdEmpresa
             // 
             this.txtIdEmpresa.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEmpresa.Location = new System.Drawing.Point(147, 68);
-            this.txtIdEmpresa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdEmpresa.Location = new System.Drawing.Point(110, 55);
             this.txtIdEmpresa.Name = "txtIdEmpresa";
-            this.txtIdEmpresa.Size = new System.Drawing.Size(132, 27);
+            this.txtIdEmpresa.Size = new System.Drawing.Size(100, 23);
             this.txtIdEmpresa.TabIndex = 5;
             this.txtIdEmpresa.TextChanged += new System.EventHandler(this.txtIdEmpresa_TextChanged);
             // 
             // txtIdProducto
             // 
             this.txtIdProducto.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdProducto.Location = new System.Drawing.Point(147, 32);
-            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdProducto.Location = new System.Drawing.Point(110, 26);
             this.txtIdProducto.Name = "txtIdProducto";
-            this.txtIdProducto.Size = new System.Drawing.Size(132, 27);
+            this.txtIdProducto.Size = new System.Drawing.Size(100, 23);
             this.txtIdProducto.TabIndex = 4;
             this.txtIdProducto.TextChanged += new System.EventHandler(this.txtIdProducto_TextChanged);
             // 
@@ -192,10 +180,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(317, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(238, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.Size = new System.Drawing.Size(61, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "ID Marca";
             // 
@@ -203,10 +190,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(325, 36);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(244, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "ID Linea";
             // 
@@ -214,10 +200,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(28, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID Empresa";
             // 
@@ -225,22 +210,20 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(28, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(76, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID Producto";
             // 
             // frmSeleccionProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
-            this.ClientSize = new System.Drawing.Size(1030, 403);
+            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo2;
+            this.ClientSize = new System.Drawing.Size(468, 392);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSeleccionProducto";
             this.Text = "frmSeleccionProducto";
             this.groupBox1.ResumeLayout(false);
