@@ -1,5 +1,5 @@
-create database if not exists dbCVIERP2;
-use dbCVIERP2;
+create database if not exists dbCVIERP;
+use dbCVIERP;
 #Base de datos Seguridad-----------------------------------------------------------------------------------
 create table if not exists LOGIN(
 	pk_id_login 						int(10) auto_increment,
@@ -550,7 +550,7 @@ alter table COBRO add constraint fk_cobro_metodopago foreign key(fkIdMetodoPago)
 #PROCEDIMIENTO ALMACENADO LOGIN --------------------------------------------------------------------------------------------------------------------------
 DROP procedure IF EXISTS sp_Login;
 DELIMITER $$
-USE dbcvierp2$$
+USE dbcvierp$$
 CREATE PROCEDURE sp_Login(
 	in UserLogin varchar(45),
 	in PassLogin varchar(45)
@@ -606,7 +606,7 @@ if (select cantidad_existencia from existencia where fkIdEmpresa=idEmpresaOrigen
 else
 	update existencia set cantidad_existencia = cantidad_existencia + CantidadMover where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto;
     update existencia set cantidad_existencia = cantidad_existencia - CantidadMover where fkIdEmpresa=idEmpresaDestino and fkIdSucursal=idSucursalDestino and fkIdBodega=idBodegaDestino and fkIdPro=idProducto;
-    DELETE FROM `dbcvierp`.`movimientoinventario` WHERE (`pkmovimiento` = idMovmiento);
+    DELETE FROM `movimientoinventario` WHERE (`pkmovimiento` = idMovmiento);
 end if;
 END$$
 DELIMITER ;

@@ -1,5 +1,5 @@
-create database if not exists dbCVIERP2;
-use dbCVIERP2;
+create database if not exists dbCVIERP;
+use dbCVIERP;
 #Base de datos Seguridad-----------------------------------------------------------------------------------
 create table if not exists LOGIN(
 	pk_id_login 						int(10) auto_increment,
