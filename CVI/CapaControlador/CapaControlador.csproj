@@ -50,6 +50,7 @@
     <Compile Include="clsValidaciones.cs" />
     <Compile Include="Controlador.cs" />
     <Compile Include="ControladorJM.cs" />
+    <Compile Include="DGVPrinterHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VariableGlobal.cs" />
   </ItemGroup>
