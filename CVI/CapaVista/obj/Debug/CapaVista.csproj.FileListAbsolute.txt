@@ -249,3 +249,10 @@ D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmMovimientoInventarios.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionBodega.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionProducto.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaVistaEncriptar.dll
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaControladorEncriptar.dll
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaVistaEncriptar.pdb
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaControladorEncriptar.pdb
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmMovimientoInventarios.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionBodega.resources
+C:\Users\jmora\Desktop\Git\ForkProy2\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionProducto.resources
