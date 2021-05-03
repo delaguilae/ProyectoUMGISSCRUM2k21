@@ -261,8 +261,21 @@ create table if not exists MARCAPRODUCTO(
 );
 alter table MARCAPRODUCTO add constraint fk_marca_empresa foreign key(fkIdEmpresa) references EMPRESA(pkIdEmpresa);
 
+create table if not exists PROVEEDOR(
+	pkIdProv 					int(10)auto_increment,
+    fkIdPais 					int(10)not null,
+    direccionProv				varchar(50)not null,
+    nitProv 					varchar(20)not null,
+    telProv						int(8)not null,
+    correoProv					varchar(30)not null,
+    estadoProv 					int(1)not null,
+    primary key(pkIdProv)
+);
+alter table PROVEEDOR add constraint fk_proveedor_pais foreign key(fkIdPais) references PAIS(pkIdPais);
+
 create table if not exists PRODUCTO(
 	pkIdProducto				int(10)auto_increment,
+    fkProv                      int(10)not null,
     fkIdEmpresa					int(10),
     fkIdLineaPro 				int(10)not null,
     fkIdMarcaPro 				int(10)not null,
@@ -273,8 +286,10 @@ create table if not exists PRODUCTO(
     primary key(pkIdProducto)
 );
 alter table PRODUCTO add constraint fk_producto_empresa foreign key(fkIdEmpresa) references EMPRESA(pkIdEmpresa);
+alter table PRODUCTO add constraint fk_producto_proveedor foreign key(fkProv) references PROVEEDOR(pkIdProv);
 alter table PRODUCTO add constraint fk_producto_lineaProducto foreign key(fkIdLineaPro) references LINEAPRODUCTO(pkIdLineaPro);
 alter table PRODUCTO add constraint fk_producto_categoriaProducto foreign key(fkIdMarcaPro) references MARCAPRODUCTO(pkIdMarcaPro);
+
 
 create table if not exists EXISTENCIA(
     pkIdExis 					int(10),
@@ -304,7 +319,7 @@ create table if not exists PUESTO(
 #Tabla de empleados temporal.
 create table if not exists EMPLEADO(
 	pkIdEmpleado 				int(10)auto_increment,
-    idManager					int(10),
+    idManager                   int(10),
     fkIdEmpresa					int(10),
     fkIdSucursal				int(10),
     fkIdPuesto					int(10),
@@ -338,17 +353,20 @@ alter table PERSONALBODEGA add constraint fk_personal_bodega foreign key(fkIdBod
 alter table PERSONALBODEGA add constraint fk_personal_cargo foreign key(fkIdCargo) references PUESTO(pkIdPuesto);
 
 #--------------------------------------------------------------------------------------------------------------------------
-create table if not exists PROVEEDOR(
-	pkIdProv 					int(10)auto_increment,
-    fkIdPais 					int(10)not null,
-    direccionProv				varchar(50)not null,
-    nitProv 					varchar(20)not null,
-    telProv						int(8)not null,
-    correoProv					varchar(30)not null,
-    estadoProv 					int(1)not null,
-    primary key(pkIdProv)
+ create table if not exists TIPOCOMPRA(
+ pktipocompra int(10) not null auto_increment,
+ nombretipocompra varchar(50),
+ descripciontipocompra varchar(75),
+ estado int(1),
+ primary key (pktipocompra)
+ );
+ 
+create table if not exists METODOPAGO(
+	pkIdMetodoPago				int(10)not null auto_increment,
+    descripcionMetodo			varchar(150)not null,
+    estadoMetodo				int(1),
+    primary key(pkIdMetodoPago)
 );
-alter table PROVEEDOR add constraint fk_proveedor_pais foreign key(fkIdPais) references PAIS(pkIdPais);
 
 create table if not exists COMPRAENCABEZADO(
 	pkNoDocumentoEnca 			int(10)not null auto_increment,
@@ -356,8 +374,10 @@ create table if not exists COMPRAENCABEZADO(
     fkIdEmpleado				int(10)not null,
     fkIdEmpresa					int(10)not null,
     fkIdSucursal				int(10)not null,
-    fechaCompra 				date not null,
+    fechaCompra 				varchar(15),
     totalCompra 				double(12,2) not null,
+    fktipocompra                int(10) not null,
+    fkmetodoPago                int(10) not null,
     estadoCompra 				int(1)not null,
     primary key(pkNoDocumentoEnca)
 );
@@ -365,6 +385,8 @@ alter table COMPRAENCABEZADO add constraint fk_compra_empresa foreign key(fkIdEm
 alter table COMPRAENCABEZADO add constraint fk_compra_sucursal foreign key(fkIdSucursal) references SUCURSAL(pkIdSucursal);
 alter table COMPRAENCABEZADO add constraint fk_compra_empleado foreign key(fkIdEmpleado) references EMPLEADO(pkIdEmpleado);
 alter table COMPRAENCABEZADO add constraint fk_compra_proveedor foreign key(fkIdProv) references PROVEEDOR(pkIdProv);
+alter table COMPRAENCABEZADO add constraint fk_compra_tipocompra foreign key(fktipocompra) references TIPOCOMPRA(pktipocompra);
+alter table COMPRAENCABEZADO add constraint fk_compra_metodopago foreign key(fkmetodopago) references METODOPAGO(pkIdMetodoPago);
 
 create table COMPRADETALLE(
 	pkIdCompraDetalle			int(10)not null,
@@ -372,12 +394,29 @@ create table COMPRADETALLE(
 	fkIdPro 					int(10)not null,
     cantidadCompraDe 			int(10)not null,
     costoCompraDe 				double(8,2)not null,
-    fkIdBodega 					int(10)not null,
+    fkIdBodegadestino 			int(10)not null,
+    estado                      int(1),
     primary key(pkIdCompraDetalle,fkNoDocumentoEnca,fkIdPro)
 );
 alter table COMPRADETALLE add constraint fk_compra_detalle_encabezado foreign key(fkNoDocumentoEnca) references COMPRAENCABEZADO(pkNoDocumentoEnca);
 alter table COMPRADETALLE add constraint fk_compra_producto foreign key(fkIdPro) references PRODUCTO(pkIdProducto);
-alter table COMPRADETALLE add constraint fk_compra_bodega foreign key(fkIdBodega) references BODEGA(pkIdBodega);
+alter table COMPRADETALLE add constraint fk_compra_bodega foreign key(fkIdBodegadestino) references BODEGA(pkIdBodega);
+
+create table if not exists SALDOSCOMRPA(
+pksaldocompra     			int(10) not null auto_increment,
+fkNoDocumentoEnca    		int(10)not null,
+saldo       	    		double(10,2),
+primary key (pksaldocompra)
+);
+
+create table if not exists SALDOHISTORICOCOMPRA(
+pksaldohistoricocompra      int(10) not null auto_increment,
+fechamovimientocompra       varchar(15) not null,
+fkNoDocumentoEnca    		int(10)not null,
+saldoanterior        	    double(10,2),
+abono                		double(10,2),
+primary key (pksaldohistoricocompra)
+);
 
 #VENTAS---------------------------------------------------------------------------------------------------------------------------
 create table if not exists CLIENTE(
@@ -527,12 +566,6 @@ alter table CUENTAS add constraint fk_cuentas_empresa foreign key(fkIdEmpresa) r
 alter table CUENTAS add constraint fk_cuentas_sucursal foreign key(fkIdSucursal) references SUCURSAL(pkIdSucursal);
 alter table CUENTAS add constraint fk_cuentas_empleado foreign key(fkIdEmpleado) references EMPLEADO(pkIdEmpleado);
 
-create table if not exists METODOPAGO(
-	pkIdMetodoPago				int(10)not null auto_increment,
-    descripcionMetodo			varchar(150)not null,
-    estadoMetodo				int(1),
-    primary key(pkIdMetodoPago)
-);
 create table if not exists COBRO(
 	pkNoRegistroCobro			int(10)not null auto_increment,
     fkIdRegistroCuenta			int(10)not null,
@@ -546,6 +579,48 @@ create table if not exists COBRO(
 alter table COBRO add constraint fk_cobro_cuentas foreign key(fkIdRegistroCuenta) references CUENTAS(pkIdRegistroCuentas);
 alter table COBRO add constraint fk_cobro_empleado foreign key(fkIdEmpleado) references EMPLEADO(pkIdEmpleado);
 alter table COBRO add constraint fk_cobro_metodopago foreign key(fkIdMetodoPago) references METODOPAGO(pkIdMetodoPago);
+
+ create table if not exists RAZONMOVIMIENTO(
+ pkrazon int(10) not null auto_increment,
+ nombrerazon varchar(50),
+ descripcionrazon varchar(75),
+ estadorazon int(1),
+ primary key (pkrazon)
+ );
+ 
+create table if not exists MOVIMIENTOINVENTARIOENCABEZADO(
+pkmovimientoe int(10)not null auto_increment,
+fkempresa int(10) not null,
+fksucursal int(10),
+fkbodegaorigen int(10),
+fkbodegadestino int(10),
+fkrazon int(10) not null,
+fkproveedor int(10),
+fkcliente int(10),
+fkencargado int(10),
+fecha varchar(15),
+estado int(1) not null,
+primary key(pkmovimientoe)
+);
+alter table MOVIMIENTOINVENTARIOENCABEZADO add constraint fk_bodega_empresaa foreign key(fkempresa) references EMPRESA(pkIdEmpresa);
+alter table MOVIMIENTOINVENTARIOENCABEZADO add constraint fk_bodega_razonn foreign key(fkrazon) references razonmovimiento(pkrazon);
+alter table MOVIMIENTOINVENTARIOENCABEZADO add constraint fk_bodega_origenn foreign key(fkbodegaorigen) references bodega(pkIdBodega);
+alter table MOVIMIENTOINVENTARIOENCABEZADO add constraint fk_bodega_destinoo foreign key(fkbodegadestino) references bodega(pkIdBodega);
+alter table MOVIMIENTOINVENTARIOENCABEZADO add constraint fk_bodega_encargadoo foreign key(fkencargado) references login(pk_id_login);
+alter table MOVIMIENTOINVENTARIOENCABEZADO add constraint fk_bodega_sucursall foreign key(fksucursal) references sucursal(pkIdSucursal);
+
+
+create table if not exists MOVIMIENTOINVENTARIODETALLE(
+fkmovimiento int(10)not null,
+fkidproducto int(10)not null,
+cantidad int(50)not null,
+estado int(1) not null,
+primary key(fkmovimiento, fkidproducto)
+);
+alter table MOVIMIENTOINVENTARIODETALLE add constraint fk_detalleproductoo foreign key(fkidproducto) references PRODUCTO(pkIdProducto);
+alter table MOVIMIENTOINVENTARIODETALLE add constraint fk_detallemovimiento foreign key(fkmovimiento) references MOVIMIENTOINVENTARIOENCABEZADO(pkmovimientoe);
+
+
 
 #PROCEDIMIENTO ALMACENADO LOGIN --------------------------------------------------------------------------------------------------------------------------
 DROP procedure IF EXISTS sp_Login;
@@ -564,21 +639,7 @@ DELIMITER ;
 #alter table APLICACION add archivoCHM varchar(100) after descripcion_aplicacion;
 #alter table APLICACION add archivoHTML varchar(100) after archivoCHM;
 
-create table if not exists MOVIMIENTOINVENTARIO(
-pkmovimiento int(10)not null auto_increment,
-fkidproducto int(10)not null,
-fkbodegaorigen int(10)not null,
-fkbodegadestino int(10),
-cantidad int(50)not null,
-razon varchar(250)not null,
-fkencargado int(10),
-estado int(1) not null,
-primary key(pkmovimiento)
-);
-alter table MOVIMIENTOINVENTARIO add constraint fk_producto foreign key(fkidproducto) references PRODUCTO(pkIdProducto);
-alter table MOVIMIENTOINVENTARIO add constraint fk_bodega_origen foreign key(fkbodegaorigen) references bodega(pkIdBodega);
-alter table MOVIMIENTOINVENTARIO add constraint fk_bodega_destino foreign key(fkbodegadestino) references bodega(pkIdBodega);
-alter table MOVIMIENTOINVENTARIO add constraint fk_bodega_encargado foreign key(fkencargado) references login(pk_id_login);
+
 
 -- Procedimiento para Mover Inventarios
 DELIMITER $$
@@ -633,6 +694,4 @@ INSERT INTO `SUCURSAL` VALUES (1,1,'SUCURSAL1',1,'DIRECCION2',1,1,1),(2,1,'SUCUR
 INSERT INTO `BODEGA` VALUES (1,1,1,1,1,'DESCRIPCION1','DIRECCION1',12345678,1),(2,2,1,1,1,'DESCRIPCION2','DIRECCION2',12345678,1);
 INSERT INTO `LINEAPRODUCTO` VALUES (1,1,'LINEA1','DESCRIPCION1',1),(2,2,'LINEA2','DESCRIPCION2',1);
 INSERT INTO `MARCAPRODUCTO` VALUES (1,1,'NOMBRE1','DESCRIPCION1',1),(2,2,'NOMBRE2','DESCRIPCION2',1);
-INSERT INTO `PRODUCTO` VALUES (1,1,1,1,'NOMBRE1',20.50,'DESCRIPCION1',1),(2,1,1,1,'NOMBRE2',287.50,'DESCRIPCION2',1);
-INSERT INTO `existencia` (`pkIdExis`, `fkIdEmpresa`, `fkIdSucursal`, `fkIdBodega`, `fkIdPro`, `cantidad_existencia`, `existencia_minima`, `existencia_maxima`, `estado_existencia`) 
-VALUES ('1', '1', '1', '1', '1', '10', '50', '100', '1'), ('1', '1', '1', '1', '2', '50', '25', '50', '1'), ('1', '1', '1', '2', '1', '100', '50', '150', '1');
+
