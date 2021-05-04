@@ -253,53 +253,11 @@
     <Compile Include="Procesos\Saldos\frmSaldos.Designer.cs">
       <DependentUpon>frmSaldos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmDetalleOrdenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmDetalleOrdenes.Designer.cs">
-      <DependentUpon>frmDetalleOrdenes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmModificarOrden.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\OrdenesCompra\frmModificarOrden.Designer.cs">
-      <DependentUpon>frmModificarOrden.cs</DependentUpon>
-    </Compile>
     <Compile Include="Procesos\OrdenesCompra\frmOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\OrdenesCompra\frmOrdenes.Designer.cs">
       <DependentUpon>frmOrdenes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmDetallesPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmDetallesPedido.Designer.cs">
-      <DependentUpon>frmDetallesPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmImpresionPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmImpresionPedido.Designer.cs">
-      <DependentUpon>frmImpresionPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmModificarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmModificarPedido.Designer.cs">
-      <DependentUpon>frmModificarPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmNuevoPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmNuevoPedido.Designer.cs">
-      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmPedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Procesos\PedidosCompraMP\frmPedidos.Designer.cs">
-      <DependentUpon>frmPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -405,29 +363,8 @@
     <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
       <DependentUpon>frmSaldos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\OrdenesCompra\frmDetalleOrdenes.resx">
-      <DependentUpon>frmDetalleOrdenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\OrdenesCompra\frmModificarOrden.resx">
-      <DependentUpon>frmModificarOrden.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\OrdenesCompra\frmOrdenes.resx">
       <DependentUpon>frmOrdenes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmDetallesPedido.resx">
-      <DependentUpon>frmDetallesPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmImpresionPedido.resx">
-      <DependentUpon>frmImpresionPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmModificarPedido.resx">
-      <DependentUpon>frmModificarPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmNuevoPedido.resx">
-      <DependentUpon>frmNuevoPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\PedidosCompraMP\frmPedidos.resx">
-      <DependentUpon>frmPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
