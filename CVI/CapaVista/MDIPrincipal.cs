@@ -12,6 +12,7 @@ using CapaControlador;
 using CapaVistaSeguridad.Formularios;
 using CapaVistaSeguridad.Formularios.Mantenimientos;
 using CapaVista.Mantenimientos;
+using CapaVista.Procesos.Ordenes;
 
 namespace CapaVista
 {
@@ -453,6 +454,31 @@ namespace CapaVista
                 bit.insert("Trato de Ingresar A Mantenimiento Productos", 303);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
+        }
+
+        private void compraDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (seguridad.PermisosAcceso("303", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso A Mantenimiento Productos", 303);
+                frmOrdenes mantenimiento = new frmOrdenes(txtusuario.Text);
+                mantenimiento.MdiParent = this;
+                mantenimiento.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar A Mantenimiento Productos", 303);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+
+
+
+
+
+
         }
     }
 }

@@ -12,9 +12,14 @@ namespace CapaVista.Procesos.Ordenes
 {
     public partial class frmOrdenes : Form
     {
-        public frmOrdenes()
+        public frmOrdenes(string usuario)
         {
             InitializeComponent();
+        }
+
+        private void frmOrdenes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

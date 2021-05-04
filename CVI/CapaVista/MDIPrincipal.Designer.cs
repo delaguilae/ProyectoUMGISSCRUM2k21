@@ -78,6 +78,7 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.compraDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -317,6 +318,8 @@ namespace CapaVista
             // 
             // comprasToolStripMenuItem
             // 
+            this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.compraDeProveedoresToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.comprasToolStripMenuItem.Text = "Compras";
@@ -451,6 +454,13 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(132, 22);
             this.txtusuario.TabIndex = 4;
             // 
+            // compraDeProveedoresToolStripMenuItem
+            // 
+            this.compraDeProveedoresToolStripMenuItem.Name = "compraDeProveedoresToolStripMenuItem";
+            this.compraDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.compraDeProveedoresToolStripMenuItem.Text = "0808-Compra de Proveedores";
+            this.compraDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.compraDeProveedoresToolStripMenuItem_Click);
+            // 
             // MDIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,6 +535,7 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem visualizarMovimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBodegaABodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoExistenciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem compraDeProveedoresToolStripMenuItem;
     }
 }
 
