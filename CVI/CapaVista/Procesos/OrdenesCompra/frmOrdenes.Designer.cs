@@ -30,7 +30,7 @@ namespace CapaVista.Procesos.Ordenes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,6 +45,7 @@ namespace CapaVista.Procesos.Ordenes
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.txtproveedor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtempledo = new System.Windows.Forms.TextBox();
@@ -70,11 +71,10 @@ namespace CapaVista.Procesos.Ordenes
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -180,8 +180,8 @@ namespace CapaVista.Procesos.Ordenes
             // 
             // dgvOrdenes
             // 
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrdenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrdenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -247,6 +247,16 @@ namespace CapaVista.Procesos.Ordenes
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             // 
+            // button6
+            // 
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(1235, 15);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(55, 46);
+            this.button6.TabIndex = 92;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // txtproveedor
             // 
             this.txtproveedor.Enabled = false;
@@ -299,6 +309,7 @@ namespace CapaVista.Procesos.Ordenes
             // 
             // dgvcompras2
             // 
+            this.dgvcompras2.AllowUserToAddRows = false;
             this.dgvcompras2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcompras2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
@@ -521,6 +532,16 @@ namespace CapaVista.Procesos.Ordenes
             this.groupBox3.TabIndex = 86;
             this.groupBox3.TabStop = false;
             // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(180, 99);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(138, 28);
+            this.cmbEmpleado.TabIndex = 80;
+            this.cmbEmpleado.SelectedIndexChanged += new System.EventHandler(this.cmbEmpleado_SelectedIndexChanged);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
@@ -553,26 +574,6 @@ namespace CapaVista.Procesos.Ordenes
             this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 88;
             this.label11.Text = "FECHA";
-            // 
-            // cmbEmpleado
-            // 
-            this.cmbEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(180, 99);
-            this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(138, 28);
-            this.cmbEmpleado.TabIndex = 80;
-            this.cmbEmpleado.SelectedIndexChanged += new System.EventHandler(this.cmbEmpleado_SelectedIndexChanged);
-            // 
-            // button6
-            // 
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1235, 15);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 46);
-            this.button6.TabIndex = 92;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmOrdenes
             // 
