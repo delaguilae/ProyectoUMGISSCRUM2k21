@@ -134,9 +134,7 @@ namespace CapaVista.Procesos.Ordenes
                 cantidaddetalle = Convert.ToString(Myrow.Cells[4].Value);
                 costodetalle = Convert.ToString(Myrow.Cells[2].Value);
                 OdbcDataReader consulta = jm.funcInsertarDetalleCompras(idencabezado, idproductodetalle,cantidaddetalle, costodetalle,"1");
-
             }
-
         }
 
         private void frmOrdenes_Load(object sender, EventArgs e)
