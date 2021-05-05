@@ -73,15 +73,51 @@ namespace CapaControlador
             string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND existencia_maxima < cantidad_existencia;";
             return Modelo.funcConsulta(Consulta);
         }
-        public OdbcDataReader funcSelectllenardgvMovimiento()
+        public OdbcDataReader funcSelectllenardgvOrdenes()
         {
-            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado;";
+            string Consulta = "select PRO.pkIdProducto, PRO.nombrePro, PRO.precioPro, PRO.descripcionPro FROM PRODUCTO PRO INNER JOIN PROVEEDOR PROVEE ON PRO.fkProv = PROVEE.pkIdProv WHERE PROVEE.pkIdProv";
             return Modelo.funcConsulta(Consulta);
         }
+
         public OdbcDataReader funcSelectllenardgvMovimientofiltro(string campo, string dato)
         {
             string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado WHERE "+campo+"= "+dato+";";
             return Modelo.funcConsulta(Consulta);
         }
+        public OdbcDataReader funcInsertarEncabezadoCompras( string idproveedor, string idempleado, string idempresa, string idsucursal, string idbodega, string fecha, string totalcompra, string idtipocompra, string idmetodopago, string estado)
+        {
+            string Consulta = "INSERT INTO compraencabezado( `fkIdProv`, `fkIdEmpleado`, `fkIdEmpresa`, `fkIdSucursal`,`fkIdBodegadestino`, `fechaCompra`, `totalCompra`, `fktipocompra`, `fkmetodoPago`, `estadoCompra`) VALUES(" + idproveedor + "," + idempleado + "," + idempresa + "," + idsucursal + "," + idbodega + "," + fecha + "," + totalcompra + "," + idtipocompra + "," + idmetodopago + "," + estado + ");";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funConsultaobteneridEncabezadoCompras()
+        {
+            string Consulta = "SELECT pkNoDocumentoEnca FROM compraencabezado ORDER BY 1 DESC LIMIT 1;"; 
+            return Modelo.funcInsertar(Consulta);
+        }
+
+        public OdbcDataReader funcSelectllenardgvProductosProveedor(string proveedor)
+        {
+            string Consulta = "select PRO.pkIdProducto, PRO.nombrePro, PRO.precioPro, PRO.descripcionPro FROM PRODUCTO PRO INNER JOIN PROVEEDOR PROVEE ON PRO.fkProv = PROVEE.pkIdProv WHERE PROVEE.pkIdProv = " + proveedor + "";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvMovimiento()
+        {
+            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado;";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcInsertarDetalleCompras( string idencabezado, string idproductodetalle, string cantidad, string costo ,string estado)
+        {
+            string Consulta = "INSERT INTO compradetalle( `fkNoDocumentoEnca`, `fkIdPro`, `cantidadCompraDe`, `costoCompraDe`,`estado`) VALUES(" + idencabezado + "," + idproductodetalle + "," + cantidad + "," + costo + "," + estado + ");";
+            return Modelo.funcInsertar(Consulta);
+        }
+        //UPDATE `dbcvierp`.`compraencabezado` SET `totalCompra` = '10' WHERE(`pkNoDocumentoEnca` = '7');
+        public OdbcDataReader funcActualizarencabezado(string idencabezado, string total)
+        {
+            string Consulta = "UPDATE `compraencabezado` SET `totalCompra` = "+total+" WHERE(`pkNoDocumentoEnca` = "+idencabezado+");";
+            return Modelo.funcInsertar(Consulta);
+        }
+
+
+
     }
 }

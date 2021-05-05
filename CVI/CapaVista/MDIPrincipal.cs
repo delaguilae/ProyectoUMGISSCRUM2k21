@@ -473,12 +473,6 @@ namespace CapaVista
                 bit.insert("Trato de Ingresar A Mantenimiento Productos", 303);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
-
-
-
-
-
-
         }
     }
 }

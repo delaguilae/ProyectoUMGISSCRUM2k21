@@ -374,6 +374,7 @@ create table if not exists COMPRAENCABEZADO(
     fkIdEmpleado				int(10)not null,
     fkIdEmpresa					int(10)not null,
     fkIdSucursal				int(10)not null,
+	fkIdBodegadestino 			int(10)not null,
     fechaCompra 				varchar(15),
     totalCompra 				double(12,2) not null,
     fktipocompra                int(10) not null,
@@ -387,20 +388,19 @@ alter table COMPRAENCABEZADO add constraint fk_compra_empleado foreign key(fkIdE
 alter table COMPRAENCABEZADO add constraint fk_compra_proveedor foreign key(fkIdProv) references PROVEEDOR(pkIdProv);
 alter table COMPRAENCABEZADO add constraint fk_compra_tipocompra foreign key(fktipocompra) references TIPOCOMPRA(pktipocompra);
 alter table COMPRAENCABEZADO add constraint fk_compra_metodopago foreign key(fkmetodopago) references METODOPAGO(pkIdMetodoPago);
+alter table COMPRAENCABEZADO add constraint fk_compra_bodega foreign key(fkIdBodegadestino) references BODEGA(pkIdBodega);
+
 
 create table COMPRADETALLE(
-	pkIdCompraDetalle			int(10)not null,
 	fkNoDocumentoEnca 			int(10)not null,
 	fkIdPro 					int(10)not null,
     cantidadCompraDe 			int(10)not null,
     costoCompraDe 				double(8,2)not null,
-    fkIdBodegadestino 			int(10)not null,
     estado                      int(1),
-    primary key(pkIdCompraDetalle,fkNoDocumentoEnca,fkIdPro)
+    primary key(fkNoDocumentoEnca,fkIdPro)
 );
 alter table COMPRADETALLE add constraint fk_compra_detalle_encabezado foreign key(fkNoDocumentoEnca) references COMPRAENCABEZADO(pkNoDocumentoEnca);
 alter table COMPRADETALLE add constraint fk_compra_producto foreign key(fkIdPro) references PRODUCTO(pkIdProducto);
-alter table COMPRADETALLE add constraint fk_compra_bodega foreign key(fkIdBodegadestino) references BODEGA(pkIdBodega);
 
 create table if not exists SALDOSCOMRPA(
 pksaldocompra     			int(10) not null auto_increment,
@@ -686,7 +686,7 @@ END$$
 DELIMITER ;
 
 -- #### VALORES
-INSERT INTO `PAIS` VALUES (1,'pais1','capital1',1),(2,'pais2','capital2',1);
+INSERT INTO `PAIS` VALUES ('1', 'GUATEMALA', 'GUATEMALA', '1'),('2', 'MEXICO ', 'DF', '1'),('3', 'SALVADOR', 'SAN SALVADOR', '1');
 INSERT INTO `DEPARTAMENTO` VALUES (1,'DEPARTA1','DESCRIPCION1',1),(2,'DEPART2','DESCRIP2',1);
 INSERT INTO `MUNICIPIO` VALUES (1,1,'MUNICIPIO1','DESCRI1',1),(2,1,'MUNICIPIO2','DESCRI2',1);
 INSERT INTO `EMPRESA` VALUES (1,'EMPRESA1',1,'DIRECCION1',1,1,1),(2,'EMPRESA2',1,'DIRECCION2',1,1,1);
@@ -694,4 +694,13 @@ INSERT INTO `SUCURSAL` VALUES (1,1,'SUCURSAL1',1,'DIRECCION2',1,1,1),(2,1,'SUCUR
 INSERT INTO `BODEGA` VALUES (1,1,1,1,1,'DESCRIPCION1','DIRECCION1',12345678,1),(2,2,1,1,1,'DESCRIPCION2','DIRECCION2',12345678,1);
 INSERT INTO `LINEAPRODUCTO` VALUES (1,1,'LINEA1','DESCRIPCION1',1),(2,2,'LINEA2','DESCRIPCION2',1);
 INSERT INTO `MARCAPRODUCTO` VALUES (1,1,'NOMBRE1','DESCRIPCION1',1),(2,2,'NOMBRE2','DESCRIPCION2',1);
+INSERT INTO `PROVEEDOR` VALUES ('1', '1', 'JULIO', '6516513', '84621', 'hola@gmail.com', '1'),('2', '2', 'BRIAN', '7465', '3216544', 'hola2@gamil.com', '1');
+INSERT INTO `PRODUCTO`  VALUES ('1', '1', '1', '1', '1', 'JAMON', '85.00', 'RICO', '1'),('2', '1', '1', '1', '1', 'QUESO', '50.00', 'RICO', '1'),('3', '1', '1', '1', '1', 'PAN', '2.00', 'RICO ', '1'),('4', '1', '1', '1', '1', 'AGUA', '10.00', 'RICO', '1'),('5', '1', '1', '1', '1', 'TORTILLA', '5.00', 'RICO', '1');
+INSERT INTO `EXISTENCIA` VALUES ('1', '1', '1', '1', '1', '100', '50', '200', '1');
+INSERT INTO `TIPOCOMPRA`  VALUES ('1', 'CONTADO', 'PAGO INMEDIATO', '1'),('2', 'CREDITO', 'PAGO PENDIENTE', '1');
+INSERT INTO `METODOPAGO`  VALUES ('1', 'EFECTIVO', '1'),('2', 'CHEQUE', '1'),('3', 'TARJETA', '1');
+INSERT INTO `PUESTO` VALUES ('1', 'GERENTE', 'BUENO', '1');
+INSERT INTO `EMPLEADO`  VALUES ('1', '1', '1', '1', '1', 'Julio', 'Morataya', '1010', '898491', 'hola@gmail.com', '1');
+INSERT INTO `COMPRAENCABEZADO` VALUES ('1', '1', '1', '1', '1', '1', '04052021', '10', '1', '1', '1');
+
 
