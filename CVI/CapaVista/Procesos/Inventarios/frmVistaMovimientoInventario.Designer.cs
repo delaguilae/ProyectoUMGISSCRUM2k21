@@ -68,7 +68,7 @@ namespace CapaVista.Procesos.Inventarios
             this.Column7,
             this.Column8});
             this.dgvMovimiento.Location = new System.Drawing.Point(16, 139);
-            this.dgvMovimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMovimiento.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMovimiento.Name = "dgvMovimiento";
             this.dgvMovimiento.RowHeadersWidth = 51;
             this.dgvMovimiento.Size = new System.Drawing.Size(1591, 466);
@@ -133,7 +133,7 @@ namespace CapaVista.Procesos.Inventarios
             // btnPrint
             // 
             this.btnPrint.Location = new System.Drawing.Point(973, 626);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(140, 39);
             this.btnPrint.TabIndex = 1;
@@ -144,7 +144,7 @@ namespace CapaVista.Procesos.Inventarios
             // btnActualizar
             // 
             this.btnActualizar.Location = new System.Drawing.Point(819, 626);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(140, 39);
             this.btnActualizar.TabIndex = 2;
@@ -155,7 +155,7 @@ namespace CapaVista.Procesos.Inventarios
             // btnLimpiar
             // 
             this.btnLimpiar.Location = new System.Drawing.Point(663, 626);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(140, 39);
             this.btnLimpiar.TabIndex = 3;
@@ -177,18 +177,19 @@ namespace CapaVista.Procesos.Inventarios
             this.Filtros.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Filtros.ForeColor = System.Drawing.Color.White;
             this.Filtros.Location = new System.Drawing.Point(16, 26);
-            this.Filtros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Filtros.Margin = new System.Windows.Forms.Padding(4);
             this.Filtros.Name = "Filtros";
-            this.Filtros.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Filtros.Padding = new System.Windows.Forms.Padding(4);
             this.Filtros.Size = new System.Drawing.Size(1591, 106);
             this.Filtros.TabIndex = 4;
             this.Filtros.TabStop = false;
             this.Filtros.Text = "Filtros";
+            this.Filtros.Enter += new System.EventHandler(this.Filtros_Enter);
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(543, 57);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(132, 27);
             this.txtUsuario.TabIndex = 7;
@@ -198,7 +199,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             this.rbUsuario.AutoSize = true;
             this.rbUsuario.Location = new System.Drawing.Point(543, 28);
-            this.rbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.rbUsuario.Name = "rbUsuario";
             this.rbUsuario.Size = new System.Drawing.Size(91, 24);
             this.rbUsuario.TabIndex = 6;
@@ -209,7 +210,7 @@ namespace CapaVista.Procesos.Inventarios
             // txtBodega
             // 
             this.txtBodega.Location = new System.Drawing.Point(389, 57);
-            this.txtBodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBodega.Margin = new System.Windows.Forms.Padding(4);
             this.txtBodega.Name = "txtBodega";
             this.txtBodega.Size = new System.Drawing.Size(132, 27);
             this.txtBodega.TabIndex = 5;
@@ -219,7 +220,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             this.rbBodega.AutoSize = true;
             this.rbBodega.Location = new System.Drawing.Point(389, 28);
-            this.rbBodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbBodega.Margin = new System.Windows.Forms.Padding(4);
             this.rbBodega.Name = "rbBodega";
             this.rbBodega.Size = new System.Drawing.Size(89, 24);
             this.rbBodega.TabIndex = 4;
@@ -230,7 +231,7 @@ namespace CapaVista.Procesos.Inventarios
             // txtRazon
             // 
             this.txtRazon.Location = new System.Drawing.Point(225, 57);
-            this.txtRazon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRazon.Margin = new System.Windows.Forms.Padding(4);
             this.txtRazon.Name = "txtRazon";
             this.txtRazon.Size = new System.Drawing.Size(132, 27);
             this.txtRazon.TabIndex = 3;
@@ -240,7 +241,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             this.rbRazon.AutoSize = true;
             this.rbRazon.Location = new System.Drawing.Point(225, 28);
-            this.rbRazon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbRazon.Margin = new System.Windows.Forms.Padding(4);
             this.rbRazon.Name = "rbRazon";
             this.rbRazon.Size = new System.Drawing.Size(77, 24);
             this.rbRazon.TabIndex = 2;
@@ -251,7 +252,7 @@ namespace CapaVista.Procesos.Inventarios
             // txtProducto
             // 
             this.txtProducto.Location = new System.Drawing.Point(57, 57);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(132, 27);
             this.txtProducto.TabIndex = 1;
@@ -261,7 +262,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             this.rbProducto.AutoSize = true;
             this.rbProducto.Location = new System.Drawing.Point(57, 28);
-            this.rbProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbProducto.Margin = new System.Windows.Forms.Padding(4);
             this.rbProducto.Name = "rbProducto";
             this.rbProducto.Size = new System.Drawing.Size(101, 24);
             this.rbProducto.TabIndex = 0;
@@ -272,7 +273,7 @@ namespace CapaVista.Procesos.Inventarios
             // btnFiltrar
             // 
             this.btnFiltrar.Location = new System.Drawing.Point(515, 626);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(140, 39);
             this.btnFiltrar.TabIndex = 5;
@@ -292,10 +293,11 @@ namespace CapaVista.Procesos.Inventarios
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.dgvMovimiento);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVistaMovimientoInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVistaMovimientoInventario";
+            this.Load += new System.EventHandler(this.frmVistaMovimientoInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovimiento)).EndInit();
             this.Filtros.ResumeLayout(false);
             this.Filtros.PerformLayout();

@@ -135,5 +135,10 @@ namespace CapaVista.Mantenimientos
                 txtMunicipalidad.Text = cmbMunicipalidad.SelectedValue.ToString();
             }
         }
+
+        private void txtIdPais_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

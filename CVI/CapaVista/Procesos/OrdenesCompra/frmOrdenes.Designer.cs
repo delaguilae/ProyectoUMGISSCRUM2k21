@@ -30,6 +30,7 @@ namespace CapaVista.Procesos.Ordenes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,42 +38,55 @@ namespace CapaVista.Procesos.Ordenes
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbproveedor = new System.Windows.Forms.ComboBox();
+            this.dgvOrdenes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtproveedor = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtempledo = new System.Windows.Forms.TextBox();
+            this.txtIdBodegaDestino = new System.Windows.Forms.TextBox();
+            this.txtIdEmpresaDestino = new System.Windows.Forms.TextBox();
+            this.dgvcompras2 = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.txttipocompra = new System.Windows.Forms.TextBox();
+            this.cmbtipocompra = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.txtmetodopago = new System.Windows.Forms.TextBox();
+            this.cmbmetodopago = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.txtIdSucursalDestino = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtfecha = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbEmpleado = new System.Windows.Forms.ComboBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcompras2)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(1258, -1);
+            this.button5.Location = new System.Drawing.Point(1281, -1);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 47);
             this.button5.TabIndex = 55;
@@ -99,7 +113,7 @@ namespace CapaVista.Procesos.Ordenes
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1316, 46);
+            this.panel1.Size = new System.Drawing.Size(1331, 46);
             this.panel1.TabIndex = 56;
             // 
             // label2
@@ -108,7 +122,7 @@ namespace CapaVista.Procesos.Ordenes
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 275);
+            this.label2.Location = new System.Drawing.Point(7, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 20);
@@ -134,7 +148,7 @@ namespace CapaVista.Procesos.Ordenes
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 319);
+            this.label3.Location = new System.Drawing.Point(19, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 20);
@@ -147,46 +161,101 @@ namespace CapaVista.Procesos.Ordenes
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(39, 362);
+            this.label4.Location = new System.Drawing.Point(20, 63);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 20);
             this.label4.TabIndex = 60;
             this.label4.Text = "ID SUCURSAL";
             // 
-            // comboBox1
+            // cmbproveedor
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 28);
-            this.comboBox1.TabIndex = 61;
+            this.cmbproveedor.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbproveedor.FormattingEnabled = true;
+            this.cmbproveedor.Location = new System.Drawing.Point(24, 76);
+            this.cmbproveedor.Name = "cmbproveedor";
+            this.cmbproveedor.Size = new System.Drawing.Size(131, 28);
+            this.cmbproveedor.TabIndex = 61;
+            this.cmbproveedor.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dgvOrdenes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(173, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1095, 167);
-            this.dataGridView1.TabIndex = 62;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrdenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvOrdenes.Location = new System.Drawing.Point(173, 15);
+            this.dgvOrdenes.Name = "dgvOrdenes";
+            this.dgvOrdenes.ReadOnly = true;
+            this.dgvOrdenes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvOrdenes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvOrdenes.RowHeadersWidth = 51;
+            this.dgvOrdenes.RowTemplate.Height = 24;
+            this.dgvOrdenes.Size = new System.Drawing.Size(1056, 167);
+            this.dgvOrdenes.TabIndex = 62;
+            this.dgvOrdenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "NOMBRE";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "PRECIO";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "DESCRIPCION";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.txtproveedor);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.dgvOrdenes);
+            this.groupBox1.Controls.Add(this.cmbproveedor);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(18, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1274, 188);
+            this.groupBox1.Size = new System.Drawing.Size(1301, 188);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
+            // 
+            // txtproveedor
+            // 
+            this.txtproveedor.Enabled = false;
+            this.txtproveedor.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtproveedor.Location = new System.Drawing.Point(24, 110);
+            this.txtproveedor.Name = "txtproveedor";
+            this.txtproveedor.Size = new System.Drawing.Size(131, 27);
+            this.txtproveedor.TabIndex = 64;
+            this.txtproveedor.TextChanged += new System.EventHandler(this.txtproveedor_TextChanged);
             // 
             // button1
             // 
@@ -198,79 +267,89 @@ namespace CapaVista.Procesos.Ordenes
             this.button1.TabIndex = 63;
             this.button1.Text = "ACTUALIZAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox2
+            // txtempledo
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(191, 267);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(138, 28);
-            this.comboBox2.TabIndex = 64;
+            this.txtempledo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtempledo.Location = new System.Drawing.Point(337, 99);
+            this.txtempledo.Name = "txtempledo";
+            this.txtempledo.Size = new System.Drawing.Size(50, 27);
+            this.txtempledo.TabIndex = 65;
+            this.txtempledo.TextChanged += new System.EventHandler(this.txtempledo_TextChanged);
             // 
-            // comboBox3
+            // txtIdBodegaDestino
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(191, 316);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(138, 28);
-            this.comboBox3.TabIndex = 65;
+            this.txtIdBodegaDestino.Enabled = false;
+            this.txtIdBodegaDestino.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdBodegaDestino.Location = new System.Drawing.Point(151, 17);
+            this.txtIdBodegaDestino.Name = "txtIdBodegaDestino";
+            this.txtIdBodegaDestino.Size = new System.Drawing.Size(228, 27);
+            this.txtIdBodegaDestino.TabIndex = 67;
             // 
-            // comboBox4
+            // txtIdEmpresaDestino
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(191, 359);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(138, 28);
-            this.comboBox4.TabIndex = 66;
+            this.txtIdEmpresaDestino.Enabled = false;
+            this.txtIdEmpresaDestino.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEmpresaDestino.Location = new System.Drawing.Point(151, 60);
+            this.txtIdEmpresaDestino.Name = "txtIdEmpresaDestino";
+            this.txtIdEmpresaDestino.Size = new System.Drawing.Size(228, 27);
+            this.txtIdEmpresaDestino.TabIndex = 68;
+            this.txtIdEmpresaDestino.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox1
+            // dgvcompras2
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 27);
-            this.textBox1.TabIndex = 64;
+            this.dgvcompras2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcompras2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6,
+            this.Column8,
+            this.Column7,
+            this.Column9});
+            this.dgvcompras2.Location = new System.Drawing.Point(42, 416);
+            this.dgvcompras2.Name = "dgvcompras2";
+            this.dgvcompras2.RowHeadersWidth = 51;
+            this.dgvcompras2.RowTemplate.Height = 24;
+            this.dgvcompras2.Size = new System.Drawing.Size(1193, 271);
+            this.dgvcompras2.TabIndex = 69;
+            this.dgvcompras2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dgvcompras2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcompras2_CellValueChanged);
+            this.dgvcompras2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvcompras2_KeyPress);
             // 
-            // textBox2
+            // Column5
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(348, 267);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 27);
-            this.textBox2.TabIndex = 65;
+            this.Column5.HeaderText = "ID";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
             // 
-            // textBox3
+            // Column6
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(348, 316);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 27);
-            this.textBox3.TabIndex = 67;
+            this.Column6.HeaderText = "NOMBRE";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
             // 
-            // textBox4
+            // Column8
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(348, 359);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(50, 27);
-            this.textBox4.TabIndex = 68;
+            this.Column8.HeaderText = "DESCRIPCION";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 125;
             // 
-            // dataGridView2
+            // Column7
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(42, 416);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1193, 271);
-            this.dataGridView2.TabIndex = 69;
+            this.Column7.HeaderText = "PRECIO";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "CANTIDAD";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 125;
             // 
             // label5
             // 
@@ -285,32 +364,34 @@ namespace CapaVista.Procesos.Ordenes
             this.label5.TabIndex = 70;
             this.label5.Text = "TOTAL";
             // 
-            // textBox5
+            // txttotal
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(134, 716);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(155, 27);
-            this.textBox5.TabIndex = 71;
+            this.txttotal.Enabled = false;
+            this.txttotal.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotal.Location = new System.Drawing.Point(134, 716);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(155, 27);
+            this.txttotal.TabIndex = 71;
             // 
-            // textBox6
+            // txttipocompra
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(776, 267);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(50, 27);
-            this.textBox6.TabIndex = 74;
+            this.txttipocompra.Enabled = false;
+            this.txttipocompra.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttipocompra.Location = new System.Drawing.Point(337, 16);
+            this.txttipocompra.Name = "txttipocompra";
+            this.txttipocompra.Size = new System.Drawing.Size(50, 27);
+            this.txttipocompra.TabIndex = 74;
+            this.txttipocompra.TextChanged += new System.EventHandler(this.txttipocompra_TextChanged);
             // 
-            // comboBox5
+            // cmbtipocompra
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(619, 267);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(138, 28);
-            this.comboBox5.TabIndex = 73;
+            this.cmbtipocompra.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbtipocompra.FormattingEnabled = true;
+            this.cmbtipocompra.Location = new System.Drawing.Point(180, 16);
+            this.cmbtipocompra.Name = "cmbtipocompra";
+            this.cmbtipocompra.Size = new System.Drawing.Size(138, 28);
+            this.cmbtipocompra.TabIndex = 73;
+            this.cmbtipocompra.SelectedIndexChanged += new System.EventHandler(this.cmbtipocompra_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -318,30 +399,32 @@ namespace CapaVista.Procesos.Ordenes
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(446, 275);
+            this.label6.Location = new System.Drawing.Point(7, 19);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 20);
             this.label6.TabIndex = 72;
             this.label6.Text = "TIPO DE COMPRA";
             // 
-            // textBox7
+            // txtmetodopago
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(776, 311);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(50, 27);
-            this.textBox7.TabIndex = 77;
+            this.txtmetodopago.Enabled = false;
+            this.txtmetodopago.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmetodopago.Location = new System.Drawing.Point(337, 60);
+            this.txtmetodopago.Name = "txtmetodopago";
+            this.txtmetodopago.Size = new System.Drawing.Size(50, 27);
+            this.txtmetodopago.TabIndex = 77;
+            this.txtmetodopago.TextChanged += new System.EventHandler(this.txtmetodopago_TextChanged);
             // 
-            // comboBox6
+            // cmbmetodopago
             // 
-            this.comboBox6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(619, 311);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(138, 28);
-            this.comboBox6.TabIndex = 76;
+            this.cmbmetodopago.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbmetodopago.FormattingEnabled = true;
+            this.cmbmetodopago.Location = new System.Drawing.Point(180, 60);
+            this.cmbmetodopago.Name = "cmbmetodopago";
+            this.cmbmetodopago.Size = new System.Drawing.Size(138, 28);
+            this.cmbmetodopago.TabIndex = 76;
+            this.cmbmetodopago.SelectedIndexChanged += new System.EventHandler(this.cmbmetodopago_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -349,51 +432,21 @@ namespace CapaVista.Procesos.Ordenes
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(446, 319);
+            this.label7.Location = new System.Drawing.Point(7, 63);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(166, 20);
             this.label7.TabIndex = 75;
             this.label7.Text = "METODO DE PAGO";
             // 
-            // label9
+            // txtIdSucursalDestino
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(446, 362);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 20);
-            this.label9.TabIndex = 78;
-            this.label9.Text = "ID DETALLE";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(619, 359);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(207, 27);
-            this.textBox8.TabIndex = 79;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(1203, 267);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(50, 27);
-            this.textBox9.TabIndex = 82;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(1046, 267);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(138, 28);
-            this.comboBox7.TabIndex = 81;
+            this.txtIdSucursalDestino.Enabled = false;
+            this.txtIdSucursalDestino.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdSucursalDestino.Location = new System.Drawing.Point(151, 99);
+            this.txtIdSucursalDestino.Name = "txtIdSucursalDestino";
+            this.txtIdSucursalDestino.Size = new System.Drawing.Size(228, 27);
+            this.txtIdSucursalDestino.TabIndex = 82;
             // 
             // label10
             // 
@@ -401,7 +454,7 @@ namespace CapaVista.Procesos.Ordenes
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(873, 275);
+            this.label10.Location = new System.Drawing.Point(19, 107);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 20);
@@ -421,6 +474,105 @@ namespace CapaVista.Procesos.Ordenes
             this.button2.Size = new System.Drawing.Size(57, 51);
             this.button2.TabIndex = 83;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Image = global::CapaVista.Properties.Resources.Consultar;
+            this.button3.Location = new System.Drawing.Point(397, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(57, 54);
+            this.button3.TabIndex = 84;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtIdSucursalDestino);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.txtIdEmpresaDestino);
+            this.groupBox2.Controls.Add(this.txtIdBodegaDestino);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(20, 255);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(473, 142);
+            this.groupBox2.TabIndex = 85;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.txtmetodopago);
+            this.groupBox3.Controls.Add(this.cmbmetodopago);
+            this.groupBox3.Controls.Add(this.cmbEmpleado);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.txttipocompra);
+            this.groupBox3.Controls.Add(this.cmbtipocompra);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.txtempledo);
+            this.groupBox3.Location = new System.Drawing.Point(507, 255);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(416, 141);
+            this.groupBox3.TabIndex = 86;
+            this.groupBox3.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(1028, 715);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(207, 38);
+            this.button4.TabIndex = 87;
+            this.button4.Text = "GUARDAR";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtfecha
+            // 
+            this.txtfecha.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfecha.Location = new System.Drawing.Point(1047, 271);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.Size = new System.Drawing.Size(222, 27);
+            this.txtfecha.TabIndex = 89;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(941, 274);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 20);
+            this.label11.TabIndex = 88;
+            this.label11.Text = "FECHA";
+            // 
+            // cmbEmpleado
+            // 
+            this.cmbEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbEmpleado.FormattingEnabled = true;
+            this.cmbEmpleado.Location = new System.Drawing.Point(180, 99);
+            this.cmbEmpleado.Name = "cmbEmpleado";
+            this.cmbEmpleado.Size = new System.Drawing.Size(138, 28);
+            this.cmbEmpleado.TabIndex = 80;
+            this.cmbEmpleado.SelectedIndexChanged += new System.EventHandler(this.cmbEmpleado_SelectedIndexChanged);
+            // 
+            // button6
+            // 
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(1235, 15);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(55, 46);
+            this.button6.TabIndex = 92;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // frmOrdenes
             // 
@@ -428,32 +580,17 @@ namespace CapaVista.Procesos.Ordenes
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
-            this.ClientSize = new System.Drawing.Size(1316, 771);
+            this.ClientSize = new System.Drawing.Size(1331, 771);
+            this.Controls.Add(this.txtfecha);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txttotal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.dgvcompras2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmOrdenes";
@@ -462,10 +599,14 @@ namespace CapaVista.Procesos.Ordenes
             this.Load += new System.EventHandler(this.frmOrdenes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcompras2)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,31 +620,42 @@ namespace CapaVista.Procesos.Ordenes
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbproveedor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtproveedor;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtempledo;
+        private System.Windows.Forms.TextBox txtIdBodegaDestino;
+        private System.Windows.Forms.TextBox txtIdEmpresaDestino;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.TextBox txttipocompra;
+        private System.Windows.Forms.ComboBox cmbtipocompra;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.TextBox txtmetodopago;
+        private System.Windows.Forms.ComboBox cmbmetodopago;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox txtIdSucursalDestino;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.DataGridView dgvOrdenes;
+        public System.Windows.Forms.DataGridView dgvcompras2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtfecha;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.ComboBox cmbEmpleado;
+        private System.Windows.Forms.Button button6;
     }
 }

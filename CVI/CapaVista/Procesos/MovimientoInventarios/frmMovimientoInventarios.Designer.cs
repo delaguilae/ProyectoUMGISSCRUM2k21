@@ -29,7 +29,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCantMover = new System.Windows.Forms.TextBox();
@@ -103,7 +103,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtCantMover.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantMover.Location = new System.Drawing.Point(189, 119);
-            this.txtCantMover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantMover.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantMover.Name = "txtCantMover";
             this.txtCantMover.Size = new System.Drawing.Size(181, 27);
             this.txtCantMover.TabIndex = 5;
@@ -112,7 +112,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
             this.btnAgregar.Location = new System.Drawing.Point(372, 454);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(105, 28);
             this.btnAgregar.TabIndex = 6;
@@ -124,7 +124,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
             this.btnEliminar.Location = new System.Drawing.Point(485, 454);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(105, 28);
             this.btnEliminar.TabIndex = 7;
@@ -135,16 +135,16 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // dgvMover
             // 
             this.dgvMover.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMover.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMover.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMover.Location = new System.Drawing.Point(24, 512);
-            this.dgvMover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMover.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMover.Name = "dgvMover";
             this.dgvMover.RowHeadersWidth = 51;
             this.dgvMover.Size = new System.Drawing.Size(896, 208);
@@ -156,7 +156,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtCodBodegaOrigen.Enabled = false;
             this.txtCodBodegaOrigen.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodBodegaOrigen.Location = new System.Drawing.Point(137, 103);
-            this.txtCodBodegaOrigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodBodegaOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodBodegaOrigen.Name = "txtCodBodegaOrigen";
             this.txtCodBodegaOrigen.Size = new System.Drawing.Size(88, 27);
             this.txtCodBodegaOrigen.TabIndex = 11;
@@ -166,7 +166,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtDirecBodegaOrigen.Enabled = false;
             this.txtDirecBodegaOrigen.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDirecBodegaOrigen.Location = new System.Drawing.Point(137, 139);
-            this.txtDirecBodegaOrigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDirecBodegaOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.txtDirecBodegaOrigen.Multiline = true;
             this.txtDirecBodegaOrigen.Name = "txtDirecBodegaOrigen";
             this.txtDirecBodegaOrigen.Size = new System.Drawing.Size(164, 57);
@@ -179,7 +179,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnBuscarBodegaOrigen.Image = global::CapaVista.Properties.Resources.Consultar;
             this.btnBuscarBodegaOrigen.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarBodegaOrigen.Location = new System.Drawing.Point(327, 65);
-            this.btnBuscarBodegaOrigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarBodegaOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarBodegaOrigen.Name = "btnBuscarBodegaOrigen";
             this.btnBuscarBodegaOrigen.Size = new System.Drawing.Size(109, 66);
             this.btnBuscarBodegaOrigen.TabIndex = 13;
@@ -201,9 +201,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(913, 490);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -212,7 +212,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // txtIdMovimiento
             // 
             this.txtIdMovimiento.Location = new System.Drawing.Point(31, 436);
-            this.txtIdMovimiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdMovimiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdMovimiento.Name = "txtIdMovimiento";
             this.txtIdMovimiento.Size = new System.Drawing.Size(132, 27);
             this.txtIdMovimiento.TabIndex = 23;
@@ -226,9 +226,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox5.Controls.Add(this.rbMovimientoBodegaBodega);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(515, 266);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(381, 155);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
@@ -237,7 +237,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // txtAcciones
             // 
             this.txtAcciones.Location = new System.Drawing.Point(28, 121);
-            this.txtAcciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAcciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtAcciones.Name = "txtAcciones";
             this.txtAcciones.Size = new System.Drawing.Size(132, 27);
             this.txtAcciones.TabIndex = 3;
@@ -247,7 +247,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.rbVentas.AutoSize = true;
             this.rbVentas.Location = new System.Drawing.Point(28, 96);
-            this.rbVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbVentas.Margin = new System.Windows.Forms.Padding(4);
             this.rbVentas.Name = "rbVentas";
             this.rbVentas.Size = new System.Drawing.Size(224, 24);
             this.rbVentas.TabIndex = 2;
@@ -259,7 +259,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.rbDevClientes.AutoSize = true;
             this.rbDevClientes.Location = new System.Drawing.Point(28, 65);
-            this.rbDevClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDevClientes.Margin = new System.Windows.Forms.Padding(4);
             this.rbDevClientes.Name = "rbDevClientes";
             this.rbDevClientes.Size = new System.Drawing.Size(231, 24);
             this.rbDevClientes.TabIndex = 1;
@@ -271,7 +271,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.rbMovimientoBodegaBodega.AutoSize = true;
             this.rbMovimientoBodegaBodega.Location = new System.Drawing.Point(28, 34);
-            this.rbMovimientoBodegaBodega.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMovimientoBodegaBodega.Margin = new System.Windows.Forms.Padding(4);
             this.rbMovimientoBodegaBodega.Name = "rbMovimientoBodegaBodega";
             this.rbMovimientoBodegaBodega.Size = new System.Drawing.Size(312, 24);
             this.rbMovimientoBodegaBodega.TabIndex = 0;
@@ -292,9 +292,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox3.Controls.Add(this.btnBuscarDestino);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(460, 41);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(444, 204);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
@@ -305,7 +305,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtIdEmpresaDestino.Enabled = false;
             this.txtIdEmpresaDestino.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdEmpresaDestino.Location = new System.Drawing.Point(137, 32);
-            this.txtIdEmpresaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdEmpresaDestino.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdEmpresaDestino.Name = "txtIdEmpresaDestino";
             this.txtIdEmpresaDestino.Size = new System.Drawing.Size(88, 27);
             this.txtIdEmpresaDestino.TabIndex = 19;
@@ -315,7 +315,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtIdSucursalDestino.Enabled = false;
             this.txtIdSucursalDestino.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdSucursalDestino.Location = new System.Drawing.Point(137, 68);
-            this.txtIdSucursalDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdSucursalDestino.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdSucursalDestino.Name = "txtIdSucursalDestino";
             this.txtIdSucursalDestino.Size = new System.Drawing.Size(88, 27);
             this.txtIdSucursalDestino.TabIndex = 18;
@@ -365,7 +365,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtIdBodegaDestino.Enabled = false;
             this.txtIdBodegaDestino.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdBodegaDestino.Location = new System.Drawing.Point(137, 103);
-            this.txtIdBodegaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdBodegaDestino.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdBodegaDestino.Name = "txtIdBodegaDestino";
             this.txtIdBodegaDestino.Size = new System.Drawing.Size(88, 27);
             this.txtIdBodegaDestino.TabIndex = 11;
@@ -375,7 +375,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtDireccBodegaDestino.Enabled = false;
             this.txtDireccBodegaDestino.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccBodegaDestino.Location = new System.Drawing.Point(137, 139);
-            this.txtDireccBodegaDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccBodegaDestino.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccBodegaDestino.Multiline = true;
             this.txtDireccBodegaDestino.Name = "txtDireccBodegaDestino";
             this.txtDireccBodegaDestino.Size = new System.Drawing.Size(164, 57);
@@ -389,7 +389,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnBuscarDestino.Image = global::CapaVista.Properties.Resources.Consultar;
             this.btnBuscarDestino.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarDestino.Location = new System.Drawing.Point(327, 65);
-            this.btnBuscarDestino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarDestino.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarDestino.Name = "btnBuscarDestino";
             this.btnBuscarDestino.Size = new System.Drawing.Size(109, 66);
             this.btnBuscarDestino.TabIndex = 13;
@@ -410,9 +410,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox4.Controls.Add(this.txtCantMover);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(8, 266);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(499, 155);
             this.groupBox4.TabIndex = 20;
             this.groupBox4.TabStop = false;
@@ -422,7 +422,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtIdProducto.Enabled = false;
             this.txtIdProducto.Location = new System.Drawing.Point(189, 21);
-            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(40, 27);
             this.txtIdProducto.TabIndex = 21;
@@ -434,7 +434,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnBuscarProducto.Image = global::CapaVista.Properties.Resources.Consultar;
             this.btnBuscarProducto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBuscarProducto.Location = new System.Drawing.Point(380, 20);
-            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(109, 66);
             this.btnBuscarProducto.TabIndex = 20;
@@ -459,7 +459,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtCantidadDisponible.Enabled = false;
             this.txtCantidadDisponible.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadDisponible.Location = new System.Drawing.Point(189, 57);
-            this.txtCantidadDisponible.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidadDisponible.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidadDisponible.Name = "txtCantidadDisponible";
             this.txtCantidadDisponible.Size = new System.Drawing.Size(181, 27);
             this.txtCantidadDisponible.TabIndex = 8;
@@ -468,7 +468,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtProducto.Enabled = false;
             this.txtProducto.Location = new System.Drawing.Point(239, 21);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(132, 27);
             this.txtProducto.TabIndex = 6;
@@ -486,9 +486,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox2.Controls.Add(this.btnBuscarBodegaOrigen);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(8, 41);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(444, 204);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
@@ -499,17 +499,18 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtIdEmpresaOrigen.Enabled = false;
             this.txtIdEmpresaOrigen.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdEmpresaOrigen.Location = new System.Drawing.Point(137, 32);
-            this.txtIdEmpresaOrigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdEmpresaOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdEmpresaOrigen.Name = "txtIdEmpresaOrigen";
             this.txtIdEmpresaOrigen.Size = new System.Drawing.Size(88, 27);
             this.txtIdEmpresaOrigen.TabIndex = 19;
+            this.txtIdEmpresaOrigen.TextChanged += new System.EventHandler(this.txtIdEmpresaOrigen_TextChanged);
             // 
             // txtIdSucursalOrigen
             // 
             this.txtIdSucursalOrigen.Enabled = false;
             this.txtIdSucursalOrigen.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdSucursalOrigen.Location = new System.Drawing.Point(137, 68);
-            this.txtIdSucursalOrigen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdSucursalOrigen.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdSucursalOrigen.Name = "txtIdSucursalOrigen";
             this.txtIdSucursalOrigen.Size = new System.Drawing.Size(88, 27);
             this.txtIdSucursalOrigen.TabIndex = 18;
@@ -563,7 +564,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.ClientSize = new System.Drawing.Size(945, 735);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvMover);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMovimientoInventarios";

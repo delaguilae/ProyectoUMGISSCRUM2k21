@@ -26,7 +26,7 @@ namespace CapaVista.Procesos.Inventarios
         {
             dgvMovimiento.Rows.Clear();
 
-            OdbcDataReader mostrar = controlador.funcSelectllenardgvMovimiento();
+            OdbcDataReader mostrar = controlador.funcSelectllenardgvOrdenes();
             try
             {
                 while (mostrar.Read())
@@ -126,6 +126,16 @@ namespace CapaVista.Procesos.Inventarios
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             llenar_dgv();
+        }
+
+        private void Filtros_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmVistaMovimientoInventario_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

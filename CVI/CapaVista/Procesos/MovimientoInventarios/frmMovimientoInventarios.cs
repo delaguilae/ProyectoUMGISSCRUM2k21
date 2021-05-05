@@ -365,5 +365,10 @@ namespace CapaVista.Procesos.MovimientoInventarios
         {
             txtAcciones.Text = "Accion por Ventas";
         }
+
+        private void txtIdEmpresaOrigen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
