@@ -332,3 +332,5 @@ D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\
 D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaModeloSeguridad.pdb
 D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaModeloNavegador.pdb
 D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.csproj.CopyComplete
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionCliente.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.MovimientoInventarios.frmSeleccionProveedor.resources

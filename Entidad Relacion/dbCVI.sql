@@ -697,7 +697,6 @@ INSERT INTO `MARCAPRODUCTO` VALUES (1,1,'NOMBRE1','DESCRIPCION1',1),(2,2,'NOMBRE
 INSERT INTO `PROVEEDOR` VALUES ('1', '1', 'JULIO', '6516513', '84621', 'hola@gmail.com', '1'),('2', '2', 'BRIAN', '7465', '3216544', 'hola2@gamil.com', '1');
 INSERT INTO `PRODUCTO`  VALUES ('1', '1', '1', '1', '1', 'JAMON', '85.00', 'RICO', '1'),('2', '1', '1', '1', '1', 'QUESO', '50.00', 'RICO', '1'),('3', '1', '1', '1', '1', 'PAN', '2.00', 'RICO ', '1'),('4', '1', '1', '1', '1', 'AGUA', '10.00', 'RICO', '1'),('5', '1', '1', '1', '1', 'TORTILLA', '5.00', 'RICO', '1');
 INSERT INTO `EXISTENCIA` VALUES ('1', '1', '1', '1', '1', '100', '50', '200', '1');
-INSERT INTO `TIPOCOMPRA`  VALUES ('1', 'CONTADO', 'PAGO INMEDIATO', '1'),('2', 'CREDITO', 'PAGO PENDIENTE', '1');
 INSERT INTO `METODOPAGO`  VALUES ('1', 'EFECTIVO', '1'),('2', 'CHEQUE', '1'),('3', 'TARJETA', '1'),('4', 'CREDITO', '1');
 INSERT INTO `PUESTO` VALUES ('1', 'GERENTE', 'BUENO', '1');
 INSERT INTO `EMPLEADO`  VALUES ('1', '1', '1', '1', '1', 'Julio', 'Morataya', '1010', '898491', 'hola@gmail.com', '1');
