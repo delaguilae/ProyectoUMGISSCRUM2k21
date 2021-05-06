@@ -416,3 +416,36 @@ C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutabl
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.dll
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.pdb
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Ejecutable.exe.config
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Ejecutable.exe
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Ejecutable.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVista.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaNavegador.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaSeguridad.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControlador.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorNavegador.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorSeguridad.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloSeguridad.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModelo.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloNavegador.dll
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVista.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaEncriptar.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaNavegador.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaVistaSeguridad.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControlador.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorEncriptar.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorNavegador.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaControladorSeguridad.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloSeguridad.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModelo.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\bin\Debug\CapaModeloNavegador.pdb
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csprojAssemblyReference.cache
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.Properties.Resources.resources
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.GenerateResource.cache
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CoreCompileInputs.cache
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.csproj.CopyComplete
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.exe
+D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\Ejecutable\Ejecutable\obj\Debug\Ejecutable.pdb
