@@ -247,6 +247,24 @@
     <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProducto.Designer.cs">
       <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmAbonoCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmAbonoCuentas.Designer.cs">
+      <DependentUpon>frmAbonoCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmEstadoCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmEstadoCompras.Designer.cs">
+      <DependentUpon>frmEstadoCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmImpresionfacturaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmImpresionfacturaCompras.Designer.cs">
+      <DependentUpon>frmImpresionfacturaCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\Saldos\frmSaldos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,6 +377,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionProducto.resx">
       <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmAbonoCuentas.resx">
+      <DependentUpon>frmAbonoCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmEstadoCompras.resx">
+      <DependentUpon>frmEstadoCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmImpresionfacturaCompras.resx">
+      <DependentUpon>frmImpresionfacturaCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
       <DependentUpon>frmSaldos.cs</DependentUpon>

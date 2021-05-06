@@ -60,6 +60,9 @@ namespace CapaVista
             this.movimientoDeInventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarMovimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.compraDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.impresionComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cobrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +81,7 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.compraDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abonoCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -319,10 +322,34 @@ namespace CapaVista
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.compraDeProveedoresToolStripMenuItem});
+            this.compraDeProveedoresToolStripMenuItem,
+            this.impresionComprasToolStripMenuItem,
+            this.estadoDeComprasToolStripMenuItem,
+            this.abonoCuentasToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.comprasToolStripMenuItem.Text = "Compras";
+            // 
+            // compraDeProveedoresToolStripMenuItem
+            // 
+            this.compraDeProveedoresToolStripMenuItem.Name = "compraDeProveedoresToolStripMenuItem";
+            this.compraDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.compraDeProveedoresToolStripMenuItem.Text = "0808-Compra de Proveedores";
+            this.compraDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.compraDeProveedoresToolStripMenuItem_Click);
+            // 
+            // impresionComprasToolStripMenuItem
+            // 
+            this.impresionComprasToolStripMenuItem.Name = "impresionComprasToolStripMenuItem";
+            this.impresionComprasToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.impresionComprasToolStripMenuItem.Text = "0801-Impresion Compras";
+            this.impresionComprasToolStripMenuItem.Click += new System.EventHandler(this.impresionComprasToolStripMenuItem_Click);
+            // 
+            // estadoDeComprasToolStripMenuItem
+            // 
+            this.estadoDeComprasToolStripMenuItem.Name = "estadoDeComprasToolStripMenuItem";
+            this.estadoDeComprasToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.estadoDeComprasToolStripMenuItem.Text = "0802-Estado de Compras";
+            this.estadoDeComprasToolStripMenuItem.Click += new System.EventHandler(this.estadoDeComprasToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
@@ -454,12 +481,12 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(132, 22);
             this.txtusuario.TabIndex = 4;
             // 
-            // compraDeProveedoresToolStripMenuItem
+            // abonoCuentasToolStripMenuItem
             // 
-            this.compraDeProveedoresToolStripMenuItem.Name = "compraDeProveedoresToolStripMenuItem";
-            this.compraDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
-            this.compraDeProveedoresToolStripMenuItem.Text = "0808-Compra de Proveedores";
-            this.compraDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.compraDeProveedoresToolStripMenuItem_Click);
+            this.abonoCuentasToolStripMenuItem.Name = "abonoCuentasToolStripMenuItem";
+            this.abonoCuentasToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+            this.abonoCuentasToolStripMenuItem.Text = "0803-Abono Cuentas";
+            this.abonoCuentasToolStripMenuItem.Click += new System.EventHandler(this.abonoCuentasToolStripMenuItem_Click);
             // 
             // MDIPrincipal
             // 
@@ -536,6 +563,9 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBodegaABodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoExistenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem compraDeProveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem impresionComprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadoDeComprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abonoCuentasToolStripMenuItem;
     }
 }
 

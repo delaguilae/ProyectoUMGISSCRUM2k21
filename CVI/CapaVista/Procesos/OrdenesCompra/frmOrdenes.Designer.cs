@@ -30,7 +30,7 @@ namespace CapaVista.Procesos.Ordenes
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -75,6 +75,8 @@ namespace CapaVista.Procesos.Ordenes
             this.button4 = new System.Windows.Forms.Button();
             this.txtfecha = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenes)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -180,8 +182,9 @@ namespace CapaVista.Procesos.Ordenes
             // 
             // dgvOrdenes
             // 
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvOrdenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dgvOrdenes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvOrdenes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrdenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -205,7 +208,6 @@ namespace CapaVista.Procesos.Ordenes
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
             // 
             // Column2
             // 
@@ -213,7 +215,6 @@ namespace CapaVista.Procesos.Ordenes
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
             // 
             // Column3
             // 
@@ -221,7 +222,6 @@ namespace CapaVista.Procesos.Ordenes
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
             // 
             // Column4
             // 
@@ -229,7 +229,6 @@ namespace CapaVista.Procesos.Ordenes
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
             // 
             // groupBox1
             // 
@@ -282,10 +281,11 @@ namespace CapaVista.Procesos.Ordenes
             // txtempledo
             // 
             this.txtempledo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtempledo.Location = new System.Drawing.Point(337, 99);
+            this.txtempledo.Location = new System.Drawing.Point(1269, 377);
             this.txtempledo.Name = "txtempledo";
             this.txtempledo.Size = new System.Drawing.Size(50, 27);
             this.txtempledo.TabIndex = 65;
+            this.txtempledo.Visible = false;
             this.txtempledo.TextChanged += new System.EventHandler(this.txtempledo_TextChanged);
             // 
             // txtIdBodegaDestino
@@ -310,6 +310,7 @@ namespace CapaVista.Procesos.Ordenes
             // dgvcompras2
             // 
             this.dgvcompras2.AllowUserToAddRows = false;
+            this.dgvcompras2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvcompras2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcompras2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
@@ -332,35 +333,30 @@ namespace CapaVista.Procesos.Ordenes
             this.Column5.HeaderText = "ID";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "NOMBRE";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "DESCRIPCION";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "PRECIO";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "CANTIDAD";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
             // 
             // label5
             // 
@@ -388,10 +384,11 @@ namespace CapaVista.Procesos.Ordenes
             // 
             this.txttipocompra.Enabled = false;
             this.txttipocompra.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipocompra.Location = new System.Drawing.Point(337, 16);
+            this.txttipocompra.Location = new System.Drawing.Point(1269, 294);
             this.txttipocompra.Name = "txttipocompra";
             this.txttipocompra.Size = new System.Drawing.Size(50, 27);
             this.txttipocompra.TabIndex = 74;
+            this.txttipocompra.Visible = false;
             this.txttipocompra.TextChanged += new System.EventHandler(this.txttipocompra_TextChanged);
             // 
             // cmbtipocompra
@@ -421,10 +418,11 @@ namespace CapaVista.Procesos.Ordenes
             // 
             this.txtmetodopago.Enabled = false;
             this.txtmetodopago.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmetodopago.Location = new System.Drawing.Point(337, 60);
+            this.txtmetodopago.Location = new System.Drawing.Point(1269, 338);
             this.txtmetodopago.Name = "txtmetodopago";
             this.txtmetodopago.Size = new System.Drawing.Size(50, 27);
             this.txtmetodopago.TabIndex = 77;
+            this.txtmetodopago.Visible = false;
             this.txtmetodopago.TextChanged += new System.EventHandler(this.txtmetodopago_TextChanged);
             // 
             // cmbmetodopago
@@ -517,18 +515,15 @@ namespace CapaVista.Procesos.Ordenes
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.txtmetodopago);
             this.groupBox3.Controls.Add(this.cmbmetodopago);
             this.groupBox3.Controls.Add(this.cmbEmpleado);
             this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txttipocompra);
             this.groupBox3.Controls.Add(this.cmbtipocompra);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.txtempledo);
             this.groupBox3.Location = new System.Drawing.Point(507, 255);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(416, 141);
+            this.groupBox3.Size = new System.Drawing.Size(341, 141);
             this.groupBox3.TabIndex = 86;
             this.groupBox3.TabStop = false;
             // 
@@ -556,11 +551,13 @@ namespace CapaVista.Procesos.Ordenes
             // 
             // txtfecha
             // 
+            this.txtfecha.Enabled = false;
             this.txtfecha.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfecha.Location = new System.Drawing.Point(1047, 271);
+            this.txtfecha.Location = new System.Drawing.Point(960, 370);
             this.txtfecha.Name = "txtfecha";
             this.txtfecha.Size = new System.Drawing.Size(222, 27);
             this.txtfecha.TabIndex = 89;
+            this.txtfecha.Visible = false;
             // 
             // label11
             // 
@@ -568,12 +565,34 @@ namespace CapaVista.Procesos.Ordenes
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(941, 274);
+            this.label11.Location = new System.Drawing.Point(888, 275);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 88;
             this.label11.Text = "FECHA";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1013, 270);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(222, 27);
+            this.dateTimePicker1.TabIndex = 90;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.White;
+            this.button7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(815, 715);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(207, 38);
+            this.button7.TabIndex = 91;
+            this.button7.Text = "LIMPIAR";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // frmOrdenes
             // 
@@ -582,14 +601,19 @@ namespace CapaVista.Procesos.Ordenes
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
             this.ClientSize = new System.Drawing.Size(1331, 771);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtmetodopago);
             this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.txttipocompra);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtempledo);
             this.Controls.Add(this.dgvcompras2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -658,5 +682,7 @@ namespace CapaVista.Procesos.Ordenes
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.ComboBox cmbEmpleado;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button7;
     }
 }

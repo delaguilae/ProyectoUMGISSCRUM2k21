@@ -86,7 +86,7 @@ namespace CapaControlador
         }
         public OdbcDataReader funcInsertarEncabezadoCompras( string idproveedor, string idempleado, string idempresa, string idsucursal, string idbodega, string fecha, string totalcompra, string idtipocompra, string idmetodopago, string estado)
         {
-            string Consulta = "INSERT INTO compraencabezado( `fkIdProv`, `fkIdEmpleado`, `fkIdEmpresa`, `fkIdSucursal`,`fkIdBodegadestino`, `fechaCompra`, `totalCompra`, `fktipocompra`, `fkmetodoPago`, `estadoCompra`) VALUES(" + idproveedor + "," + idempleado + "," + idempresa + "," + idsucursal + "," + idbodega + "," + fecha + "," + totalcompra + "," + idtipocompra + "," + idmetodopago + "," + estado + ");";
+            string Consulta = "INSERT INTO compraencabezado( `fkIdProv`, `fkIdEmpleado`, `fkIdEmpresa`, `fkIdSucursal`,`fkIdBodegadestino`, `fechaCompra`, `totalCompra`, `fktipocompra`, `fkmetodoPago`, `estadoCompra`) VALUES(" + idproveedor + "," + idempleado + "," + idempresa + "," + idsucursal + "," + idbodega + ",'" + fecha + "'," + totalcompra + "," + idtipocompra + "," + idmetodopago + "," + estado + ");";
             return Modelo.funcInsertar(Consulta);
         }
         public OdbcDataReader funConsultaobteneridEncabezadoCompras()
@@ -116,8 +116,63 @@ namespace CapaControlador
             string Consulta = "UPDATE `compraencabezado` SET `totalCompra` = "+total+" WHERE(`pkNoDocumentoEnca` = "+idencabezado+");";
             return Modelo.funcInsertar(Consulta);
         }
+        public OdbcDataReader funcMostrarimpresion(string idimpresionencabezado)
+        {
+            string Consulta = "SELECT cd.fkIdPro, pro.nombrePro ,cd.cantidadCompraDe, pro.precioPro, (cd.cantidadCompraDe * pro.precioPro)AS subtotal, emp.nombreEmpresa, su.nombreSucursal, bo.descripcionBodega FROM  compradetalle cd inner join compraencabezado ce on cd.fkNoDocumentoEnca = ce.pkNoDocumentoEnca inner join producto pro on pro.pkIdProducto = fkIdPro inner join empresa emp on emp.pkIdEmpresa = ce.fkIdEmpresa inner join sucursal su on su.pkIdSucursal = ce.fkIdSucursal inner join bodega bo on bo.pkIdBodega = ce.fkIdBodegadestino WHERE ce.pkNoDocumentoEnca = "+idimpresionencabezado+";";
+            return Modelo.funcInsertar(Consulta);
+        }
 
+        public OdbcDataReader funcMostrarEncabezado()
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv , ce.fechaCompra, ce.totalCompra , tc.nombretipocompra FROM compraencabezado ce inner join tipocompra tc on tc.pktipocompra = fktipocompra inner join proveedor pro on pro.pkIdProv = fkIdProv;";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcActualizarestado(string idencabezadoestado, string estado)
+        {         
+            string Consulta = "UPDATE `compraencabezado` SET `fktipocompra` = "+estado+" WHERE(`pkNoDocumentoEnca` = "+idencabezadoestado+")";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcEstadosfiltroCompras(string estado)
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv , ce.fechaCompra, ce.totalCompra , tc.nombretipocompra FROM compraencabezado ce inner join tipocompra tc on tc.pktipocompra = fktipocompra inner join proveedor pro on pro.pkIdProv = fkIdProv WHERE tc.nombretipocompra = '"+estado+"' ;";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcInsertarSaldocompras(string idcabezado, string saldo)
+        {
+            string Consulta = "INSERT INTO `saldoscomrpa` (`fkNoDocumentoEnca`, `saldo`) VALUES ('"+idcabezado+"', '"+saldo+"');";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvmorosos()
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv, ce.fechaCompra, ce.totalCompra FROM compraencabezado ce inner join saldoscomrpa sc on sc.fkNoDocumentoEnca = ce.pkNoDocumentoEnca inner join proveedor pro on pro.pkIdProv = ce.fkIdProv WHERE ce.fkmetodoPago ='4' AND sc.saldo > 0;";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvmorososfiltro(string idencabezado)
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv, ce.fechaCompra, ce.totalCompra FROM compraencabezado ce inner join saldoscomrpa sc on sc.fkNoDocumentoEnca = ce.pkNoDocumentoEnca inner join proveedor pro on pro.pkIdProv = ce.fkIdProv WHERE ce.fkmetodoPago ='4' AND sc.saldo > 0 AND ce.pkNoDocumentoEnca = '"+idencabezado+"';";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvhistorico(string idencabezado)
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv, ce.fechaCompra, ce.totalCompra FROM compraencabezado ce inner join saldoscomrpa sc on sc.fkNoDocumentoEnca = ce.pkNoDocumentoEnca inner join proveedor pro on pro.pkIdProv = ce.fkIdProv WHERE ce.fkmetodoPago ='4' AND sc.saldo > 0 AND ce.pkNoDocumentoEnca = '" + idencabezado + "';";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcInsertarSaldocompras2(string fecha, string idencabezado, string metodo, string saldo, string abono)
+        {
+            string Consulta = "INSERT INTO`saldohistoricocompra` (`fechamovimientocompra`, `fkNoDocumentoEnca`, `fkmetodopago`, `saldoanterior`, `abono`) VALUES ('"+fecha+"', "+idencabezado+","+metodo+ ","+saldo+ ","+abono+");";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcSelectllenardgvmorososfiltro2(string idencabezado)
+        {
+            string Consulta = "SELECT sh.pksaldohistoricocompra, sh.fechamovimientocompra, sh.fkNoDocumentoEnca,sh.saldoanterior, sh.abono, (sh.saldoanterior - sh.abono)AS saldoactual, sc.saldo FROM saldohistoricocompra sh inner join saldoscomrpa sc on sh.fkNoDocumentoEnca = sc.fkNoDocumentoEnca WHERE sh.fkNoDocumentoEnca = "+idencabezado+";";
+            return Modelo.funcConsulta(Consulta);
+        }
+        public OdbcDataReader funcInsertarsaldocomprasdefinitivo(string saldo, string abono)
+        {
+            string Consulta = "UPDATE`saldoscomrpa` SET `saldo` = " + abono + " WHERE (`fkNoDocumentoEnca` = " + saldo + ");";
+            return Modelo.funcInsertar(Consulta);
 
+        }
 
-    }
+        }
 }
