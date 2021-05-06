@@ -75,13 +75,13 @@ namespace CapaControlador
         }
         public OdbcDataReader funcSelectllenardgvOrdenes()
         {
-            string Consulta = "select PRO.pkIdProducto, PRO.nombrePro, PRO.precioPro, PRO.descripcionPro FROM PRODUCTO PRO INNER JOIN PROVEEDOR PROVEE ON PRO.fkProv = PROVEE.pkIdProv WHERE PROVEE.pkIdProv";
+            string Consulta = "select movd.fkmovimiento, movd.fkidproducto, pro.nombrePro, moven.fkbodegaorigen, moven.fkbodegadestino, movd.cantidad, rm.nombrerazon, logi.usuario_login  from movimientoinventariodetalle movd inner join movimientoinventarioencabezado moven on movd.fkmovimiento=moven.pkmovimientoe inner join producto pro on movd.fkidproducto=pro.pkIdProducto inner join login logi on logi.pk_id_login= moven.fkencargado inner join razonmovimiento rm on rm.pkrazon=moven.fkrazon;";
             return Modelo.funcConsulta(Consulta);
         }
 
         public OdbcDataReader funcSelectllenardgvMovimientofiltro(string campo, string dato)
         {
-            string Consulta = "select MOV.PKMOVIMIENTO, fkidproducto, PROD.nombrePro, MOV.fkbodegaorigen, MOV.fkbodegadestino, MOV.cantidad, MOV.RAZON, LOGIN.usuario_login from MOVIMIENTOINVENTARIO MOV INNER JOIN producto PROD ON MOV.FKIDPRODUCTO = PROD.pkIdProducto INNER JOIN LOGIN ON LOGIN.pk_id_login = MOV.fkencargado WHERE "+campo+"= "+dato+";";
+            string Consulta = "select movd.fkmovimiento, movd.fkidproducto, pro.nombrePro, moven.fkbodegaorigen, moven.fkbodegadestino, movd.cantidad, rm.nombrerazon, logi.usuario_login  from movimientoinventariodetalle movd inner join movimientoinventarioencabezado moven on movd.fkmovimiento=moven.pkmovimientoe inner join producto pro on movd.fkidproducto=pro.pkIdProducto inner join login logi on logi.pk_id_login= moven.fkencargado inner join razonmovimiento rm on rm.pkrazon=moven.fkrazon;";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcInsertarEncabezadoCompras( string idproveedor, string idempleado, string idempresa, string idsucursal, string idbodega, string fecha, string totalcompra, string idtipocompra, string idmetodopago, string estado)
@@ -173,6 +173,10 @@ namespace CapaControlador
             return Modelo.funcInsertar(Consulta);
 
         }
-
+        public OdbcDataReader funcSelectllenardgvMovimientofiltroordenes(string campo1, string dato1)
+        {
+            string Consulta = "select PRO.pkIdProducto, PRO.nombrePro, PRO.precioPro, PRO.descripcionPro FROM PRODUCTO PRO INNER JOIN PROVEEDOR PROVEE ON PRO.fkProv = PROVEE.pkIdProv WHERE "+campo1+"=" +dato1+";";
+            return Modelo.funcConsulta(Consulta);
         }
+    }
 }

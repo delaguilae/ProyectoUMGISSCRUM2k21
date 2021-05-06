@@ -163,5 +163,21 @@ namespace CapaVista.Procesos.OrdenesCompra
             filtro = "DEVOLUCION";
             filtroscompra(filtro);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "PROCESOS DE COMRPAS A PROVEEDORES ";//header
+            printer.SubTitle = string.Format("ASC");
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageSettings.Landscape = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = false;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "ASC";//Foote
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvEstados);
+        }
     }
 }

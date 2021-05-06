@@ -28,9 +28,10 @@ namespace CapaVista.Procesos.Ordenes
         int validacion = 0;
         double preciotabla2 ,totalsuma,multiplicacion;
         int cantidad;
+        string campo1, dato1;
 
 
-        
+
 
         public frmOrdenes(string usuario)
         {
@@ -364,6 +365,42 @@ namespace CapaVista.Procesos.Ordenes
         private void button7_Click(object sender, EventArgs e)
         {
             limpiarcampos();
+        }
+        public void CargarDetallesFiltro()
+        {
+            dgvOrdenes.Rows.Clear();
+
+            OdbcDataReader mostrar = jm.funcSelectllenardgvMovimientofiltroordenes(campo1, dato1);
+            try
+            {
+                while (mostrar.Read())
+                {
+                    dgvOrdenes.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3));
+                }
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+        }
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            if (rbProducto.Checked == false && rbProducto2.Checked == false)
+            {
+                MessageBox.Show("Seleccione el campo a filtar");
+            }
+            if (rbProducto.Checked == true && txtProducto.Text != "")
+            {
+                campo1 = "PRO.pkIdProducto";
+                dato1 = txtProducto.Text;
+                CargarDetallesFiltro();
+            }
+            if (rbProducto2.Checked == true && rbProducto2.Text != "")
+            {
+                campo1 = "PRO.nombrePro";
+                dato1 = "'"+txtProducto2.Text+"'";
+                CargarDetallesFiltro();
+            }           
         }
 
         private void cmbEmpleado_SelectedIndexChanged(object sender, EventArgs e)

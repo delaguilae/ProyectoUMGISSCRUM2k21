@@ -138,6 +138,16 @@ namespace CapaVista.Procesos.Inventarios
 
         }
 
+        private void rbProducto_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnPrint_Click(object sender, EventArgs e)
         {
             DGVPrinter printer = new DGVPrinter();
