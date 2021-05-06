@@ -84,34 +84,146 @@ namespace CapaModelo
                 return "No Se Realizo el Movimiento";
             }
         }
+        
         //funcion Realizar la transaccion de movimientos
-        /*public bool InsertarMovmientos(List<clsDatosEncapsuladosMo> LstDetalletraslado)
+        public bool InsertarMovmientos(clsListaEncabezado encabezado, List<clsListaDetalle> listaDetalles, List<clsListaExistencia> listaExistencia, List<clsListaExistenciaMovBodegas> listaBodegas, string fkRazon)
         {
             int bandera = 0;
             var resultado = cn.ObtenerConexion();
             OdbcTransaction transaction = resultado.Item2;
             OdbcCommand cmd = resultado.Item1.CreateCommand();
             cmd.Transaction = transaction;
-           
-            foreach (clsDatosEncapsuladosMo detalleTraslado in LstDetalletraslado)
+            try
             {
-                try
+                strSql = "INSERT INTO movimientoinventarioencabezado " +
+                    "(pkmovimientoe, fkempresa, fksucursal, fkbodegaorigen, fkbodegadestino, fkrazon, fkproveedor, fkcliente, fkencargado, fecha, estado)" +
+                    " VALUES ('" + encabezado.PkIdMovimientoEncabezado + "','" + encabezado.FkEmpresa + "','" + encabezado.FkSucursal + "','" + encabezado.FkBodegaOrigen +  "','" + 
+                    encabezado.FkBodegaDestino + "','" + encabezado.FkRazon + "','" + encabezado.FkProveedor + "','" + encabezado.FkCliente +"','" + 
+                    encabezado.FkEncargado + "','" + encabezado.FechaEncabezado + "','" + encabezado.EstadoEncabezado + "');";
+                cmd.CommandText = strSql;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("encabezado guardado");
+                //Llenado del detalle
+                foreach (clsListaDetalle detalle in listaDetalles)
                 {
-                    strSql = "INSERT INTO movimientoinventario (fkidproducto, fkbodegaorigen, fkbodegadestino,cantidad,razon,fkencargado) " +
-                            "VALUES ('" + detalleTraslado.StrIdProducto + "','" + detalleTraslado.StrIdBodegaOrigen + "','" + detalleTraslado.StrIdBodegaDestino + "','" + detalleTraslado.StrCantidad + "','" + detalleTraslado.StrRazonMov + "','" + detalleTraslado.StrEncargado + "');";
-                    cmd.CommandText = strSql;
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Movmientos Guardados guardado");
+                    try
+                    {
+                        strSql = "INSERT INTO movimientoinventariodetalle (fkmovimiento, fkidproducto, cantidad, estado) " +
+                            "VALUES ('" + detalle.FkMovimientoDetalle + "','" + detalle.FkIdProducto + "','" + detalle.Cantidad1 + "','" + detalle.Estado + "');";
+                        cmd.CommandText = strSql;
+                        cmd.ExecuteNonQuery();                       
+                        MessageBox.Show("Detalles guardado");
+                    }
+                    catch (OdbcException err)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show("Error Rollback realizado en detalles" + err.Message);
+                        Console.WriteLine("eroro", err.Message);
+                        bandera = 1;
+
+                        return false;
+                    }
                 }
-                catch (OdbcException err)
+                if (fkRazon.Equals("1") || fkRazon.Equals("4"))
                 {
-                    transaction.Rollback();
-                    MessageBox.Show("Error\n Rollback realizado en Movimientos" + err.Message);
-                    Console.WriteLine("eroro", err.Message);
-                    bandera = 1;
-                    return false;
+                    //modificacion en tabla existencias suma a existencia
+                    foreach (clsListaExistencia existencia in listaExistencia)
+                    {
+                        try
+                        {
+                            strSql = "update existencia set cantidad_existencia = cantidad_existencia + "+existencia.Cantidad1+" where " +
+                                "fkIdEmpresa='"+existencia.IdEmpresaOrigen+ "' and fkIdSucursal='" + existencia.IdSucursalOrigen + "' " +
+                                "and fkIdBodega='" + existencia.IdBodegaOrigen + "' and fkIdPro='" + existencia.IdProducto + "';";
+                            cmd.CommandText = strSql;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Existencias guardado");
+                        }
+                        catch (OdbcException err)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error Rollback realizado en Existencias" + err.Message);
+                            Console.WriteLine("eroro", err.Message);
+                            bandera = 1;
+
+                            return false;
+                        }
+                    }
                 }
-            }           
+                if (fkRazon.Equals("2") || fkRazon.Equals("3"))
+                {
+                    //modificacion a tabla existencia resta a existencia
+                    foreach (clsListaExistencia existencia in listaExistencia)
+                    {
+                        try
+                        {
+                            strSql = "update existencia set cantidad_existencia = cantidad_existencia - " + existencia.Cantidad1 + " where " +
+                                "fkIdEmpresa='" + existencia.IdEmpresaOrigen + "' and fkIdSucursal='" + existencia.IdSucursalOrigen + "' " +
+                                "and fkIdBodega='" + existencia.IdBodegaOrigen + "' and fkIdPro='" + existencia.IdProducto + "';";
+                            cmd.CommandText = strSql;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Existencias guardado");
+                        }
+                        catch (OdbcException err)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error Rollback realizado en Existencias" + err.Message);
+                            Console.WriteLine("eroro", err.Message);
+                            bandera = 1;
+
+                            return false;
+                        }
+                    }
+                }
+                if (fkRazon.Equals("5"))
+                {
+                    foreach (clsListaExistenciaMovBodegas bod in listaBodegas)
+                    {
+                        try
+                        {
+                            strSql = "update existencia set cantidad_existencia = cantidad_existencia - " + bod.Cantidad1 + " where fkIdEmpresa ='" + bod.IdEmpresaOrigen + "' and fkIdSucursal ='" + bod.IdSucursalOrigen + "' and fkIdBodega ='" + bod.IdBodegaOrigen + "' and fkIdPro ='" + bod.IdProducto + "';";
+                            cmd.CommandText = strSql;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Existencias guardado");
+                        }
+                        catch (OdbcException err)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error Rollback realizado en Existencias" + err.Message);
+                            Console.WriteLine("eroro", err.Message);
+                            bandera = 1;
+
+                            return false;
+                        }
+                    }
+                    foreach (clsListaExistenciaMovBodegas bod in listaBodegas)
+                    {
+                        try
+                        {
+                            strSql = "update existencia set cantidad_existencia = cantidad_existencia + " + bod.Cantidad1 + " where fkIdEmpresa = '" + bod.IdEmpresaDestino + "' and fkIdSucursal = '" + bod.IdSucursalDestino + "' and fkIdBodega = '" + bod.IdBodegaDestino + "' and fkIdPro  = '" + bod.IdProducto + "'; ";
+                            cmd.CommandText = strSql;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Existencias guardado");
+                        }
+                        catch (OdbcException err)
+                        {
+                            transaction.Rollback();
+                            MessageBox.Show("Error Rollback realizado en Existencias" + err.Message);
+                            Console.WriteLine("eroro", err.Message);
+                            bandera = 1;
+
+                            return false;
+                        }
+                    }
+                }
+                
+            }
+            catch (OdbcException err)
+            {
+                transaction.Rollback();
+                MessageBox.Show("Error Rollback realizado en encabezado" + err.Message);
+                bandera = 1;
+                return false;
+            }
             if (bandera == 0)
             {
                 transaction.Commit();
@@ -122,6 +234,28 @@ namespace CapaModelo
                 bandera = 0;
             }
             return true;
-        }*/
+        }
+    
+        public void PruebaRecorrido(clsListaEncabezado encabezado, List<clsListaDetalle> listaDetalles)
+        {
+            Console.WriteLine(encabezado.PkIdMovimientoEncabezado+"\n"+
+                encabezado.FkEmpresa + "\n" +
+                encabezado.FkSucursal + "\n" +
+                encabezado.FkBodegaOrigen + "\n" +
+                encabezado.FkBodegaDestino + "\n" +
+                encabezado.FkRazon + "\n" +
+                encabezado.FkProveedor + "\n" +
+                encabezado.FkCliente + "\n" +
+                encabezado.FkEncargado + "\n" +
+                encabezado.FechaEncabezado + "\n" +
+                encabezado.EstadoEncabezado + "\n");
+            foreach(clsListaDetalle detalle in listaDetalles)
+            {
+                Console.WriteLine(detalle.FkMovimientoDetalle + "\n" +
+                    detalle.FkIdProducto+"\n"+
+                    detalle.Cantidad1+"\n"+
+                    detalle.Estado+"\n");
+            }
+        }
     }
 }

@@ -39,7 +39,7 @@ namespace CapaModelo
 
         public Tuple<OdbcConnection, OdbcTransaction> ObtenerConexion()
         {
-            OdbcConnection conectar = new OdbcConnection("Dsn=BD_LabClinico");
+            OdbcConnection conectar = new OdbcConnection("Dsn=CVI");
             conectar.Open();
             OdbcTransaction transaction = conectar.BeginTransaction();
             return Tuple.Create(conectar, transaction);

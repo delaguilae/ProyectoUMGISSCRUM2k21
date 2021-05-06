@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsListaDetalle.cs" />
+    <Compile Include="clsListaEncabezado.cs" />
+    <Compile Include="clsListaExistencia.cs" />
+    <Compile Include="clsListaExistenciaMovBodegas.cs" />
     <Compile Include="clsMovInventariosMo.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -241,11 +241,23 @@
     <Compile Include="Procesos\MovimientoInventarios\frmSeleccionBodega.Designer.cs">
       <DependentUpon>frmSeleccionBodega.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionCliente.Designer.cs">
+      <DependentUpon>frmSeleccionCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProducto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProducto.Designer.cs">
       <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\MovimientoInventarios\frmSeleccionProveedor.Designer.cs">
+      <DependentUpon>frmSeleccionProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\OrdenesCompra\frmAbonoCuentas.cs">
       <SubType>Form</SubType>
@@ -375,8 +387,14 @@
     <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionBodega.resx">
       <DependentUpon>frmSeleccionBodega.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionCliente.resx">
+      <DependentUpon>frmSeleccionCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionProducto.resx">
       <DependentUpon>frmSeleccionProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\MovimientoInventarios\frmSeleccionProveedor.resx">
+      <DependentUpon>frmSeleccionProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\OrdenesCompra\frmAbonoCuentas.resx">
       <DependentUpon>frmAbonoCuentas.cs</DependentUpon>
