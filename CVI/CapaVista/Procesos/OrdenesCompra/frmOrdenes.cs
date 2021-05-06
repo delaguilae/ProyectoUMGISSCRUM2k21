@@ -37,6 +37,7 @@ namespace CapaVista.Procesos.Ordenes
             InitializeComponent();
             user = usuario;
             CargarCombobox();
+            cmbmetodopago.Enabled = false;
         }
         public void funcBodegaDestino()
         {
@@ -97,12 +98,42 @@ namespace CapaVista.Procesos.Ordenes
             txttotal.Text = Convert.ToString(totalsuma);
 
         }
+        private void limpiarcampos() {
+            txtproveedor.Text = "";
+            dgvOrdenes.Rows.Clear();
+            dgvcompras2.Rows.Clear();
+            txttotal.Text = "";
+        }
+
+        private void verificacionllenadocampos() {
+
+            if (txtproveedor.Text == "" || txtIdSucursalDestino.Text == "" || txtIdEmpresaDestino.Text == "" || txtIdBodegaDestino.Text == "" || txttipocompra.Text == "" || txtmetodopago.Text == "" || txtempledo.Text == "" || txtfecha.Text == "" || dgvcompras2.Rows.Count < 1)
+            {
+
+                MessageBox.Show("INGRESE TODOS LOS CAMPOS PARA PODER REALIZAR EL REGISTRO");
+            } else {
+                try
+                {
+                    OdbcDataReader consulta = jm.funcInsertarEncabezadoCompras(txtproveedor.Text, txtempledo.Text, txtIdEmpresaDestino.Text, txtIdSucursalDestino.Text, txtIdBodegaDestino.Text, txtfecha.Text, "0.00", txttipocompra.Text, txtmetodopago.Text, "1");
+                    obtenerpk();
+                    guardardetalle();
+                    actualizarencabezado();
+                    ingresarasaldocompra();
+                    MessageBox.Show("EL INGRESO HA SIDO SATISFACTORIO, SU ORDEN ES LA NUMERO: " +idencabezado);
+                    
+                }
+                catch
+                {
+                    MessageBox.Show("NO SE HA PODIDO INGRESAR EL REGISTRO");
+                }
+            }    
+        }
         public void CargarCombobox()
         {
             //llenado de combobox de tipo compra
             cmbtipocompra.DisplayMember = "nombretipocompra";
             cmbtipocompra.ValueMember = "pktipocompra";
-            cmbtipocompra.DataSource = con.funcObtenerCamposComboboxPais("pktipocompra", "nombretipocompra", "tipocompra", "estado");
+            cmbtipocompra.DataSource = con.funcObtenerCamposComboboxtipoorden("pktipocompra", "nombretipocompra", "tipocompra", "estado");
             cmbtipocompra.SelectedIndex = -1;
 
             //llenado de combobox de metodo pago
@@ -171,6 +202,16 @@ namespace CapaVista.Procesos.Ordenes
             if (cmbtipocompra.SelectedIndex != -1)
             {
                 txttipocompra.Text = cmbtipocompra.SelectedValue.ToString();
+            }
+            if (txttipocompra.Text == "2")
+            {
+                cmbmetodopago.Enabled = true;
+            }
+            else {
+                cmbmetodopago.Text = "";
+                txtmetodopago.Text = "";
+                cmbmetodopago.Enabled = false;
+
             }
         }
 
@@ -276,14 +317,17 @@ namespace CapaVista.Procesos.Ordenes
         {
             
         }
+        private void ingresarasaldocompra() {
+            if (txtmetodopago.Text == "4") {
+                OdbcDataReader consulta = jm.funcInsertarSaldocompras(idencabezado,txttotal.Text);
+                OdbcDataReader consulta2 = jm.funcInsertarSaldocompras2(txtfecha.Text,idencabezado,"4",txttotal.Text,"0.00");
+            }            
+        
+        }
         private void button4_Click(object sender, EventArgs e)
         {
-            OdbcDataReader consulta = jm.funcInsertarEncabezadoCompras(txtproveedor.Text, txtempledo.Text, txtIdEmpresaDestino.Text, txtIdSucursalDestino.Text, txtIdBodegaDestino.Text, txtfecha.Text, "0.00", txttipocompra.Text, txtmetodopago.Text, "1");           
-            obtenerpk();
-            guardardetalle();
-            actualizarencabezado();
-
-
+            verificacionllenadocampos();          
+            limpiarcampos();
 
         }
         private void txtempledo_TextChanged(object sender, EventArgs e)
@@ -310,6 +354,16 @@ namespace CapaVista.Procesos.Ordenes
         private void dgvcompras2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             total();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            txtfecha.Text = dateTimePicker1.Value.ToString(" dd/MM/yyyy");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            limpiarcampos();
         }
 
         private void cmbEmpleado_SelectedIndexChanged(object sender, EventArgs e)

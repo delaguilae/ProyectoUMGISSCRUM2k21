@@ -378,7 +378,7 @@ create table if not exists COMPRAENCABEZADO(
     fechaCompra 				varchar(15),
     totalCompra 				double(12,2) not null,
     fktipocompra                int(10) not null,
-    fkmetodoPago                int(10) not null,
+    fkmetodoPago                int(10),
     estadoCompra 				int(1)not null,
     primary key(pkNoDocumentoEnca)
 );
@@ -698,9 +698,8 @@ INSERT INTO `PROVEEDOR` VALUES ('1', '1', 'JULIO', '6516513', '84621', 'hola@gma
 INSERT INTO `PRODUCTO`  VALUES ('1', '1', '1', '1', '1', 'JAMON', '85.00', 'RICO', '1'),('2', '1', '1', '1', '1', 'QUESO', '50.00', 'RICO', '1'),('3', '1', '1', '1', '1', 'PAN', '2.00', 'RICO ', '1'),('4', '1', '1', '1', '1', 'AGUA', '10.00', 'RICO', '1'),('5', '1', '1', '1', '1', 'TORTILLA', '5.00', 'RICO', '1');
 INSERT INTO `EXISTENCIA` VALUES ('1', '1', '1', '1', '1', '100', '50', '200', '1');
 INSERT INTO `TIPOCOMPRA`  VALUES ('1', 'CONTADO', 'PAGO INMEDIATO', '1'),('2', 'CREDITO', 'PAGO PENDIENTE', '1');
-INSERT INTO `METODOPAGO`  VALUES ('1', 'EFECTIVO', '1'),('2', 'CHEQUE', '1'),('3', 'TARJETA', '1');
+INSERT INTO `METODOPAGO`  VALUES ('1', 'EFECTIVO', '1'),('2', 'CHEQUE', '1'),('3', 'TARJETA', '1'),('4', 'CREDITO', '1');
 INSERT INTO `PUESTO` VALUES ('1', 'GERENTE', 'BUENO', '1');
 INSERT INTO `EMPLEADO`  VALUES ('1', '1', '1', '1', '1', 'Julio', 'Morataya', '1010', '898491', 'hola@gmail.com', '1');
 INSERT INTO `COMPRAENCABEZADO` VALUES ('1', '1', '1', '1', '1', '1', '04052021', '10', '1', '1', '1');
-
-
+INSERT INTO `TIPOCOMPRA` VALUES ('1', 'SOLICITUD', 'NECESITA APROBACION ', '1'),('2',  'ORDEN ', 'SOLICITUD APROBADA', '1'),('3', 'PROCESO', 'ENVIADA A PROVEEDOR', '1'),('4', 'EN CURSO', 'DESPACHADA POR PROVEEDOR', '1'),('5', 'RECIBIDA', 'ORDEN INGRESADA', '1'),('6', 'SOLICITUD RECHAZADA', 'NO ACEPTADA', '1'),('7', 'ORDEN RECHAZADA', 'RECHAZADA POR INCONFORMIDAD', '1'),('8', 'DEVOLUCION', 'REGRESO DE ORDEN A PROVEEDOR', '1');

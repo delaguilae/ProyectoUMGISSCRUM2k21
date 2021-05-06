@@ -45,5 +45,10 @@ namespace CapaControlador
             string Comando = string.Format("SELECT " + Campo1 + " ," + Campo2 + " FROM " + Tabla + " WHERE " + Estado + "= 1;");
             return Modelo.funcObtenerCamposCombobox(Comando);
         }
+        public DataTable funcObtenerCamposComboboxtipoorden(string Campo1, string Campo2, string Tabla, string Estado)
+        {
+            string Comando = string.Format("SELECT " + Campo1 + " ," + Campo2 + " FROM " + Tabla + " WHERE " + Estado + "= 1 LIMIT 2;");
+            return Modelo.funcObtenerCamposCombobox(Comando);
+        }
     }
 }
