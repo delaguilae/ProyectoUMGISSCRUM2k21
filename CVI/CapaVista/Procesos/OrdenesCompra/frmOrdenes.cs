@@ -26,6 +26,7 @@ namespace CapaVista.Procesos.Ordenes
         string descripcion = "";
         string precio = "";
         int validacion = 0;
+        int validaciondgv = 0;
         double preciotabla2 ,totalsuma,multiplicacion;
         int cantidad;
         string campo1, dato1;
@@ -39,6 +40,11 @@ namespace CapaVista.Procesos.Ordenes
             user = usuario;
             CargarCombobox();
             cmbmetodopago.Enabled = false;
+            txtfecha.Text= DateTime.Now.ToString("M/d/yyyy");
+            dgvcompras2.Columns["Column5"].ReadOnly = true;
+            dgvcompras2.Columns["Column6"].ReadOnly = true;
+            dgvcompras2.Columns["Column8"].ReadOnly = true;
+            dgvcompras2.Columns["Column7"].ReadOnly = true;
         }
         public void funcBodegaDestino()
         {
@@ -107,8 +113,8 @@ namespace CapaVista.Procesos.Ordenes
         }
 
         private void verificacionllenadocampos() {
-
-            if (txtproveedor.Text == "" || txtIdSucursalDestino.Text == "" || txtIdEmpresaDestino.Text == "" || txtIdBodegaDestino.Text == "" || txttipocompra.Text == "" || txtmetodopago.Text == "" || txtempledo.Text == "" || txtfecha.Text == "" || dgvcompras2.Rows.Count < 1)
+            verificarcantidad();
+            if (txtproveedor.Text == "" || txtIdSucursalDestino.Text == "" || txtIdEmpresaDestino.Text == "" || txtIdBodegaDestino.Text == "" || txttipocompra.Text == "" || txtmetodopago.Text == "" || txtempledo.Text == "" || txtfecha.Text == "" || dgvcompras2.Rows.Count < 1 || validaciondgv!=0)
             {
 
                 MessageBox.Show("INGRESE TODOS LOS CAMPOS PARA PODER REALIZAR EL REGISTRO");
@@ -121,7 +127,8 @@ namespace CapaVista.Procesos.Ordenes
                     actualizarencabezado();
                     ingresarasaldocompra();
                     MessageBox.Show("EL INGRESO HA SIDO SATISFACTORIO, SU ORDEN ES LA NUMERO: " +idencabezado);
-                    
+                    limpiarcampos();
+
                 }
                 catch
                 {
@@ -328,8 +335,20 @@ namespace CapaVista.Procesos.Ordenes
         private void button4_Click(object sender, EventArgs e)
         {
             verificacionllenadocampos();          
-            limpiarcampos();
+          
 
+        }
+        private void verificarcantidad()
+        {
+            validaciondgv = 0;
+            foreach (DataGridViewRow Myrow in dgvcompras2.Rows)
+            {
+                if (Convert.ToString(Myrow.Cells[4].Value) == "" || Convert.ToInt32(Myrow.Cells[4].Value) == 0) 
+                {
+                    validaciondgv = 1; 
+                    MessageBox.Show("VERIFIQUE LA CANTIDAD DE PRODUCTOS A ORDENAR");
+                }
+            }
         }
         private void txtempledo_TextChanged(object sender, EventArgs e)
         {
@@ -383,6 +402,23 @@ namespace CapaVista.Procesos.Ordenes
                 Console.WriteLine(err.Message);
             }
         }
+
+        private void dgvcompras2_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == dgvcompras2.Columns["Column9"].Index)
+            {
+                dgvcompras2.Rows[e.RowIndex].ErrorText = "";
+                int newInteger;
+                if (dgvcompras2.Rows[e.RowIndex].IsNewRow) { return; }
+                if (!int.TryParse(e.FormattedValue.ToString(),
+                    out newInteger) || newInteger < 0)
+                {
+                    e.Cancel = true;
+                    dgvcompras2.Rows[e.RowIndex].ErrorText = "El valor debe ser un numero entero";
+                }
+            }
+        }
+
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (rbProducto.Checked == false && rbProducto2.Checked == false)

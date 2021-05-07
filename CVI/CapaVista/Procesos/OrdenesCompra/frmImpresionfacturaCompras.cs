@@ -49,18 +49,25 @@ namespace CapaVista.Procesos.OrdenesCompra
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OdbcDataReader mostrar = jm.funcMostrarimpresion(txtimpresion.Text);
-            try
+            if (txtimpresion.Text != "")
             {
-                while (mostrar.Read())
+                OdbcDataReader mostrar = jm.funcMostrarimpresion(txtimpresion.Text);
+                try
                 {
-                    dgvimpresioncompras.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5), mostrar.GetString(6), mostrar.GetString(7));
+                    while (mostrar.Read())
+                    {
+                        dgvimpresioncompras.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4), mostrar.GetString(5), mostrar.GetString(6), mostrar.GetString(7));
+                    }
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("INGRESE NUMERO DE FACTURA");
+                    Console.WriteLine(err.Message);
                 }
             }
-            catch (Exception err)
+            else
             {
-                MessageBox.Show("INGRESE NUMERO DE FACTURA");
-                Console.WriteLine(err.Message);
+                MessageBox.Show("favor de verificar los campos");
             }
         }
     }

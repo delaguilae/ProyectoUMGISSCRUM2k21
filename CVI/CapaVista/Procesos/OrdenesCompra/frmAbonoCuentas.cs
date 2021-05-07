@@ -196,12 +196,12 @@ namespace CapaVista.Procesos.OrdenesCompra
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (saldoanterior > Double.Parse(txtabono.Text))
+            if (saldoanterior >= Double.Parse(txtabono.Text))
             {
                 realizarpago();
             }
             else {
-                MessageBox.Show("ESTA PAGANDO DE MAS BURRO");
+                MessageBox.Show("EL MONTO INGRESADO EXCEDE EL SALDO");
             
             
             }

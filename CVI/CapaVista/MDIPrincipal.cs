@@ -202,10 +202,10 @@ namespace CapaVista
         //Menu Mantenimiento Proveedores-Seguridad
         private void mantenimientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (seguridad.PermisosAcceso("1501", txtusuario.Text) == 1)
+            if (seguridad.PermisosAcceso("3", txtusuario.Text) == 1)
             {
                 bit.user(txtusuario.Text);
-                bit.insert("Ingreso A Mantenimiento Proveedores", 1501);
+                bit.insert("Ingreso A Mantenimiento Proveedores", 3);
                 frmProveedores mantenimiento = new frmProveedores(txtusuario.Text);
                 mantenimiento.MdiParent = this;
                 mantenimiento.Show();
@@ -525,6 +525,24 @@ namespace CapaVista
             {
                 bit.user(txtusuario.Text);
                 bit.insert("Trato de Ingresar A Mantenimiento Productos", 303);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("8", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("ingreso a Mantenimiento Modulo", 8);
+                frmAgregarAplicacion modulo = new frmAgregarAplicacion();
+                modulo.MdiParent = this;
+                modulo.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar A Mantenimiento Modulo", 8);
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
