@@ -66,25 +66,25 @@ namespace CapaVista.Procesos.Inventarios
             }
             if (rbProducto.Checked == true && txtProducto.Text != "")
             {
-                campo = "fkidproducto";
+                campo = "pro.fkidproducto";
                 dato = txtProducto.Text;
                 CargarDetallesFiltro();
             }
             if (rbBodega.Checked == true && txtBodega.Text != "")
             {
-                campo = "fkbodegaorigen";
+                campo = "moven.fkbodegaorigen";
                 dato = txtBodega.Text;
                 CargarDetallesFiltro();
             }
             if (rbRazon.Checked == true && txtRazon.Text != "")
             {
-                campo = "RAZON";
+                campo = "rm.nombrerazon";
                 dato = "'"+txtRazon.Text+"'";
                 CargarDetallesFiltro();
             }
             if (rbUsuario.Checked == true && txtUsuario.Text != "")
             {
-                campo = "usuario_login";
+                campo = "logi.usuario_login";
                 dato = "'" + txtUsuario.Text + "'";
                 CargarDetallesFiltro();
             }

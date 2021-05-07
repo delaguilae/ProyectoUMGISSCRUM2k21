@@ -408,16 +408,17 @@ fkNoDocumentoEnca    		int(10)not null,
 saldo       	    		double(10,2),
 primary key (pksaldocompra)
 );
-
 create table if not exists SALDOHISTORICOCOMPRA(
 pksaldohistoricocompra      int(10) not null auto_increment,
 fechamovimientocompra       varchar(15) not null,
-fkNoDocumentoEnca    		int(10)not null,
-saldoanterior        	    double(10,2),
-abono                		double(10,2),
+fkNoDocumentoEnca            int(10)not null,
+fkmetodopago				int(10),
+saldoanterior                double(10,2),
+abono                        double(10,2),
 primary key (pksaldohistoricocompra)
 );
-
+alter table SALDOHISTORICOCOMPRA add constraint fk_DocumentoEnca  foreign key(fkNoDocumentoEnca) references COMPRAENCABEZADO(pkNoDocumentoEnca);
+alter table SALDOHISTORICOCOMPRA add constraint fk_metodopago  foreign key(fkmetodopago) references METODOPAGO(pkIdMetodoPago);
 #VENTAS---------------------------------------------------------------------------------------------------------------------------
 create table if not exists CLIENTE(
 	pkIdCliente 				int(5)not null auto_increment,
@@ -702,3 +703,4 @@ INSERT INTO `PUESTO` VALUES ('1', 'GERENTE', 'BUENO', '1');
 INSERT INTO `EMPLEADO`  VALUES ('1', '1', '1', '1', '1', 'Julio', 'Morataya', '1010', '898491', 'hola@gmail.com', '1');
 INSERT INTO `COMPRAENCABEZADO` VALUES ('1', '1', '1', '1', '1', '1', '04052021', '10', '1', '1', '1');
 INSERT INTO `TIPOCOMPRA` VALUES ('1', 'SOLICITUD', 'NECESITA APROBACION ', '1'),('2',  'ORDEN ', 'SOLICITUD APROBADA', '1'),('3', 'PROCESO', 'ENVIADA A PROVEEDOR', '1'),('4', 'EN CURSO', 'DESPACHADA POR PROVEEDOR', '1'),('5', 'RECIBIDA', 'ORDEN INGRESADA', '1'),('6', 'SOLICITUD RECHAZADA', 'NO ACEPTADA', '1'),('7', 'ORDEN RECHAZADA', 'RECHAZADA POR INCONFORMIDAD', '1'),('8', 'DEVOLUCION', 'REGRESO DE ORDEN A PROVEEDOR', '1');
+INSERT INTO razonmovimiento VALUES ('1','Compras','Compra A Proveedores','1'),('2','Ventas','Venta a Clientes','1'),('3','Devolucion Sobre Compras','Devolucion Sobre Compras','1'),('4','Devolucion sobre Ventas','Devolucion sobre Ventas','1'),('5','Movimiento De Inventarios','Movimiento De Bodega a Bodega','1');

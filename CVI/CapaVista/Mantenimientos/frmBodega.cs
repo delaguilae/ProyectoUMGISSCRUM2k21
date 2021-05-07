@@ -58,7 +58,7 @@ namespace CapaVista.Mantenimientos
             //llenado de  parametros para la aplicacion 
             navegador1.aplicacion = 303;
             navegador1.tbl = "bodega";
-            navegador1.campoEstado = "estado";
+            navegador1.campoEstado = "estadoBodega";
             //se agregan los componentes del formulario a la lista tipo control
             foreach (Control C in this.Controls)
             {

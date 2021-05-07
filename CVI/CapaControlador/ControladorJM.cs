@@ -73,7 +73,7 @@ namespace CapaControlador
             string Consulta = "select pro.nombrePro as producto, em.nombreEmpresa as empresa, bo.descripcionBodega as bodega, ex.cantidad_existencia as existencia, ex.existencia_maxima as maxima, ex.existencia_minima as minima from (existencia ex inner join empresa em on em.pkIdEmpresa = ex.fkIdEmpresa inner join bodega bo on bo.pkIdBodega = ex.fkIdBodega inner join producto pro on pro.pkIdProducto = ex.fkIdPro)WHERE ex.estado_existencia = 1 AND existencia_maxima < cantidad_existencia;";
             return Modelo.funcConsulta(Consulta);
         }
-        public OdbcDataReader funcSelectllenardgvOrdenes()
+        public OdbcDataReader funcSelectllenardgvOrdenes() //vista movimiento inventario llenar todo
         {
             string Consulta = "select movd.fkmovimiento, movd.fkidproducto, pro.nombrePro, moven.fkbodegaorigen, moven.fkbodegadestino, movd.cantidad, rm.nombrerazon, logi.usuario_login  from movimientoinventariodetalle movd inner join movimientoinventarioencabezado moven on movd.fkmovimiento=moven.pkmovimientoe inner join producto pro on movd.fkidproducto=pro.pkIdProducto inner join login logi on logi.pk_id_login= moven.fkencargado inner join razonmovimiento rm on rm.pkrazon=moven.fkrazon;";
             return Modelo.funcConsulta(Consulta);
@@ -81,7 +81,7 @@ namespace CapaControlador
 
         public OdbcDataReader funcSelectllenardgvMovimientofiltro(string campo, string dato)
         {
-            string Consulta = "select movd.fkmovimiento, movd.fkidproducto, pro.nombrePro, moven.fkbodegaorigen, moven.fkbodegadestino, movd.cantidad, rm.nombrerazon, logi.usuario_login  from movimientoinventariodetalle movd inner join movimientoinventarioencabezado moven on movd.fkmovimiento=moven.pkmovimientoe inner join producto pro on movd.fkidproducto=pro.pkIdProducto inner join login logi on logi.pk_id_login= moven.fkencargado inner join razonmovimiento rm on rm.pkrazon=moven.fkrazon;";
+            string Consulta = "select movd.fkmovimiento, movd.fkidproducto, pro.nombrePro, moven.fkbodegaorigen, moven.fkbodegadestino, movd.cantidad, rm.nombrerazon, logi.usuario_login  from movimientoinventariodetalle movd inner join movimientoinventarioencabezado moven on movd.fkmovimiento=moven.pkmovimientoe inner join producto pro on movd.fkidproducto=pro.pkIdProducto inner join login logi on logi.pk_id_login= moven.fkencargado inner join razonmovimiento rm on rm.pkrazon=moven.fkrazon where "+campo+" = "+dato+";";
             return Modelo.funcConsulta(Consulta);
         }
         public OdbcDataReader funcInsertarEncabezadoCompras( string idproveedor, string idempleado, string idempresa, string idsucursal, string idbodega, string fecha, string totalcompra, string idtipocompra, string idmetodopago, string estado)
@@ -110,7 +110,6 @@ namespace CapaControlador
             string Consulta = "INSERT INTO compradetalle( `fkNoDocumentoEnca`, `fkIdPro`, `cantidadCompraDe`, `costoCompraDe`,`estado`) VALUES(" + idencabezado + "," + idproductodetalle + "," + cantidad + "," + costo + "," + estado + ");";
             return Modelo.funcInsertar(Consulta);
         }
-        //UPDATE `dbcvierp`.`compraencabezado` SET `totalCompra` = '10' WHERE(`pkNoDocumentoEnca` = '7');
         public OdbcDataReader funcActualizarencabezado(string idencabezado, string total)
         {
             string Consulta = "UPDATE `compraencabezado` SET `totalCompra` = "+total+" WHERE(`pkNoDocumentoEnca` = "+idencabezado+");";
@@ -159,7 +158,7 @@ namespace CapaControlador
         }
         public OdbcDataReader funcInsertarSaldocompras2(string fecha, string idencabezado, string metodo, string saldo, string abono)
         {
-            string Consulta = "INSERT INTO`saldohistoricocompra` (`fechamovimientocompra`, `fkNoDocumentoEnca`, `fkmetodopago`, `saldoanterior`, `abono`) VALUES ('"+fecha+"', "+idencabezado+","+metodo+ ","+saldo+ ","+abono+");";
+            string Consulta = "INSERT INTO saldohistoricocompra (`fechamovimientocompra`, `fkNoDocumentoEnca`, `fkmetodopago`, `saldoanterior`, `abono`) VALUES ('"+fecha+"', "+idencabezado+","+metodo+ ","+saldo+ ","+abono+");";
             return Modelo.funcInsertar(Consulta);
         }
         public OdbcDataReader funcSelectllenardgvmorososfiltro2(string idencabezado)

@@ -46,7 +46,7 @@ namespace CapaVista.Mantenimientos
             List<string> CamposTabla = new List<string>();
             List<Control> lista = new List<Control>();
             //llenado de  parametros para la aplicacion 
-            navegador1.aplicacion = 2501;
+            navegador1.aplicacion = 3;
             navegador1.tbl = "cliente";
             navegador1.campoEstado = "estadoCliente";
 
