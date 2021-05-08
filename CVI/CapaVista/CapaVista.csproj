@@ -271,11 +271,23 @@
     <Compile Include="Procesos\OrdenesCompra\frmEstadoCompras.Designer.cs">
       <DependentUpon>frmEstadoCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmGuardar1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmGuardar1.Designer.cs">
+      <DependentUpon>frmGuardar1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Procesos\OrdenesCompra\frmImpresionfacturaCompras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Procesos\OrdenesCompra\frmImpresionfacturaCompras.Designer.cs">
       <DependentUpon>frmImpresionfacturaCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmVisualizarTodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\OrdenesCompra\frmVisualizarTodo.Designer.cs">
+      <DependentUpon>frmVisualizarTodo.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\Saldos\frmSaldos.cs">
       <SubType>Form</SubType>
@@ -402,8 +414,14 @@
     <EmbeddedResource Include="Procesos\OrdenesCompra\frmEstadoCompras.resx">
       <DependentUpon>frmEstadoCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmGuardar1.resx">
+      <DependentUpon>frmGuardar1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Procesos\OrdenesCompra\frmImpresionfacturaCompras.resx">
       <DependentUpon>frmImpresionfacturaCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\OrdenesCompra\frmVisualizarTodo.resx">
+      <DependentUpon>frmVisualizarTodo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
       <DependentUpon>frmSaldos.cs</DependentUpon>
@@ -436,6 +454,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regrescar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\revisa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

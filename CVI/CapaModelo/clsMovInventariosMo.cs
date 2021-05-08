@@ -14,6 +14,7 @@ namespace CapaModelo
         OdbcCommand Comm;
         OdbcTransaction transaction = null;
         string strSql = "";
+        string Mensaje = "";
         public int funcObtenerID(string strConsulta)
         {
             try
@@ -48,22 +49,23 @@ namespace CapaModelo
             }
         }
         //Consulta para calcular existencia
-        public int funcConsExistencia(string Consulta)
+        public string funcConsExistencia(string Consulta)
         {
+            string intExistencia = "";
             try
             {
-                int intExistencia=0;
+                
                 Comm = new OdbcCommand(Consulta, cn.conexion());
                 OdbcDataReader reader = Comm.ExecuteReader();
                 reader.Read();
-                intExistencia = reader.GetInt32(0);
+                intExistencia = reader.GetString(0);
                 reader.Close();
                 return intExistencia;
             }
             catch (Exception Error)
             {
-                Console.WriteLine("Error Consulta Existencia: " + Error);
-                return 0;
+                Console.WriteLine("Error Consulta Existencia: ");
+                return intExistencia;
             }
         }
 
@@ -84,7 +86,27 @@ namespace CapaModelo
                 return "No Se Realizo el Movimiento";
             }
         }
-        
+        public void PruebaRecorrido(clsListaEncabezado encabezado, List<clsListaDetalle> listaDetalles)
+        {
+            Console.WriteLine(encabezado.PkIdMovimientoEncabezado + "\n" +
+                encabezado.FkEmpresa + "\n" +
+                encabezado.FkSucursal + "\n" +
+                encabezado.FkBodegaOrigen + "\n" +
+                encabezado.FkBodegaDestino + "\n" +
+                encabezado.FkRazon + "\n" +
+                encabezado.FkProveedor + "\n" +
+                encabezado.FkCliente + "\n" +
+                encabezado.FkEncargado + "\n" +
+                encabezado.FechaEncabezado + "\n" +
+                encabezado.EstadoEncabezado + "\n");
+            foreach (clsListaDetalle detalle in listaDetalles)
+            {
+                Console.WriteLine(detalle.FkMovimientoDetalle + "\n" +
+                    detalle.FkIdProducto + "\n" +
+                    detalle.Cantidad1 + "\n" +
+                    detalle.Estado + "\n");
+            }
+        }
         //funcion Realizar la transaccion de movimientos
         public bool InsertarMovmientos(clsListaEncabezado encabezado, List<clsListaDetalle> listaDetalles, List<clsListaExistencia> listaExistencia, List<clsListaExistenciaMovBodegas> listaBodegas, string fkRazon)
         {
@@ -235,27 +257,77 @@ namespace CapaModelo
             }
             return true;
         }
-    
-        public void PruebaRecorrido(clsListaEncabezado encabezado, List<clsListaDetalle> listaDetalles)
+
+        public bool InsertarMovmientosBodega(List<clsListaMoverAExistencia> listaDetalles, string strNoDocumento)
         {
-            Console.WriteLine(encabezado.PkIdMovimientoEncabezado+"\n"+
-                encabezado.FkEmpresa + "\n" +
-                encabezado.FkSucursal + "\n" +
-                encabezado.FkBodegaOrigen + "\n" +
-                encabezado.FkBodegaDestino + "\n" +
-                encabezado.FkRazon + "\n" +
-                encabezado.FkProveedor + "\n" +
-                encabezado.FkCliente + "\n" +
-                encabezado.FkEncargado + "\n" +
-                encabezado.FechaEncabezado + "\n" +
-                encabezado.EstadoEncabezado + "\n");
-            foreach(clsListaDetalle detalle in listaDetalles)
+            int bandera = 0;
+            var resultado = cn.ObtenerConexion();
+            OdbcTransaction transaction = resultado.Item2;
+            OdbcCommand cmd = resultado.Item1.CreateCommand();
+            cmd.Transaction = transaction;
+            try
             {
-                Console.WriteLine(detalle.FkMovimientoDetalle + "\n" +
-                    detalle.FkIdProducto+"\n"+
-                    detalle.Cantidad1+"\n"+
-                    detalle.Estado+"\n");
+                strSql = "UPDATE compraencabezado SET fktipocompra = '9' WHERE (pkNoDocumentoEnca = " + strNoDocumento + ");";
+                cmd.CommandText = strSql;
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Actualizacion encabezado");
+                //Llenado del detalle
+                foreach (clsListaMoverAExistencia detalle in listaDetalles)
+                {
+                    try
+                    {
+                        if (detalle.IntAccion.Equals("1"))
+                        {
+                            Console.WriteLine("Entro al foreach");
+                            strSql = "INSERT INTO existencia (fkIdEmpresa, fkIdSucursal, fkIdBodega, fkIdPro, cantidad_existencia, " +
+                                "existencia_minima, existencia_maxima, estado_existencia) " +
+                                "VALUES ('" + detalle.IdEmpresaOrigen + "', '" + detalle.IdSucursalOrigen + "', '" + detalle.IdBodegaOrigen + "', " +
+                                "'" + detalle.IdProducto + "', '" + detalle.Cantidad1 + "', '100', '10000', '1');";
+                            cmd.CommandText = strSql;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Guardado En Bodega");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Entro al foreach");
+                            strSql = "UPDATE existencia SET cantidad_existencia = cantidad_existencia + " + detalle.Cantidad1 + " " +
+                                "WHERE (fkIdEmpresa = '" + detalle.IdEmpresaOrigen + "') and(fkIdBodega = '" + detalle.IdBodegaOrigen + "') " +
+                                "and(fkIdPro = '" + detalle.IdProducto + "')and(fkIdSucursal = '" + detalle.IdSucursalOrigen + "');";
+                            cmd.CommandText = strSql;
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Guardado En Bodega");
+                        }
+                        
+                    }
+                    catch (OdbcException err)
+                    {
+                        transaction.Rollback();
+                        MessageBox.Show("Error Rollback\nGuardado en bodega" + err.Message);
+                        Console.WriteLine("eroro", err.Message);
+                        bandera = 1;
+
+                        return false;
+                    }
+                }              
             }
+            catch (OdbcException err)
+            {
+                transaction.Rollback();
+                MessageBox.Show("Error Rollback\nRealizadio en Actualizacion encabezado" + err.Message);
+                bandera = 1;
+                return false;
+            }
+            if (bandera == 0)
+            {
+                transaction.Commit();
+                MessageBox.Show("Realizando commit datos guardados");
+            }
+            else
+            {
+                bandera = 0;
+            }
+            return true;
         }
     }
+
 }

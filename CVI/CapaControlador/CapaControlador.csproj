@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsMoverAExistencias.cs" />
     <Compile Include="clsMovInventariosCon.cs" />
     <Compile Include="clsValidaciones.cs" />
     <Compile Include="Controlador.cs" />

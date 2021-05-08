@@ -292,7 +292,7 @@ alter table PRODUCTO add constraint fk_producto_categoriaProducto foreign key(fk
 
 
 create table if not exists EXISTENCIA(
-    pkIdExis 					int(10),
+    pkIdExis 					int(10) auto_increment,
     fkIdEmpresa					int(10),
     fkIdSucursal				int(10),
     fkIdBodega 					int(10)not null,
@@ -686,6 +686,7 @@ BEGIN
 END$$
 DELIMITER ;
 
+
 -- #### VALORES
 INSERT INTO `PAIS` VALUES ('1', 'GUATEMALA', 'GUATEMALA', '1'),('2', 'MEXICO ', 'DF', '1'),('3', 'SALVADOR', 'SAN SALVADOR', '1');
 INSERT INTO `DEPARTAMENTO` VALUES (1,'DEPARTA1','DESCRIPCION1',1),(2,'DEPART2','DESCRIP2',1);
@@ -701,6 +702,7 @@ INSERT INTO `EXISTENCIA` VALUES ('1', '1', '1', '1', '1', '100', '50', '200', '1
 INSERT INTO `METODOPAGO`  VALUES ('1', 'EFECTIVO', '1'),('2', 'CHEQUE', '1'),('3', 'TARJETA', '1'),('4', 'CREDITO', '1');
 INSERT INTO `PUESTO` VALUES ('1', 'GERENTE', 'BUENO', '1');
 INSERT INTO `EMPLEADO`  VALUES ('1', '1', '1', '1', '1', 'Julio', 'Morataya', '1010', '898491', 'hola@gmail.com', '1');
-INSERT INTO `COMPRAENCABEZADO` VALUES ('1', '1', '1', '1', '1', '1', '04052021', '10', '1', '1', '1');
 INSERT INTO `TIPOCOMPRA` VALUES ('1', 'SOLICITUD', 'NECESITA APROBACION ', '1'),('2',  'ORDEN ', 'SOLICITUD APROBADA', '1'),('3', 'PROCESO', 'ENVIADA A PROVEEDOR', '1'),('4', 'EN CURSO', 'DESPACHADA POR PROVEEDOR', '1'),('5', 'RECIBIDA', 'ORDEN INGRESADA', '1'),('6', 'SOLICITUD RECHAZADA', 'NO ACEPTADA', '1'),('7', 'ORDEN RECHAZADA', 'RECHAZADA POR INCONFORMIDAD', '1'),('8', 'DEVOLUCION', 'REGRESO DE ORDEN A PROVEEDOR', '1');
+INSERT INTO `dbcvierp`.`tipocompra` (`pktipocompra`, `nombretipocompra`, `descripciontipocompra`, `estado`) VALUES ('9', 'ALMACENADA', 'ORDEN ALMACENADA EN BODEGA', '1');
+INSERT INTO `COMPRAENCABEZADO` VALUES ('1', '1', '1', '1', '1', '1', '04052021', '10', '1', '1', '1');
 INSERT INTO razonmovimiento VALUES ('1','Compras','Compra A Proveedores','1'),('2','Ventas','Venta a Clientes','1'),('3','Devolucion Sobre Compras','Devolucion Sobre Compras','1'),('4','Devolucion sobre Ventas','Devolucion sobre Ventas','1'),('5','Movimiento De Inventarios','Movimiento De Bodega a Bodega','1');
