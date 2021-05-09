@@ -34,3 +34,9 @@ D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj
 D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
 D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.dll
 D:\Documentos\Proyectos-Software\Nuevo\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.pdb
+C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\bin\Debug\CapaModelo.dll
+C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\bin\Debug\CapaModelo.pdb
+C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.csprojAssemblyReference.cache
+C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.csproj.CoreCompileInputs.cache
+C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.dll
+C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaModelo\obj\Debug\CapaModelo.pdb
