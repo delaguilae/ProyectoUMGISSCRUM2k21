@@ -46,6 +46,7 @@
     <Compile Include="clsListaEncabezado.cs" />
     <Compile Include="clsListaExistencia.cs" />
     <Compile Include="clsListaExistenciaMovBodegas.cs" />
+    <Compile Include="clsListaMoverAExistencia.cs" />
     <Compile Include="clsMovInventariosMo.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

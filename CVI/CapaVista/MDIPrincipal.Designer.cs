@@ -82,6 +82,7 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.moverABodegasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -317,7 +318,8 @@ namespace CapaVista
             this.compraDeProveedoresToolStripMenuItem,
             this.impresionComprasToolStripMenuItem,
             this.estadoDeComprasToolStripMenuItem,
-            this.abonoCuentasToolStripMenuItem});
+            this.abonoCuentasToolStripMenuItem,
+            this.moverABodegasToolStripMenuItem});
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
             this.comprasToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.comprasToolStripMenuItem.Text = "Compras";
@@ -486,6 +488,13 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(100, 20);
             this.txtusuario.TabIndex = 4;
             // 
+            // moverABodegasToolStripMenuItem
+            // 
+            this.moverABodegasToolStripMenuItem.Name = "moverABodegasToolStripMenuItem";
+            this.moverABodegasToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.moverABodegasToolStripMenuItem.Text = "0804-Mover A Bodegas";
+            this.moverABodegasToolStripMenuItem.Click += new System.EventHandler(this.moverABodegasToolStripMenuItem_Click);
+            // 
             // MDIPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -563,6 +572,7 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem estadoDeComprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abonoCuentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem moverABodegasToolStripMenuItem;
     }
 }
 

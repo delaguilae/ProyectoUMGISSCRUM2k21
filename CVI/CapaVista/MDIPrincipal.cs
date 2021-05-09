@@ -546,5 +546,12 @@ namespace CapaVista
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
+
+        private void moverABodegasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Procesos.OrdenesCompra.frmGuardar1 moverAExistencia = new Procesos.OrdenesCompra.frmGuardar1();
+            moverAExistencia.MdiParent = this;
+            moverAExistencia.Show();
+        }
     }
 }
