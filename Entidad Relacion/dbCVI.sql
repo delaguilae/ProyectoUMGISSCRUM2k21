@@ -1,5 +1,5 @@
-create database if not exists dbCVIERP;
-use dbCVIERP;
+create database if not exists dbcvierp2;
+use dbcvierp2;
 #Base de datos Seguridad-----------------------------------------------------------------------------------
 create table if not exists LOGIN(
 	pk_id_login 						int(10) auto_increment,
@@ -626,7 +626,7 @@ alter table MOVIMIENTOINVENTARIODETALLE add constraint fk_detallemovimiento fore
 #PROCEDIMIENTO ALMACENADO LOGIN --------------------------------------------------------------------------------------------------------------------------
 DROP procedure IF EXISTS sp_Login;
 DELIMITER $$
-USE dbcvierp$$
+USE dbcvierp2$$
 CREATE PROCEDURE sp_Login(
 	in UserLogin varchar(45),
 	in PassLogin varchar(45)
@@ -664,7 +664,7 @@ BEGIN
 if (select cantidad_existencia from existencia where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto) > CantidadMover and Accion = 1 then
 	update existencia set cantidad_existencia = cantidad_existencia - CantidadMover where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto;
     update existencia set cantidad_existencia = cantidad_existencia + CantidadMover where fkIdEmpresa=idEmpresaDestino and fkIdSucursal=idSucursalDestino and fkIdBodega=idBodegaDestino and fkIdPro=idProducto;
-    INSERT INTO `dbcvierp`.`movimientoinventario` (`fkidproducto`, `fkbodegaorigen`, `fkbodegadestino`, `cantidad`, `razon`, `fkencargado`) VALUES (idProducto, idBodegaOrigen, idBodegaDestino, CantidadMover, Razon, idUsuario);
+    INSERT INTO `dbcvierp2`.`movimientoinventario` (`fkidproducto`, `fkbodegaorigen`, `fkbodegadestino`, `cantidad`, `razon`, `fkencargado`) VALUES (idProducto, idBodegaOrigen, idBodegaDestino, CantidadMover, Razon, idUsuario);
 
 else
 	update existencia set cantidad_existencia = cantidad_existencia + CantidadMover where fkIdEmpresa=idEmpresaOrigen and fkIdSucursal=idSucursalOrigen and fkIdBodega=idBodegaOrigen and fkIdPro=idProducto;
@@ -686,6 +686,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+ALTER TABLE `dbcvierp2`.`saldohistoricocompra` 
+ADD COLUMN `notas` VARCHAR(45) NULL AFTER `abono`;
 
 -- #### VALORES
 INSERT INTO `PAIS` VALUES ('1', 'GUATEMALA', 'GUATEMALA', '1'),('2', 'MEXICO ', 'DF', '1'),('3', 'SALVADOR', 'SAN SALVADOR', '1');
@@ -702,7 +704,6 @@ INSERT INTO `EXISTENCIA` VALUES ('1', '1', '1', '1', '1', '100', '50', '200', '1
 INSERT INTO `METODOPAGO`  VALUES ('1', 'EFECTIVO', '1'),('2', 'CHEQUE', '1'),('3', 'TARJETA', '1'),('4', 'CREDITO', '1');
 INSERT INTO `PUESTO` VALUES ('1', 'GERENTE', 'BUENO', '1');
 INSERT INTO `EMPLEADO`  VALUES ('1', '1', '1', '1', '1', 'Julio', 'Morataya', '1010', '898491', 'hola@gmail.com', '1');
-INSERT INTO `TIPOCOMPRA` VALUES ('1', 'SOLICITUD', 'NECESITA APROBACION ', '1'),('2',  'ORDEN ', 'SOLICITUD APROBADA', '1'),('3', 'PROCESO', 'ENVIADA A PROVEEDOR', '1'),('4', 'EN CURSO', 'DESPACHADA POR PROVEEDOR', '1'),('5', 'RECIBIDA', 'ORDEN INGRESADA', '1'),('6', 'SOLICITUD RECHAZADA', 'NO ACEPTADA', '1'),('7', 'ORDEN RECHAZADA', 'RECHAZADA POR INCONFORMIDAD', '1'),('8', 'DEVOLUCION', 'REGRESO DE ORDEN A PROVEEDOR', '1');
-INSERT INTO `dbcvierp`.`tipocompra` (`pktipocompra`, `nombretipocompra`, `descripciontipocompra`, `estado`) VALUES ('9', 'ALMACENADA', 'ORDEN ALMACENADA EN BODEGA', '1');
+INSERT INTO `TIPOCOMPRA` VALUES ('1', 'SOLICITUD', 'NECESITA APROBACION ', '1'),('2',  'ORDEN ', 'SOLICITUD APROBADA', '1'),('3', 'PROCESO', 'ENVIADA A PROVEEDOR', '1'),('4', 'EN CURSO', 'DESPACHADA POR PROVEEDOR', '1'),('5', 'RECIBIDA', 'ORDEN INGRESADA', '1'),('6', 'SOLICITUD RECHAZADA', 'NO ACEPTADA', '1'),('7', 'ORDEN RECHAZADA', 'RECHAZADA POR INCONFORMIDAD', '1'),('8', 'DEVOLUCION', 'REGRESO DE ORDEN A PROVEEDOR', '1'),('9', 'ALMACENADA', 'ORDEN ALMACENADA EN BODEGA', '1');
 INSERT INTO `COMPRAENCABEZADO` VALUES ('1', '1', '1', '1', '1', '1', '04052021', '10', '1', '1', '1');
 INSERT INTO razonmovimiento VALUES ('1','Compras','Compra A Proveedores','1'),('2','Ventas','Venta a Clientes','1'),('3','Devolucion Sobre Compras','Devolucion Sobre Compras','1'),('4','Devolucion sobre Ventas','Devolucion sobre Ventas','1'),('5','Movimiento De Inventarios','Movimiento De Bodega a Bodega','1');

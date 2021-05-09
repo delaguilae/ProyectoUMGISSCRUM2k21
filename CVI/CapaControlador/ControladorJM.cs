@@ -177,5 +177,20 @@ namespace CapaControlador
             string Consulta = "select PRO.pkIdProducto, PRO.nombrePro, PRO.precioPro, PRO.descripcionPro FROM PRODUCTO PRO INNER JOIN PROVEEDOR PROVEE ON PRO.fkProv = PROVEE.pkIdProv WHERE "+campo1+"=" +dato1+";";
             return Modelo.funcConsulta(Consulta);
         }
+        public OdbcDataReader funcMostrarEncabezadoCompras()
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv, emp.nombreEmpresa, ce.fechaCompra, ce.totalCompra FROM compraencabezado ce inner join proveedor pro on pro.pkIdProv = ce.fkIdProv inner join empresa emp on emp.pkIdEmpresa = ce.fkIdEmpresa;";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcMostrarRecibo()
+        {
+            string Consulta = "SELECT ce.pkNoDocumentoEnca, pro.direccionProv, emp.nombreEmpresa, ce.fechaCompra, ce.totalCompra, tc.nombretipocompra, mp.descripcionMetodo FROM compraencabezado ce inner join metodopago mp on mp.pkIdMetodoPago = ce.fkmetodoPago inner join proveedor pro on pro.pkIdProv = ce.fkIdProv inner join empresa emp on emp.pkIdEmpresa = ce.fkIdEmpresa inner join tipocompra tc on tc.pktipocompra = ce.fktipocompra inner join saldoscomrpa scc on scc.fkNoDocumentoEnca = ce.pkNoDocumentoEnca WHERE scc.saldo > 0; ";
+            return Modelo.funcInsertar(Consulta);
+        }
+        public OdbcDataReader funcInsertarSaldocompras5(string fecha, string idencabezado, string saldo, string abono, string notas)
+        {
+            string Consulta = "INSERT INTO `saldohistoricocompra` (`fechamovimientocompra`, `fkNoDocumentoEnca`, `fkmetodopago`, `saldoanterior`, `abono`, `notas`) VALUES('" + fecha + "', " + idencabezado + ",1," + saldo + "," + abono +","+notas+");";
+            return Modelo.funcInsertar(Consulta);
+        }
     }
 }

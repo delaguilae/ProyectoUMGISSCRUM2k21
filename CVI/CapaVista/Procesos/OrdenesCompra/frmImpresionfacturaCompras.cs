@@ -70,5 +70,25 @@ namespace CapaVista.Procesos.OrdenesCompra
                 MessageBox.Show("favor de verificar los campos");
             }
         }
+        private void mostraractualizacion2()
+        {
+            OdbcDataReader mostrar = jm.funcMostrarEncabezadoCompras();
+            try
+            {
+                while (mostrar.Read())
+                {
+                    dgv2.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4));
+                }
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mostraractualizacion2();
+        }
     }
 }

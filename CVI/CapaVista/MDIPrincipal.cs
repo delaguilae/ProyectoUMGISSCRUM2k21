@@ -553,5 +553,23 @@ namespace CapaVista
             moverAExistencia.MdiParent = this;
             moverAExistencia.Show();
         }
+
+        private void reciboDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("303", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Ingreso A Mantenimiento Productos", 303);
+                Procesos.Saldos.frmReciboCompras mantenimiento = new Procesos.Saldos.frmReciboCompras(txtusuario.Text);
+                mantenimiento.MdiParent = this;
+                mantenimiento.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar A Mantenimiento Productos", 303);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+        }
     }
 }

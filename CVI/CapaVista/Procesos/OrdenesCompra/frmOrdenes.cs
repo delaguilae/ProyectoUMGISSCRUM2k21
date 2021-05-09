@@ -326,11 +326,11 @@ namespace CapaVista.Procesos.Ordenes
             
         }
         private void ingresarasaldocompra() {
-            if (txtmetodopago.Text == "4") {
-                OdbcDataReader consulta = jm.funcInsertarSaldocompras(idencabezado,txttotal.Text);
-                OdbcDataReader consulta2 = jm.funcInsertarSaldocompras2(txtfecha.Text,idencabezado,"4",txttotal.Text,"0.00");
-            }            
-        
+            
+                OdbcDataReader consulta = jm.funcInsertarSaldocompras(idencabezado,txttotal.Text);         
+                OdbcDataReader consulta2 = jm.funcInsertarSaldocompras2(txtfecha.Text, idencabezado, txtmetodopago.Text, txttotal.Text, "0.00");
+            
+            
         }
         private void button4_Click(object sender, EventArgs e)
         {

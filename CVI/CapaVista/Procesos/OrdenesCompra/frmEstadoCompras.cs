@@ -43,12 +43,12 @@ namespace CapaVista.Procesos.OrdenesCompra
             }
             catch (Exception err)
             {
-
                 Console.WriteLine(err.Message);
             }
 
         }
-            private void cmbtipocompra_SelectedIndexChanged(object sender, EventArgs e)
+       
+        private void cmbtipocompra_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbtipocompra.SelectedIndex != -1)
             {
@@ -178,6 +178,11 @@ namespace CapaVista.Procesos.OrdenesCompra
             printer.Footer = "ASC";//Foote
             printer.FooterSpacing = 15;
             printer.PrintDataGridView(dgvEstados);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
