@@ -408,9 +408,7 @@ namespace CapaVista
 
         private void movimientoDeInventariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Procesos.MovimientoInventarios.frmMovimientoInventarios MovInventario = new Procesos.MovimientoInventarios.frmMovimientoInventarios();
-            MovInventario.MdiParent = this;
-            MovInventario.Show();
+            
         }
 
         private void visualizarMovimientosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -552,6 +550,31 @@ namespace CapaVista
             Procesos.OrdenesCompra.frmGuardar1 moverAExistencia = new Procesos.OrdenesCompra.frmGuardar1();
             moverAExistencia.MdiParent = this;
             moverAExistencia.Show();
+        }
+
+        private void movimientosDeInventariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Procesos.MovimientoInventarios.frmMovimientoInventarios MovInventario = new Procesos.MovimientoInventarios.frmMovimientoInventarios();
+            MovInventario.MdiParent = this;
+            MovInventario.Show();
+        }
+
+        private void manrtenimientoRazonDeMovimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (seguridad.PermisosAcceso("8", txtusuario.Text) == 1)
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("ingreso a Mantenimiento Razon De Movimiento", 8);
+                frmRazonMovimiento modulo = new frmRazonMovimiento(txtusuario.Text);
+                modulo.MdiParent = this;
+                modulo.Show();
+            }
+            else
+            {
+                bit.user(txtusuario.Text);
+                bit.insert("Trato de Ingresar A Mantenimiento Razon De Movimiento", 8);
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
     }
 }

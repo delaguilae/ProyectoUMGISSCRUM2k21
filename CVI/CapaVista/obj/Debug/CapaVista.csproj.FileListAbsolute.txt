@@ -338,3 +338,4 @@ D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmImpresionfacturaCompras.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmGuardar1.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmVisualizarTodo.resources
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmRazonMovimiento.resources
