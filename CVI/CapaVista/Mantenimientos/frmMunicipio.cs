@@ -14,6 +14,7 @@ namespace CapaVista.Mantenimientos
     public partial class frmMunicipio : Form
     {
         string UsuarioAplicacion;
+        clsValidaciones vali = new clsValidaciones();
         Controlador con = new Controlador();
         public frmMunicipio(string usuario)
         {
@@ -103,6 +104,15 @@ namespace CapaVista.Mantenimientos
         private void rbHabilitado_CheckedChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "1";
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
         }
     }
 }

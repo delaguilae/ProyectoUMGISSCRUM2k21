@@ -15,6 +15,7 @@ namespace CapaVista.Mantenimientos
     {
         string UsuarioAplicacion;
         Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
         public frmSucursal(string usuario)
         {
             InitializeComponent();
@@ -152,6 +153,16 @@ namespace CapaVista.Mantenimientos
         private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "0";
+        }
+
+        private void txtNombreSucursal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposNumerosYLetras(e);
         }
     }
 }

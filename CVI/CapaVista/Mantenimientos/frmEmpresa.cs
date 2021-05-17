@@ -15,6 +15,7 @@ namespace CapaVista.Mantenimientos
     {
         string UsuarioAplicacion;
         Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
         public frmEmpresa(string usuario)
         {
             InitializeComponent();
@@ -139,6 +140,16 @@ namespace CapaVista.Mantenimientos
         private void txtIdPais_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombreEmpresa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtDireccionEmpresa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposNumerosYLetras(e);
         }
     }
 }

@@ -106,6 +106,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column8});
             this.dgvimpresioncompras.Location = new System.Drawing.Point(48, 340);
             this.dgvimpresioncompras.Name = "dgvimpresioncompras";
+            this.dgvimpresioncompras.ReadOnly = true;
             this.dgvimpresioncompras.RowHeadersWidth = 51;
             this.dgvimpresioncompras.RowTemplate.Height = 24;
             this.dgvimpresioncompras.Size = new System.Drawing.Size(1251, 318);
@@ -116,48 +117,56 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column1.HeaderText = "CODIGO";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "PRODUCTO";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "CANTIDAD";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "PRECIO";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "SUBTOTAL";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "EMPRESA";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "SUCURSAL";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "BODEGA";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // button4
             // 
@@ -178,6 +187,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.txtimpresion.Name = "txtimpresion";
             this.txtimpresion.Size = new System.Drawing.Size(222, 27);
             this.txtimpresion.TabIndex = 91;
+            this.txtimpresion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtimpresion_KeyPress);
             // 
             // label11
             // 
@@ -216,6 +226,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column10});
             this.dgv2.Location = new System.Drawing.Point(48, 52);
             this.dgv2.Name = "dgv2";
+            this.dgv2.ReadOnly = true;
             this.dgv2.RowHeadersWidth = 51;
             this.dgv2.RowTemplate.Height = 24;
             this.dgv2.Size = new System.Drawing.Size(1124, 220);
@@ -226,30 +237,35 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.dataGridViewTextBoxColumn1.HeaderText = "CODIGO";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "PROVEEDOR";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "EMPRESA";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "FECHA";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "TOTAL";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // button3
             // 

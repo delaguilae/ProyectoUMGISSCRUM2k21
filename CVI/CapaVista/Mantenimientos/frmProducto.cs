@@ -25,21 +25,21 @@ namespace CapaVista.Mantenimientos
             UsuarioAplicacion = usuario;
             navegador1.Usuario = UsuarioAplicacion;
             rbHabilitado.Checked = true;
-            txtEstado.Text = "1";
+            txtPrecio.Text = "1";
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (txtLinea.Text != "") 
+            if (txtEmpresa.Text != "") 
             {
-                OdbcDataReader reader = con.FieldComboboxtxt("nombreLineaPro", "lineaproducto", "estadoLineaPro", "pkIdLineaPro", txtLinea.Text);
+                OdbcDataReader reader = con.FieldComboboxtxt( "nombreEmpresa", "empresa", "estadoEmpresa", "pkIdEmpresa", txtEmpresa.Text);
                 if (reader.Read())
                 {
-                    cmbLinea.Text = reader.GetString(0);
+                    cmbEmpresa.Text = reader.GetString(0);
                 }
                 else
                 {
-                    cmbLinea.SelectedIndex = -1;
+                    cmbEmpresa.SelectedIndex = -1;
                 }
             }
         }
@@ -60,6 +60,12 @@ namespace CapaVista.Mantenimientos
             cmbMarca.ValueMember = "pkIdMarcaPro";
             cmbMarca.DataSource = con.FieldCombobox("pkIdMarcaPro", "nombreMarcaPro", "marcaproducto", "estadoMarcaPro");
             cmbMarca.SelectedIndex = -1;
+            //fill cb Proveedor
+            cmbProveedor.DisplayMember = "direccionProv";
+            cmbProveedor.ValueMember = "pkIdProv";
+            cmbProveedor.DataSource = con.FieldCombobox("pkIdProv", "direccionProv", "proveedor", "estadoProv");
+            cmbProveedor.SelectedIndex = -1;
+
         }
 
         private void navegador1_Load(object sender, EventArgs e)
@@ -105,75 +111,75 @@ namespace CapaVista.Mantenimientos
             navegador1.ruta = "Mantenimiento Producto.html";
             rbHabilitado.Checked = true;
             rbDeshabilitado.Checked = false;
-            txtEstado.Text = "1";
+            txtPrecio.Text = "1";
         }
         private void cmbEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbEmpresa.SelectedIndex != -1)
+            if (cmbProveedor.SelectedIndex != -1)
             {
-                txtEmpresa.Text = cmbEmpresa.SelectedValue.ToString();
+                txtProveedor.Text = cmbProveedor.SelectedValue.ToString();
             }
-            txtEstado.Text = "1";
+            txtestado.Text = "1";
         }
 
         private void txtEmpresa_TextChanged(object sender, EventArgs e)
         {
-            if (txtEmpresa.Text != "")
+            if (txtProveedor.Text != "")
             {
-               OdbcDataReader reader = con.FieldComboboxtxt("nombreEmpresa", "empresa", "estadoEmpresa", "pkIdEmpresa", txtEmpresa.Text);
+               OdbcDataReader reader = con.FieldComboboxtxt( "direccionProv", "proveedor", "estadoProv","pkIdProv", txtProveedor.Text);
                 if (reader.Read())
                 {
-                    cmbEmpresa.Text = reader.GetString(0);
+                    cmbProveedor.Text = reader.GetString(0);
                 }
                 else
                 {
-                    cmbEmpresa.SelectedIndex = -1;
+                    cmbProveedor.SelectedIndex = -1;
                 }
             }
         }
 
         private void cmbLinea_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbLinea.SelectedIndex != -1)
+            if (cmbEmpresa.SelectedIndex != -1)
             {
-                txtLinea.Text = cmbLinea.SelectedValue.ToString();
+                txtEmpresa.Text = cmbEmpresa.SelectedValue.ToString();
             }
-            txtEstado.Text = "1";
+            
         }
 
         private void cmbMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbMarca.SelectedIndex != -1)
+            if (cmbLinea.SelectedIndex != -1)
             {
-                txtMarca.Text = cmbMarca.SelectedValue.ToString();
+                txtLinea.Text = cmbLinea.SelectedValue.ToString();
             }
-            txtEstado.Text = "1";
+            
         }
 
         private void txtMarca_TextChanged(object sender, EventArgs e)
         {
-            if (txtMarca.Text != "")
+            if (txtLinea.Text != "")
             {
-                OdbcDataReader reader = con.FieldComboboxtxt("nombreLineaPro", "lineaproducto", "estadoLineaPro", "pkIdLineaPro", txtMarca.Text);
+                OdbcDataReader reader = con.FieldComboboxtxt("nombreLineaPro", "lineaproducto", "estadoLineaPro", "pkIdLineaPro", txtLinea.Text);
                 if (reader.Read())
                 {
-                    cmbMarca.Text = reader.GetString(0);
+                    cmbLinea.Text = reader.GetString(0);
                 }
                 else
                 {
-                    cmbMarca.SelectedIndex = -1;
+                    cmbLinea.SelectedIndex = -1;
                 }
             }
         }
 
         private void rbHabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            txtEstado.Text = "1";
+            txtestado.Text = "1";
         }
 
         private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
         {
-            txtEstado.Text = "0";
+            txtestado.Text = "0";
         }
 
         private void frmProducto_Load(object sender, EventArgs e)
@@ -188,7 +194,7 @@ namespace CapaVista.Mantenimientos
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validaciones.Camposdecimales(e);
+            validaciones.CamposLetras(e);
         }
 
         private void txtDescripcion_TextChanged(object sender, EventArgs e)
@@ -199,6 +205,51 @@ namespace CapaVista.Mantenimientos
         private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaciones.CamposNumerosYLetras(e);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMarca.SelectedIndex != -1)
+            {
+                txtMarcaPro.Text = cmbMarca.SelectedValue.ToString();
+            }
+          
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtMarcaPro.Text != "")
+            {
+                OdbcDataReader reader = con.FieldComboboxtxt("nombreMarcaPro", "marcaproducto", "estadoMarcaPro","pkIdMarcaPro", txtProveedor.Text);
+                if (reader.Read())
+                {
+                    cmbMarca.Text = reader.GetString(0);
+                }
+                else
+                {
+                    cmbMarca.SelectedIndex = -1;
+                }
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetras(e);
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetras(e);
+        }
+
+        private void txtEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.Camposdecimales(e);
         }
     }
 }

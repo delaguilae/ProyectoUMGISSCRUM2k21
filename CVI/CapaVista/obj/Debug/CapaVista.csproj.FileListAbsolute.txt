@@ -134,7 +134,6 @@ C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\De
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Facturacion.frmFacturaBusqueda.resources
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Inventarios.frmConfirmacionOrden.resources
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.frmInventarios.resources
-C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.frmSaldos.resources
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Ordenes.frmOrdenes.resources
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.csproj.GenerateResource.cache
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.csproj.CoreCompileInputs.cache
@@ -407,3 +406,6 @@ C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.
 C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.dll
 C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.pdb
 C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Saldos.frmReciboCompras.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmGuardar1.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmVisualizarTodo.resources
+C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Saldos.frmReciboCompras.resources

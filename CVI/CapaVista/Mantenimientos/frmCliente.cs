@@ -15,6 +15,7 @@ namespace CapaVista.Mantenimientos
     {
         string UsuarioAplicacion;
         Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
         public frmCliente(string usuario)
         {
             InitializeComponent();
@@ -117,6 +118,46 @@ namespace CapaVista.Mantenimientos
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "1";
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposNumerosYLetras(e);
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

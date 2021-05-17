@@ -221,5 +221,15 @@ namespace CapaVista.Mantenimientos
         {
 
         }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposLetras(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaciones.CamposNumerosYLetras(e);
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace CapaVista.Procesos.OrdenesCompra
         ControladorJM jm = new ControladorJM();
         VariableGlobal glo = new VariableGlobal();
         Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
         double saldoanterior; 
         public frmAbonoCuentas(string usuario)
         {
@@ -205,6 +206,31 @@ namespace CapaVista.Procesos.OrdenesCompra
             
             
             }
+        }
+
+        private void txtordencompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtordencompra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtabono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }

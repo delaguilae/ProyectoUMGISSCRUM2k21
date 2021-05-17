@@ -14,6 +14,7 @@ namespace CapaVista.Procesos.OrdenesCompra
 {
     public partial class frmGuardar1 : Form
     {
+        clsValidaciones vali = new clsValidaciones();
         clsMoverAExistencias mover = new clsMoverAExistencias();
         DataTable Dt = new DataTable();
         DataTable Dt2 = new DataTable();
@@ -330,6 +331,41 @@ namespace CapaVista.Procesos.OrdenesCompra
         {
             frmVisualizarTodo visualizarTodo = new frmVisualizarTodo();
             visualizarTodo.Show();
+        }
+
+        private void frmGuardar1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtproducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtIdEmpresa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtIdSucursal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtIdBodega_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }
