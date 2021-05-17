@@ -129,6 +129,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // cmbEmpresa
             // 
+            this.cmbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEmpresa.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpresa.FormattingEnabled = true;
             this.cmbEmpresa.Location = new System.Drawing.Point(143, 88);
@@ -172,6 +173,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // cbExistencia
             // 
+            this.cbExistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbExistencia.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbExistencia.FormattingEnabled = true;
             this.cbExistencia.Items.AddRange(new object[] {
@@ -234,6 +236,7 @@ namespace CapaVista.Procesos.Inventarios
             // 
             // cmbBodega
             // 
+            this.cmbBodega.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBodega.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBodega.FormattingEnabled = true;
             this.cmbBodega.Location = new System.Drawing.Point(143, 123);
@@ -356,6 +359,8 @@ namespace CapaVista.Procesos.Inventarios
             this.Controls.Add(this.cmbEmpresa);
             this.Controls.Add(this.dgvInventarioT);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmInventarioTotal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInventarioTotal";

@@ -18,6 +18,7 @@ namespace CapaVista.Procesos.OrdenesCompra
          clsMovInventariosCon Controlador = new clsMovInventariosCon();
          ControladorJM jm = new ControladorJM();
          Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
         string filtro; 
         public frmEstadoCompras(string usuario)
         {
@@ -183,6 +184,16 @@ namespace CapaVista.Procesos.OrdenesCompra
         private void button3_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void txtenca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txttipocompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }

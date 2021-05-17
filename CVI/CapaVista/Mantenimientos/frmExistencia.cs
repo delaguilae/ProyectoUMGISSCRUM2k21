@@ -16,7 +16,7 @@ namespace CapaVista.Mantenimientos
     {
         string UsuarioAplicacion;
         ControladorJM con = new ControladorJM();
-        clsValidaciones validaciones = new clsValidaciones();
+        clsValidaciones vali = new clsValidaciones();
         public frmExistencia(string usuario)
         { 
             InitializeComponent();
@@ -220,7 +220,23 @@ namespace CapaVista.Mantenimientos
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
+            
             txtEstado.Text = "1";
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtMin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtMax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }

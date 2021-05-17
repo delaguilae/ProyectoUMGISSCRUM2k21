@@ -14,6 +14,7 @@ namespace CapaVista.Mantenimientos
     public partial class frmMarcaPro : Form
     {
         string UsuarioAplicacion;
+        clsValidaciones vali = new clsValidaciones();
         Controlador con = new Controlador();
         public frmMarcaPro(string usuario)
         {
@@ -99,6 +100,21 @@ namespace CapaVista.Mantenimientos
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "1";
+        }
+
+        private void frmMarcaPro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
         }
     }
 }

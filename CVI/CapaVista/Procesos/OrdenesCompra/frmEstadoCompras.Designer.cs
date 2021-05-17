@@ -30,7 +30,7 @@ namespace CapaVista.Procesos.OrdenesCompra
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadoCompras));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
@@ -106,17 +106,18 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEstados.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEstados.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvEstados.Location = new System.Drawing.Point(26, 187);
             this.dgvEstados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvEstados.Name = "dgvEstados";
+            this.dgvEstados.ReadOnly = true;
             this.dgvEstados.RowHeadersWidth = 51;
             this.dgvEstados.RowTemplate.Height = 24;
             this.dgvEstados.Size = new System.Drawing.Size(1109, 319);
@@ -127,36 +128,41 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column1.HeaderText = "CODIGO";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "PROVEEDOR";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "FECHA";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "TOTAL";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "ESTADO";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(1142, 370);
+            this.button4.Location = new System.Drawing.Point(1142, 419);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(169, 38);
@@ -170,7 +176,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1142, 283);
+            this.button1.Location = new System.Drawing.Point(1141, 282);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 48);
@@ -180,9 +186,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             // cmbtipocompra
             // 
+            this.cmbtipocompra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbtipocompra.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbtipocompra.FormattingEnabled = true;
-            this.cmbtipocompra.Location = new System.Drawing.Point(1142, 187);
+            this.cmbtipocompra.Location = new System.Drawing.Point(1141, 186);
             this.cmbtipocompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbtipocompra.Name = "cmbtipocompra";
             this.cmbtipocompra.Size = new System.Drawing.Size(169, 28);
@@ -193,13 +200,14 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             this.txttipocompra.Enabled = false;
             this.txttipocompra.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipocompra.Location = new System.Drawing.Point(1142, 337);
+            this.txttipocompra.Location = new System.Drawing.Point(1142, 386);
             this.txttipocompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txttipocompra.Name = "txttipocompra";
             this.txttipocompra.Size = new System.Drawing.Size(169, 27);
             this.txttipocompra.TabIndex = 92;
             this.txttipocompra.Visible = false;
             this.txttipocompra.TextChanged += new System.EventHandler(this.txttipocompra_TextChanged);
+            this.txttipocompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipocompra_KeyPress);
             // 
             // label1
             // 
@@ -207,7 +215,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1144, 228);
+            this.label1.Location = new System.Drawing.Point(1143, 227);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 20);
@@ -217,11 +225,12 @@ namespace CapaVista.Procesos.OrdenesCompra
             // txtenca
             // 
             this.txtenca.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtenca.Location = new System.Drawing.Point(1142, 250);
+            this.txtenca.Location = new System.Drawing.Point(1141, 249);
             this.txtenca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtenca.Name = "txtenca";
             this.txtenca.Size = new System.Drawing.Size(169, 27);
             this.txtenca.TabIndex = 94;
+            this.txtenca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtenca_KeyPress);
             // 
             // groupBox1
             // 
@@ -366,7 +375,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1142, 415);
+            this.button2.Location = new System.Drawing.Point(1142, 464);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 38);

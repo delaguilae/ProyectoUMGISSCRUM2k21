@@ -79,6 +79,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column4});
             this.dgvmorosos.Location = new System.Drawing.Point(25, 92);
             this.dgvmorosos.Name = "dgvmorosos";
+            this.dgvmorosos.ReadOnly = true;
             this.dgvmorosos.RowHeadersWidth = 51;
             this.dgvmorosos.RowTemplate.Height = 24;
             this.dgvmorosos.Size = new System.Drawing.Size(1306, 212);
@@ -155,6 +156,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column10});
             this.dgvhistorico.Location = new System.Drawing.Point(632, 321);
             this.dgvhistorico.Name = "dgvhistorico";
+            this.dgvhistorico.ReadOnly = true;
             this.dgvhistorico.RowHeadersWidth = 51;
             this.dgvhistorico.RowTemplate.Height = 24;
             this.dgvhistorico.Size = new System.Drawing.Size(699, 315);
@@ -216,6 +218,8 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.txtordencompra.Name = "txtordencompra";
             this.txtordencompra.Size = new System.Drawing.Size(131, 27);
             this.txtordencompra.TabIndex = 65;
+            this.txtordencompra.TextChanged += new System.EventHandler(this.txtordencompra_TextChanged);
+            this.txtordencompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtordencompra_KeyPress);
             // 
             // button1
             // 
@@ -308,6 +312,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.txtabono.Name = "txtabono";
             this.txtabono.Size = new System.Drawing.Size(314, 27);
             this.txtabono.TabIndex = 80;
+            this.txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtabono_KeyPress);
             // 
             // label3
             // 
@@ -324,6 +329,7 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             // cmbmetodopago
             // 
+            this.cmbmetodopago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbmetodopago.Enabled = false;
             this.cmbmetodopago.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbmetodopago.FormattingEnabled = true;
@@ -368,6 +374,8 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.txtcodigo.Name = "txtcodigo";
             this.txtcodigo.Size = new System.Drawing.Size(314, 27);
             this.txtcodigo.TabIndex = 65;
+            this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
+            this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
             // label2
             // 

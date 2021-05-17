@@ -18,6 +18,7 @@ namespace CapaVista.Procesos.OrdenesCompra
         ControladorJM jm = new ControladorJM();
         VariableGlobal glo = new VariableGlobal();
         DataTable Dt = new DataTable();
+        clsValidaciones vali = new clsValidaciones();
         Controlador con = new Controlador();
 
 
@@ -89,6 +90,11 @@ namespace CapaVista.Procesos.OrdenesCompra
         private void button3_Click(object sender, EventArgs e)
         {
             mostraractualizacion2();
+        }
+
+        private void txtimpresion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }

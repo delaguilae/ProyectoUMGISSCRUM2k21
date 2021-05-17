@@ -188,48 +188,52 @@ namespace CapaVista.Mantenimientos
             // txtPro
             // 
             this.txtPro.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPro.Location = new System.Drawing.Point(461, 263);
+            this.txtPro.Location = new System.Drawing.Point(3, 277);
             this.txtPro.Margin = new System.Windows.Forms.Padding(4);
             this.txtPro.Name = "txtPro";
             this.txtPro.Size = new System.Drawing.Size(132, 27);
             this.txtPro.TabIndex = 35;
             this.txtPro.Tag = "fkIdPro";
+            this.txtPro.Visible = false;
             this.txtPro.TextChanged += new System.EventHandler(this.txtPro_TextChanged);
             // 
             // txtBodega
             // 
             this.txtBodega.Enabled = false;
             this.txtBodega.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBodega.Location = new System.Drawing.Point(461, 230);
+            this.txtBodega.Location = new System.Drawing.Point(3, 244);
             this.txtBodega.Margin = new System.Windows.Forms.Padding(4);
             this.txtBodega.Name = "txtBodega";
             this.txtBodega.Size = new System.Drawing.Size(132, 27);
             this.txtBodega.TabIndex = 34;
             this.txtBodega.Tag = "fkIdBodega";
+            this.txtBodega.Visible = false;
             this.txtBodega.TextChanged += new System.EventHandler(this.txtBodega_TextChanged);
             // 
             // txtSucursal
             // 
             this.txtSucursal.Enabled = false;
             this.txtSucursal.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSucursal.Location = new System.Drawing.Point(461, 197);
+            this.txtSucursal.Location = new System.Drawing.Point(3, 211);
             this.txtSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSucursal.Name = "txtSucursal";
             this.txtSucursal.Size = new System.Drawing.Size(132, 27);
             this.txtSucursal.TabIndex = 33;
             this.txtSucursal.Tag = "fkIdSucursal";
+            this.txtSucursal.Visible = false;
             this.txtSucursal.TextChanged += new System.EventHandler(this.txtSucursal_TextChanged);
             // 
             // txtEmpresa
             // 
             this.txtEmpresa.Enabled = false;
             this.txtEmpresa.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpresa.Location = new System.Drawing.Point(461, 165);
+            this.txtEmpresa.Location = new System.Drawing.Point(3, 179);
             this.txtEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(132, 27);
             this.txtEmpresa.TabIndex = 32;
             this.txtEmpresa.Tag = "fkIdEmpresa";
+            this.txtEmpresa.Visible = false;
             this.txtEmpresa.TextChanged += new System.EventHandler(this.txtEmpresa_TextChanged);
             // 
             // txtID
@@ -252,6 +256,7 @@ namespace CapaVista.Mantenimientos
             this.txtMax.Size = new System.Drawing.Size(311, 27);
             this.txtMax.TabIndex = 38;
             this.txtMax.Tag = "existencia_maxima";
+            this.txtMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMax_KeyPress);
             // 
             // txtMin
             // 
@@ -263,6 +268,7 @@ namespace CapaVista.Mantenimientos
             this.txtMin.Size = new System.Drawing.Size(311, 27);
             this.txtMin.TabIndex = 37;
             this.txtMin.Tag = "existencia_minima";
+            this.txtMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMin_KeyPress);
             // 
             // txtCantidad
             // 
@@ -275,6 +281,7 @@ namespace CapaVista.Mantenimientos
             this.txtCantidad.TabIndex = 36;
             this.txtCantidad.Tag = "cantidad_existencia";
             this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtEstado
             // 
@@ -296,7 +303,7 @@ namespace CapaVista.Mantenimientos
             this.cmbBodega.Location = new System.Drawing.Point(282, 228);
             this.cmbBodega.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBodega.Name = "cmbBodega";
-            this.cmbBodega.Size = new System.Drawing.Size(171, 28);
+            this.cmbBodega.Size = new System.Drawing.Size(311, 28);
             this.cmbBodega.TabIndex = 102;
             this.cmbBodega.Tag = "saltar";
             this.cmbBodega.SelectedIndexChanged += new System.EventHandler(this.cmbBodega_SelectedIndexChanged);
@@ -309,7 +316,7 @@ namespace CapaVista.Mantenimientos
             this.cmbSucursal.Location = new System.Drawing.Point(282, 196);
             this.cmbSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSucursal.Name = "cmbSucursal";
-            this.cmbSucursal.Size = new System.Drawing.Size(171, 28);
+            this.cmbSucursal.Size = new System.Drawing.Size(311, 28);
             this.cmbSucursal.TabIndex = 101;
             this.cmbSucursal.Tag = "saltar";
             this.cmbSucursal.SelectedIndexChanged += new System.EventHandler(this.cmbSucursal_SelectedIndexChanged);
@@ -322,7 +329,7 @@ namespace CapaVista.Mantenimientos
             this.cmbEmpresa.Location = new System.Drawing.Point(282, 163);
             this.cmbEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEmpresa.Name = "cmbEmpresa";
-            this.cmbEmpresa.Size = new System.Drawing.Size(171, 28);
+            this.cmbEmpresa.Size = new System.Drawing.Size(311, 28);
             this.cmbEmpresa.TabIndex = 100;
             this.cmbEmpresa.Tag = "saltar";
             this.cmbEmpresa.SelectedIndexChanged += new System.EventHandler(this.cmbEmpresa_SelectedIndexChanged);
@@ -332,6 +339,7 @@ namespace CapaVista.Mantenimientos
             this.dgvExistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExistencia.Location = new System.Drawing.Point(613, 125);
             this.dgvExistencia.Name = "dgvExistencia";
+            this.dgvExistencia.ReadOnly = true;
             this.dgvExistencia.RowHeadersWidth = 51;
             this.dgvExistencia.RowTemplate.Height = 24;
             this.dgvExistencia.Size = new System.Drawing.Size(790, 339);
@@ -377,7 +385,7 @@ namespace CapaVista.Mantenimientos
             this.cmbProducto.Location = new System.Drawing.Point(282, 262);
             this.cmbProducto.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProducto.Name = "cmbProducto";
-            this.cmbProducto.Size = new System.Drawing.Size(171, 28);
+            this.cmbProducto.Size = new System.Drawing.Size(311, 28);
             this.cmbProducto.TabIndex = 106;
             this.cmbProducto.Tag = "saltar";
             this.cmbProducto.SelectedIndexChanged += new System.EventHandler(this.cmbProducto_SelectedIndexChanged);

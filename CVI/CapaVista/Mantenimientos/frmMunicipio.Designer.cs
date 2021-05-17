@@ -50,10 +50,10 @@ namespace CapaVista.Mantenimientos
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
-            this.navegador1.Location = new System.Drawing.Point(13, 4);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Location = new System.Drawing.Point(17, 5);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1059, 90);
+            this.navegador1.Size = new System.Drawing.Size(1412, 111);
             this.navegador1.TabIndex = 56;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
@@ -63,10 +63,9 @@ namespace CapaVista.Mantenimientos
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(131, 306);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(155, 375);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 66;
             this.label6.Text = "Estado";
             // 
@@ -76,9 +75,10 @@ namespace CapaVista.Mantenimientos
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(121, 194);
+            this.label3.Location = new System.Drawing.Point(141, 237);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 60;
             this.label3.Text = "Nombre";
             // 
@@ -88,9 +88,10 @@ namespace CapaVista.Mantenimientos
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(65, 159);
+            this.label2.Location = new System.Drawing.Point(67, 194);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 17);
+            this.label2.Size = new System.Drawing.Size(142, 20);
             this.label2.TabIndex = 59;
             this.label2.Text = "ID Departamento";
             // 
@@ -100,9 +101,10 @@ namespace CapaVista.Mantenimientos
             this.lblId.BackColor = System.Drawing.Color.Transparent;
             this.lblId.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ForeColor = System.Drawing.Color.Black;
-            this.lblId.Location = new System.Drawing.Point(92, 125);
+            this.lblId.Location = new System.Drawing.Point(103, 152);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(90, 17);
+            this.lblId.Size = new System.Drawing.Size(109, 20);
             this.lblId.TabIndex = 58;
             this.lblId.Text = "ID Municipio";
             // 
@@ -112,64 +114,79 @@ namespace CapaVista.Mantenimientos
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(98, 234);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(111, 286);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 68;
             this.label1.Text = "Descripcion";
             // 
             // txtIdMuni
             // 
-            this.txtIdMuni.Location = new System.Drawing.Point(188, 125);
+            this.txtIdMuni.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdMuni.Location = new System.Drawing.Point(231, 152);
+            this.txtIdMuni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdMuni.Name = "txtIdMuni";
-            this.txtIdMuni.Size = new System.Drawing.Size(66, 20);
+            this.txtIdMuni.Size = new System.Drawing.Size(229, 27);
             this.txtIdMuni.TabIndex = 69;
             this.txtIdMuni.Tag = "pkIdMuni";
             // 
             // txtDepar
             // 
-            this.txtDepar.Location = new System.Drawing.Point(188, 159);
+            this.txtDepar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepar.Location = new System.Drawing.Point(468, 191);
+            this.txtDepar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDepar.Name = "txtDepar";
-            this.txtDepar.Size = new System.Drawing.Size(46, 20);
+            this.txtDepar.Size = new System.Drawing.Size(60, 27);
             this.txtDepar.TabIndex = 70;
             this.txtDepar.Tag = "fkIdDepar";
+            this.txtDepar.Visible = false;
             // 
             // cmbDepar
             // 
+            this.cmbDepar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDepar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDepar.FormattingEnabled = true;
-            this.cmbDepar.Location = new System.Drawing.Point(240, 159);
+            this.cmbDepar.Location = new System.Drawing.Point(231, 191);
+            this.cmbDepar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDepar.Name = "cmbDepar";
-            this.cmbDepar.Size = new System.Drawing.Size(121, 21);
+            this.cmbDepar.Size = new System.Drawing.Size(229, 28);
             this.cmbDepar.TabIndex = 71;
             this.cmbDepar.Tag = "saltar";
             this.cmbDepar.SelectedIndexChanged += new System.EventHandler(this.cmbDepar_SelectedIndexChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(188, 194);
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(231, 237);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(173, 20);
+            this.txtNombre.Size = new System.Drawing.Size(229, 27);
             this.txtNombre.TabIndex = 72;
             this.txtNombre.Tag = "nombreMuni";
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(188, 234);
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(231, 286);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(173, 58);
+            this.txtDescripcion.Size = new System.Drawing.Size(229, 70);
             this.txtDescripcion.TabIndex = 73;
             this.txtDescripcion.Tag = "descripcionMuni";
+            this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // rbHabilitado
             // 
             this.rbHabilitado.AutoSize = true;
             this.rbHabilitado.BackColor = System.Drawing.Color.Transparent;
-            this.rbHabilitado.Location = new System.Drawing.Point(188, 307);
+            this.rbHabilitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHabilitado.Location = new System.Drawing.Point(231, 376);
+            this.rbHabilitado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbHabilitado.Name = "rbHabilitado";
-            this.rbHabilitado.Size = new System.Drawing.Size(72, 17);
+            this.rbHabilitado.Size = new System.Drawing.Size(105, 24);
             this.rbHabilitado.TabIndex = 74;
             this.rbHabilitado.TabStop = true;
             this.rbHabilitado.Text = "Habilitado";
@@ -180,9 +197,11 @@ namespace CapaVista.Mantenimientos
             // 
             this.rbDeshabilitado.AutoSize = true;
             this.rbDeshabilitado.BackColor = System.Drawing.Color.Transparent;
-            this.rbDeshabilitado.Location = new System.Drawing.Point(266, 307);
+            this.rbDeshabilitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDeshabilitado.Location = new System.Drawing.Point(335, 376);
+            this.rbDeshabilitado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbDeshabilitado.Name = "rbDeshabilitado";
-            this.rbDeshabilitado.Size = new System.Drawing.Size(89, 17);
+            this.rbDeshabilitado.Size = new System.Drawing.Size(132, 24);
             this.rbDeshabilitado.TabIndex = 75;
             this.rbDeshabilitado.TabStop = true;
             this.rbDeshabilitado.Text = "Deshabilitado";
@@ -191,9 +210,10 @@ namespace CapaVista.Mantenimientos
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(134, 330);
+            this.txtEstado.Location = new System.Drawing.Point(159, 404);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 20);
+            this.txtEstado.Size = new System.Drawing.Size(132, 22);
             this.txtEstado.TabIndex = 76;
             this.txtEstado.Tag = "estadoMuni";
             this.txtEstado.Visible = false;
@@ -201,18 +221,21 @@ namespace CapaVista.Mantenimientos
             // dgvMunicipio
             // 
             this.dgvMunicipio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMunicipio.Location = new System.Drawing.Point(405, 101);
+            this.dgvMunicipio.Location = new System.Drawing.Point(540, 124);
+            this.dgvMunicipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvMunicipio.Name = "dgvMunicipio";
-            this.dgvMunicipio.Size = new System.Drawing.Size(640, 249);
+            this.dgvMunicipio.ReadOnly = true;
+            this.dgvMunicipio.RowHeadersWidth = 51;
+            this.dgvMunicipio.Size = new System.Drawing.Size(853, 306);
             this.dgvMunicipio.TabIndex = 77;
             // 
             // frmMunicipio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CapaVista.Properties.Resources.Mantenimiento_Centro_1141515;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1089, 435);
+            this.ClientSize = new System.Drawing.Size(1452, 535);
             this.Controls.Add(this.dgvMunicipio);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.rbDeshabilitado);
@@ -229,7 +252,7 @@ namespace CapaVista.Mantenimientos
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.navegador1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMunicipio";
