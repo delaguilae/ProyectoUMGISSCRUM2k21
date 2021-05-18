@@ -232,5 +232,10 @@ namespace CapaVista.Procesos.OrdenesCompra
         {
             vali.CampoNumerico(e);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
