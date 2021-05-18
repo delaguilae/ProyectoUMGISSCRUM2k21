@@ -18,6 +18,7 @@ namespace CapaVista.Procesos.OrdenesCompra
          clsMovInventariosCon Controlador = new clsMovInventariosCon();
          ControladorJM jm = new ControladorJM();
          Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
         string filtro; 
         public frmEstadoCompras(string usuario)
         {
@@ -43,12 +44,12 @@ namespace CapaVista.Procesos.OrdenesCompra
             }
             catch (Exception err)
             {
-
                 Console.WriteLine(err.Message);
             }
 
         }
-            private void cmbtipocompra_SelectedIndexChanged(object sender, EventArgs e)
+       
+        private void cmbtipocompra_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbtipocompra.SelectedIndex != -1)
             {
@@ -178,6 +179,21 @@ namespace CapaVista.Procesos.OrdenesCompra
             printer.Footer = "ASC";//Foote
             printer.FooterSpacing = 15;
             printer.PrintDataGridView(dgvEstados);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtenca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txttipocompra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }

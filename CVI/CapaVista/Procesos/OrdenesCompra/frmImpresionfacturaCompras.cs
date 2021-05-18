@@ -18,6 +18,7 @@ namespace CapaVista.Procesos.OrdenesCompra
         ControladorJM jm = new ControladorJM();
         VariableGlobal glo = new VariableGlobal();
         DataTable Dt = new DataTable();
+        clsValidaciones vali = new clsValidaciones();
         Controlador con = new Controlador();
 
 
@@ -69,6 +70,31 @@ namespace CapaVista.Procesos.OrdenesCompra
             {
                 MessageBox.Show("favor de verificar los campos");
             }
+        }
+        private void mostraractualizacion2()
+        {
+            OdbcDataReader mostrar = jm.funcMostrarEncabezadoCompras();
+            try
+            {
+                while (mostrar.Read())
+                {
+                    dgv2.Rows.Add(mostrar.GetString(0), mostrar.GetString(1), mostrar.GetString(2), mostrar.GetString(3), mostrar.GetString(4));
+                }
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine(err.Message);
+            }
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mostraractualizacion2();
+        }
+
+        private void txtimpresion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }

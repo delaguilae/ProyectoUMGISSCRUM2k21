@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaControlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace CapaVista.Mantenimientos
     public partial class frmDepartamento : Form
     {
         string UsuarioAplicacion;
+        clsValidaciones vali = new clsValidaciones();
         public frmDepartamento(String usuario)
         {
             InitializeComponent();
@@ -80,6 +82,21 @@ namespace CapaVista.Mantenimientos
         private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "0";
+        }
+
+        private void txtdeparnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtdescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposLetras(e);
+        }
+
+        private void txtdescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

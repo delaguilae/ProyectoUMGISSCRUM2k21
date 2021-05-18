@@ -47,9 +47,10 @@ namespace CapaVista.Mantenimientos
             // txtEstado
             // 
             this.txtEstado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.Location = new System.Drawing.Point(40, 270);
+            this.txtEstado.Location = new System.Drawing.Point(53, 332);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(100, 23);
+            this.txtEstado.Size = new System.Drawing.Size(132, 27);
             this.txtEstado.TabIndex = 53;
             this.txtEstado.Tag = "estadoPais";
             this.txtEstado.Visible = false;
@@ -57,10 +58,12 @@ namespace CapaVista.Mantenimientos
             // dgvPais
             // 
             this.dgvPais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPais.Location = new System.Drawing.Point(347, 111);
+            this.dgvPais.Location = new System.Drawing.Point(463, 137);
+            this.dgvPais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvPais.Name = "dgvPais";
+            this.dgvPais.ReadOnly = true;
             this.dgvPais.RowHeadersWidth = 51;
-            this.dgvPais.Size = new System.Drawing.Size(690, 210);
+            this.dgvPais.Size = new System.Drawing.Size(920, 258);
             this.dgvPais.TabIndex = 37;
             // 
             // label6
@@ -69,10 +72,9 @@ namespace CapaVista.Mantenimientos
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(37, 236);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(49, 290);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.Size = new System.Drawing.Size(62, 20);
             this.label6.TabIndex = 51;
             this.label6.Text = "Estado";
             // 
@@ -82,9 +84,10 @@ namespace CapaVista.Mantenimientos
             this.rbDeshabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbDeshabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDeshabilitado.ForeColor = System.Drawing.Color.Black;
-            this.rbDeshabilitado.Location = new System.Drawing.Point(210, 234);
+            this.rbDeshabilitado.Location = new System.Drawing.Point(280, 288);
+            this.rbDeshabilitado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbDeshabilitado.Name = "rbDeshabilitado";
-            this.rbDeshabilitado.Size = new System.Drawing.Size(114, 21);
+            this.rbDeshabilitado.Size = new System.Drawing.Size(138, 24);
             this.rbDeshabilitado.TabIndex = 49;
             this.rbDeshabilitado.TabStop = true;
             this.rbDeshabilitado.Text = "Deshabilitado";
@@ -97,9 +100,10 @@ namespace CapaVista.Mantenimientos
             this.rbHabilitado.BackColor = System.Drawing.Color.Transparent;
             this.rbHabilitado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbHabilitado.ForeColor = System.Drawing.Color.Black;
-            this.rbHabilitado.Location = new System.Drawing.Point(112, 234);
+            this.rbHabilitado.Location = new System.Drawing.Point(149, 288);
+            this.rbHabilitado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbHabilitado.Name = "rbHabilitado";
-            this.rbHabilitado.Size = new System.Drawing.Size(92, 21);
+            this.rbHabilitado.Size = new System.Drawing.Size(110, 24);
             this.rbHabilitado.TabIndex = 48;
             this.rbHabilitado.TabStop = true;
             this.rbHabilitado.Text = "Habilitado";
@@ -109,28 +113,33 @@ namespace CapaVista.Mantenimientos
             // txtCapital
             // 
             this.txtCapital.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCapital.Location = new System.Drawing.Point(141, 197);
+            this.txtCapital.Location = new System.Drawing.Point(188, 242);
+            this.txtCapital.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCapital.Name = "txtCapital";
-            this.txtCapital.Size = new System.Drawing.Size(183, 23);
+            this.txtCapital.Size = new System.Drawing.Size(243, 27);
             this.txtCapital.TabIndex = 45;
             this.txtCapital.Tag = "capitalPais";
+            this.txtCapital.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCapital_KeyPress);
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(141, 162);
+            this.txtNombre.Location = new System.Drawing.Point(188, 199);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(183, 23);
+            this.txtNombre.Size = new System.Drawing.Size(243, 27);
             this.txtNombre.TabIndex = 44;
             this.txtNombre.Tag = "nombrePais";
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtPais
             // 
             this.txtPais.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(141, 127);
+            this.txtPais.Location = new System.Drawing.Point(188, 156);
+            this.txtPais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(183, 23);
+            this.txtPais.Size = new System.Drawing.Size(243, 27);
             this.txtPais.TabIndex = 43;
             this.txtPais.Tag = "pkIdPais";
             // 
@@ -140,9 +149,10 @@ namespace CapaVista.Mantenimientos
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(37, 200);
+            this.label3.Location = new System.Drawing.Point(49, 246);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 40;
             this.label3.Text = "Capital";
             // 
@@ -152,9 +162,10 @@ namespace CapaVista.Mantenimientos
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(37, 162);
+            this.label2.Location = new System.Drawing.Point(49, 199);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 39;
             this.label2.Text = "Nombre ";
             // 
@@ -164,29 +175,30 @@ namespace CapaVista.Mantenimientos
             this.lblId.BackColor = System.Drawing.Color.Transparent;
             this.lblId.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ForeColor = System.Drawing.Color.Black;
-            this.lblId.Location = new System.Drawing.Point(40, 130);
+            this.lblId.Location = new System.Drawing.Point(53, 160);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(51, 17);
+            this.lblId.Size = new System.Drawing.Size(62, 20);
             this.lblId.TabIndex = 38;
             this.lblId.Text = "ID Pais";
             // 
             // navegador1
             // 
             this.navegador1.BackColor = System.Drawing.Color.Transparent;
-            this.navegador1.Location = new System.Drawing.Point(10, 11);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4);
+            this.navegador1.Location = new System.Drawing.Point(13, 14);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(1059, 93);
+            this.navegador1.Size = new System.Drawing.Size(1412, 114);
             this.navegador1.TabIndex = 55;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
             // frmPais
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CapaVista.Properties.Resources.Mantenimiento_Centro_1141515;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1082, 409);
+            this.ClientSize = new System.Drawing.Size(1443, 503);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.dgvPais);
@@ -200,12 +212,13 @@ namespace CapaVista.Mantenimientos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblId);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPais";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Pais";
+            this.Load += new System.EventHandler(this.frmPais_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPais)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

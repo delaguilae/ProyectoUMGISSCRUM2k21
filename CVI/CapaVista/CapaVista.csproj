@@ -295,11 +295,11 @@
     <Compile Include="Procesos\OrdenesCompra\frmVisualizarTodo.Designer.cs">
       <DependentUpon>frmVisualizarTodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Procesos\Saldos\frmSaldos.cs">
+    <Compile Include="Procesos\Saldos\frmReciboCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Procesos\Saldos\frmSaldos.Designer.cs">
-      <DependentUpon>frmSaldos.cs</DependentUpon>
+    <Compile Include="Procesos\Saldos\frmReciboCompras.Designer.cs">
+      <DependentUpon>frmReciboCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Procesos\OrdenesCompra\frmOrdenes.cs">
       <SubType>Form</SubType>
@@ -432,8 +432,8 @@
     <EmbeddedResource Include="Procesos\OrdenesCompra\frmVisualizarTodo.resx">
       <DependentUpon>frmVisualizarTodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Procesos\Saldos\frmSaldos.resx">
-      <DependentUpon>frmSaldos.cs</DependentUpon>
+    <EmbeddedResource Include="Procesos\Saldos\frmReciboCompras.resx">
+      <DependentUpon>frmReciboCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Procesos\OrdenesCompra\frmOrdenes.resx">
       <DependentUpon>frmOrdenes.cs</DependentUpon>

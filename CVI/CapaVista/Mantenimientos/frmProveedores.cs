@@ -15,6 +15,7 @@ namespace CapaVista
     {
         string UsuarioAplicacion;
         Controlador con = new Controlador();
+        clsValidaciones vali = new clsValidaciones();
 
         public frmProveedores(string usuario)
         {
@@ -102,6 +103,36 @@ namespace CapaVista
         private void rbDeshabilitado_CheckedChanged(object sender, EventArgs e)
         {
             txtEstado.Text = "0";
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposNumerosYLetras(e);
+        }
+
+        private void txtNit_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CamposNumerosYLetras(e);
         }
     }
 }
