@@ -133,12 +133,6 @@
     <Compile Include="Mantenimientos\frmPais.Designer.cs">
       <DependentUpon>frmPais.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimientos\frmRazonMovimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Mantenimientos\frmRazonMovimiento.Designer.cs">
-      <DependentUpon>frmRazonMovimiento.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mantenimientos\frmSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,9 +344,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmPais.resx">
       <DependentUpon>frmPais.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Mantenimientos\frmRazonMovimiento.resx">
-      <DependentUpon>frmRazonMovimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimientos\frmSucursal.resx">
       <DependentUpon>frmSucursal.cs</DependentUpon>

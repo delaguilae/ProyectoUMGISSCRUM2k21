@@ -41,12 +41,12 @@ namespace CapaVista.Procesos.MovimientoInventarios
         public void funcLimpiar()
         {
             ObtenerUltimoIDMovimientoEncabezado();
-            rbProveedor.Checked = false;
-            rbCliente.Checked = false;
-            rbEmpleado.Checked = false;
+            rbCompra.Checked = false;
+            rbVenta.Checked = false;
+            rbDevCompra.Checked = false;
+            rbDevVenta.Checked = false;
             gbVentas.Enabled = false;
             gbCompras.Enabled = false;
-            gbEmpleados.Enabled = false;
             btnBuscarProveedorCV.Enabled = false;
             btnBuscarClienteCV.Enabled = false;
 
@@ -216,7 +216,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
         //funcion para verificar si es compra o venta.
         public void funcAccion()
         {
-            if(rbProveedor.Checked == true)
+            if(rbCompra.Checked == true)
             {
                 txtAccionCV.Text = "1";
 
@@ -232,7 +232,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
                 txtTelProveedorCV.Text = "";
                 txtMailProveedorCV.Text = "";
             }
-            else if(rbEmpleado.Checked == true)
+            else if(rbDevCompra.Checked == true)
             {
                 txtAccionCV.Text = "3";
 
@@ -248,7 +248,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
                 txtTelProveedorCV.Text = "";
                 txtMailProveedorCV.Text = "";
             }
-            else if(rbCliente.Checked == true)
+            else if(rbVenta.Checked == true)
             {
                 txtAccionCV.Text = "2";
 
