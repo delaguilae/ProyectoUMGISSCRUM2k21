@@ -29,8 +29,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCantMoverCV = new System.Windows.Forms.TextBox();
@@ -41,7 +41,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtDirecCV = new System.Windows.Forms.TextBox();
             this.btnBuscarBodegaCV = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbEmpleado = new System.Windows.Forms.RadioButton();
+            this.rbDevVenta = new System.Windows.Forms.RadioButton();
+            this.rbDevCompra = new System.Windows.Forms.RadioButton();
             this.btnGuardarRegistros = new System.Windows.Forms.Button();
             this.txtIdMovimiento = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -66,8 +67,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.rbCliente = new System.Windows.Forms.RadioButton();
-            this.rbProveedor = new System.Windows.Forms.RadioButton();
+            this.rbVenta = new System.Windows.Forms.RadioButton();
+            this.rbCompra = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCantMaxima = new System.Windows.Forms.TextBox();
@@ -131,20 +132,6 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtIdBodegaOM = new System.Windows.Forms.TextBox();
             this.txtDireccionOM = new System.Windows.Forms.TextBox();
             this.txtBuscarOrigenM = new System.Windows.Forms.Button();
-            this.gbEmpleados = new System.Windows.Forms.GroupBox();
-            this.btnBuscarEmpleado = new System.Windows.Forms.Button();
-            this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
-            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
-            this.txtIDEmpleado = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.btnBuscarRazon = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtIDRazon = new System.Windows.Forms.TextBox();
-            this.txtAccionRazon = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMover)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbVentas.SuspendLayout();
@@ -159,7 +146,6 @@ namespace CapaVista.Procesos.MovimientoInventarios
             ((System.ComponentModel.ISupportInitialize)(this.dgvMoverM)).BeginInit();
             this.groupBox7.SuspendLayout();
             this.gbOrigen.SuspendLayout();
-            this.gbEmpleados.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -193,7 +179,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // btnAgregar
             // 
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(253, 472);
+            this.btnAgregar.Location = new System.Drawing.Point(398, 262);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(115, 23);
             this.btnAgregar.TabIndex = 6;
@@ -204,7 +190,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // btnEliminar
             // 
             this.btnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminar.Location = new System.Drawing.Point(374, 472);
+            this.btnEliminar.Location = new System.Drawing.Point(519, 262);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(160, 23);
             this.btnEliminar.TabIndex = 7;
@@ -214,20 +200,19 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             // dgvMover
             // 
-            this.dgvMover.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMover.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMover.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMover.Location = new System.Drawing.Point(149, 501);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMover.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMover.Location = new System.Drawing.Point(398, 291);
             this.dgvMover.Name = "dgvMover";
             this.dgvMover.RowHeadersWidth = 51;
-            this.dgvMover.Size = new System.Drawing.Size(673, 144);
+            this.dgvMover.Size = new System.Drawing.Size(561, 204);
             this.dgvMover.TabIndex = 8;
             this.dgvMover.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMover_CellClick);
             // 
@@ -235,7 +220,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtIDBodegaCV.Enabled = false;
             this.txtIDBodegaCV.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDBodegaCV.Location = new System.Drawing.Point(103, 88);
+            this.txtIDBodegaCV.Location = new System.Drawing.Point(103, 59);
             this.txtIDBodegaCV.Name = "txtIDBodegaCV";
             this.txtIDBodegaCV.Size = new System.Drawing.Size(67, 23);
             this.txtIDBodegaCV.TabIndex = 11;
@@ -244,7 +229,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtDirecCV.Enabled = false;
             this.txtDirecCV.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirecCV.Location = new System.Drawing.Point(103, 117);
+            this.txtDirecCV.Location = new System.Drawing.Point(103, 88);
             this.txtDirecCV.Multiline = true;
             this.txtDirecCV.Name = "txtDirecCV";
             this.txtDirecCV.Size = new System.Drawing.Size(118, 40);
@@ -256,7 +241,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.btnBuscarBodegaCV.ForeColor = System.Drawing.Color.Black;
             this.btnBuscarBodegaCV.Image = global::CapaVista.Properties.Resources.Consultar;
             this.btnBuscarBodegaCV.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscarBodegaCV.Location = new System.Drawing.Point(204, 30);
+            this.btnBuscarBodegaCV.Location = new System.Drawing.Point(248, 74);
             this.btnBuscarBodegaCV.Name = "btnBuscarBodegaCV";
             this.btnBuscarBodegaCV.Size = new System.Drawing.Size(82, 54);
             this.btnBuscarBodegaCV.TabIndex = 13;
@@ -268,14 +253,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtAccionRazon);
-            this.groupBox1.Controls.Add(this.txtIDRazon);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.btnBuscarRazon);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.gbEmpleados);
-            this.groupBox1.Controls.Add(this.rbEmpleado);
+            this.groupBox1.Controls.Add(this.rbDevVenta);
+            this.groupBox1.Controls.Add(this.rbDevCompra);
             this.groupBox1.Controls.Add(this.btnGuardarRegistros);
             this.groupBox1.Controls.Add(this.txtIdMovimiento);
             this.groupBox1.Controls.Add(this.label16);
@@ -287,8 +266,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox1.Controls.Add(this.txtAccionCV);
             this.groupBox1.Controls.Add(this.gbVentas);
             this.groupBox1.Controls.Add(this.gbCompras);
-            this.groupBox1.Controls.Add(this.rbCliente);
-            this.groupBox1.Controls.Add(this.rbProveedor);
+            this.groupBox1.Controls.Add(this.rbVenta);
+            this.groupBox1.Controls.Add(this.rbCompra);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.btnEliminar);
@@ -298,25 +277,38 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(915, 651);
+            this.groupBox1.Size = new System.Drawing.Size(984, 529);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Compras/Ventas O Devoluciones Sobre Compras/Ventas";
             // 
-            // rbEmpleado
+            // rbDevVenta
             // 
-            this.rbEmpleado.AutoSize = true;
-            this.rbEmpleado.Location = new System.Drawing.Point(335, 120);
-            this.rbEmpleado.Name = "rbEmpleado";
-            this.rbEmpleado.Size = new System.Drawing.Size(90, 19);
-            this.rbEmpleado.TabIndex = 33;
-            this.rbEmpleado.TabStop = true;
-            this.rbEmpleado.Text = "Empleado";
-            this.rbEmpleado.UseVisualStyleBackColor = true;
-            this.rbEmpleado.CheckedChanged += new System.EventHandler(this.rbDevCompra_CheckedChanged);
+            this.rbDevVenta.AutoSize = true;
+            this.rbDevVenta.Location = new System.Drawing.Point(375, 87);
+            this.rbDevVenta.Name = "rbDevVenta";
+            this.rbDevVenta.Size = new System.Drawing.Size(174, 19);
+            this.rbDevVenta.TabIndex = 34;
+            this.rbDevVenta.TabStop = true;
+            this.rbDevVenta.Text = "Devolucion Sobre Venta";
+            this.rbDevVenta.UseVisualStyleBackColor = true;
+            this.rbDevVenta.CheckedChanged += new System.EventHandler(this.rbDevVenta_CheckedChanged);
+            // 
+            // rbDevCompra
+            // 
+            this.rbDevCompra.AutoSize = true;
+            this.rbDevCompra.Location = new System.Drawing.Point(90, 87);
+            this.rbDevCompra.Name = "rbDevCompra";
+            this.rbDevCompra.Size = new System.Drawing.Size(189, 19);
+            this.rbDevCompra.TabIndex = 33;
+            this.rbDevCompra.TabStop = true;
+            this.rbDevCompra.Text = "Devolucion Sobre Compra";
+            this.rbDevCompra.UseVisualStyleBackColor = true;
+            this.rbDevCompra.CheckedChanged += new System.EventHandler(this.rbDevCompra_CheckedChanged);
             // 
             // btnGuardarRegistros
             // 
-            this.btnGuardarRegistros.Location = new System.Drawing.Point(540, 472);
+            this.btnGuardarRegistros.Location = new System.Drawing.Point(685, 262);
             this.btnGuardarRegistros.Name = "btnGuardarRegistros";
             this.btnGuardarRegistros.Size = new System.Drawing.Size(144, 23);
             this.btnGuardarRegistros.TabIndex = 32;
@@ -326,7 +318,6 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             // txtIdMovimiento
             // 
-            this.txtIdMovimiento.Enabled = false;
             this.txtIdMovimiento.Location = new System.Drawing.Point(123, 39);
             this.txtIdMovimiento.Name = "txtIdMovimiento";
             this.txtIdMovimiento.Size = new System.Drawing.Size(100, 23);
@@ -344,7 +335,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // txtIdUsuario
             // 
             this.txtIdUsuario.Enabled = false;
-            this.txtIdUsuario.Location = new System.Drawing.Point(757, 39);
+            this.txtIdUsuario.Location = new System.Drawing.Point(810, 54);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.Size = new System.Drawing.Size(100, 23);
             this.txtIdUsuario.TabIndex = 29;
@@ -377,7 +368,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // txtAccionCV
             // 
             this.txtAccionCV.Enabled = false;
-            this.txtAccionCV.Location = new System.Drawing.Point(863, 39);
+            this.txtAccionCV.Location = new System.Drawing.Point(916, 25);
             this.txtAccionCV.Name = "txtAccionCV";
             this.txtAccionCV.Size = new System.Drawing.Size(34, 23);
             this.txtAccionCV.TabIndex = 25;
@@ -391,7 +382,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.gbVentas.Controls.Add(this.label11);
             this.gbVentas.Controls.Add(this.label12);
             this.gbVentas.Controls.Add(this.label13);
-            this.gbVentas.Location = new System.Drawing.Point(307, 157);
+            this.gbVentas.Location = new System.Drawing.Point(307, 112);
             this.gbVentas.Name = "gbVentas";
             this.gbVentas.Size = new System.Drawing.Size(295, 118);
             this.gbVentas.TabIndex = 24;
@@ -473,7 +464,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.gbCompras.Controls.Add(this.label10);
             this.gbCompras.Controls.Add(this.label9);
             this.gbCompras.Controls.Add(this.label8);
-            this.gbCompras.Location = new System.Drawing.Point(6, 157);
+            this.gbCompras.Location = new System.Drawing.Point(6, 112);
             this.gbCompras.Name = "gbCompras";
             this.gbCompras.Size = new System.Drawing.Size(295, 118);
             this.gbCompras.TabIndex = 23;
@@ -546,29 +537,29 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.label8.TabIndex = 0;
             this.label8.Text = "ID Proveedor";
             // 
-            // rbCliente
+            // rbVenta
             // 
-            this.rbCliente.AutoSize = true;
-            this.rbCliente.Location = new System.Drawing.Point(257, 120);
-            this.rbCliente.Name = "rbCliente";
-            this.rbCliente.Size = new System.Drawing.Size(72, 19);
-            this.rbCliente.TabIndex = 22;
-            this.rbCliente.TabStop = true;
-            this.rbCliente.Text = "Cliente";
-            this.rbCliente.UseVisualStyleBackColor = true;
-            this.rbCliente.CheckedChanged += new System.EventHandler(this.rbVenta_CheckedChanged);
+            this.rbVenta.AutoSize = true;
+            this.rbVenta.Location = new System.Drawing.Point(307, 87);
+            this.rbVenta.Name = "rbVenta";
+            this.rbVenta.Size = new System.Drawing.Size(62, 19);
+            this.rbVenta.TabIndex = 22;
+            this.rbVenta.TabStop = true;
+            this.rbVenta.Text = "Venta";
+            this.rbVenta.UseVisualStyleBackColor = true;
+            this.rbVenta.CheckedChanged += new System.EventHandler(this.rbVenta_CheckedChanged);
             // 
-            // rbProveedor
+            // rbCompra
             // 
-            this.rbProveedor.AutoSize = true;
-            this.rbProveedor.Location = new System.Drawing.Point(174, 120);
-            this.rbProveedor.Name = "rbProveedor";
-            this.rbProveedor.Size = new System.Drawing.Size(77, 19);
-            this.rbProveedor.TabIndex = 21;
-            this.rbProveedor.TabStop = true;
-            this.rbProveedor.Text = "Compra";
-            this.rbProveedor.UseVisualStyleBackColor = true;
-            this.rbProveedor.CheckedChanged += new System.EventHandler(this.rbCompra_CheckedChanged);
+            this.rbCompra.AutoSize = true;
+            this.rbCompra.Location = new System.Drawing.Point(7, 87);
+            this.rbCompra.Name = "rbCompra";
+            this.rbCompra.Size = new System.Drawing.Size(77, 19);
+            this.rbCompra.TabIndex = 21;
+            this.rbCompra.TabStop = true;
+            this.rbCompra.Text = "Compra";
+            this.rbCompra.UseVisualStyleBackColor = true;
+            this.rbCompra.CheckedChanged += new System.EventHandler(this.rbCompra_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -585,7 +576,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox4.Controls.Add(this.txtProductoCV);
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(448, 281);
+            this.groupBox4.Location = new System.Drawing.Point(8, 250);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(374, 185);
             this.groupBox4.TabIndex = 20;
@@ -692,9 +683,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox2.Controls.Add(this.txtDirecCV);
             this.groupBox2.Controls.Add(this.btnBuscarBodegaCV);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(143, 281);
+            this.groupBox2.Location = new System.Drawing.Point(620, 87);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(299, 185);
+            this.groupBox2.Size = new System.Drawing.Size(339, 143);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bodega";
@@ -712,7 +703,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtIdSucursalCV.Enabled = false;
             this.txtIdSucursalCV.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdSucursalCV.Location = new System.Drawing.Point(103, 55);
+            this.txtIdSucursalCV.Location = new System.Drawing.Point(263, 24);
             this.txtIdSucursalCV.Name = "txtIdSucursalCV";
             this.txtIdSucursalCV.Size = new System.Drawing.Size(67, 23);
             this.txtIdSucursalCV.TabIndex = 18;
@@ -720,7 +711,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 121);
+            this.label7.Location = new System.Drawing.Point(28, 92);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 15);
             this.label7.TabIndex = 17;
@@ -729,7 +720,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 92);
+            this.label6.Location = new System.Drawing.Point(25, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 15);
             this.label6.TabIndex = 16;
@@ -738,7 +729,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 61);
+            this.label5.Location = new System.Drawing.Point(176, 30);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 15);
             this.label5.TabIndex = 15;
@@ -762,7 +753,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(929, 686);
+            this.tabControl1.Size = new System.Drawing.Size(998, 564);
             this.tabControl1.TabIndex = 19;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -772,9 +763,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(921, 657);
+            this.tabPage1.Size = new System.Drawing.Size(990, 535);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Ingreso/Egresos de Producto";
+            this.tabPage1.Text = "Compras/Ventas";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -782,9 +773,9 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(921, 657);
+            this.tabPage3.Size = new System.Drawing.Size(990, 535);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Movimiento De Entre Bodegas";
+            this.tabPage3.Text = "Movimiento De Productos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -809,7 +800,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(921, 657);
+            this.groupBox3.Size = new System.Drawing.Size(990, 535);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Compras/Ventas O Devoluciones Sobre Compras/Ventas";
@@ -826,7 +817,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.gbDestino.Controls.Add(this.txtDireccionDM);
             this.gbDestino.Controls.Add(this.txtDestinoM);
             this.gbDestino.ForeColor = System.Drawing.Color.White;
-            this.gbDestino.Location = new System.Drawing.Point(410, 122);
+            this.gbDestino.Location = new System.Drawing.Point(371, 85);
             this.gbDestino.Name = "gbDestino";
             this.gbDestino.Size = new System.Drawing.Size(339, 143);
             this.gbDestino.TabIndex = 20;
@@ -928,7 +919,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // btnGuardarM
             // 
             this.btnGuardarM.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarM.Location = new System.Drawing.Point(721, 337);
+            this.btnGuardarM.Location = new System.Drawing.Point(685, 262);
             this.btnGuardarM.Name = "btnGuardarM";
             this.btnGuardarM.Size = new System.Drawing.Size(144, 23);
             this.btnGuardarM.TabIndex = 32;
@@ -939,7 +930,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // txtIdMovimientoM
             // 
             this.txtIdMovimientoM.ForeColor = System.Drawing.Color.Black;
-            this.txtIdMovimientoM.Location = new System.Drawing.Point(162, 76);
+            this.txtIdMovimientoM.Location = new System.Drawing.Point(123, 39);
             this.txtIdMovimientoM.Name = "txtIdMovimientoM";
             this.txtIdMovimientoM.Size = new System.Drawing.Size(100, 23);
             this.txtIdMovimientoM.TabIndex = 31;
@@ -947,7 +938,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(53, 79);
+            this.label17.Location = new System.Drawing.Point(14, 42);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 15);
             this.label17.TabIndex = 30;
@@ -956,18 +947,18 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // dgvMoverM
             // 
             this.dgvMoverM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMoverM.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvMoverM.Location = new System.Drawing.Point(434, 366);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMoverM.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMoverM.Location = new System.Drawing.Point(398, 291);
             this.dgvMoverM.Name = "dgvMoverM";
             this.dgvMoverM.RowHeadersWidth = 51;
-            this.dgvMoverM.Size = new System.Drawing.Size(431, 204);
+            this.dgvMoverM.Size = new System.Drawing.Size(561, 204);
             this.dgvMoverM.TabIndex = 8;
             this.dgvMoverM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMoverM_CellClick);
             // 
@@ -975,7 +966,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             this.txtFechaM.Enabled = false;
             this.txtFechaM.ForeColor = System.Drawing.Color.Black;
-            this.txtFechaM.Location = new System.Drawing.Point(553, 73);
+            this.txtFechaM.Location = new System.Drawing.Point(514, 36);
             this.txtFechaM.Name = "txtFechaM";
             this.txtFechaM.Size = new System.Drawing.Size(100, 23);
             this.txtFechaM.TabIndex = 28;
@@ -983,7 +974,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(289, 79);
+            this.label18.Location = new System.Drawing.Point(250, 42);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 15);
             this.label18.TabIndex = 27;
@@ -991,7 +982,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // 
             // dtpFechaM
             // 
-            this.dtpFechaM.Location = new System.Drawing.Point(340, 73);
+            this.dtpFechaM.Location = new System.Drawing.Point(301, 36);
             this.dtpFechaM.Name = "dtpFechaM";
             this.dtpFechaM.Size = new System.Drawing.Size(200, 23);
             this.dtpFechaM.TabIndex = 26;
@@ -1011,7 +1002,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox7.Controls.Add(this.txtProductoM);
             this.groupBox7.Controls.Add(this.label29);
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(47, 366);
+            this.groupBox7.Location = new System.Drawing.Point(8, 250);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(374, 185);
             this.groupBox7.TabIndex = 20;
@@ -1143,7 +1134,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // btnAgregarM
             // 
             this.btnAgregarM.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarM.Location = new System.Drawing.Point(434, 337);
+            this.btnAgregarM.Location = new System.Drawing.Point(398, 262);
             this.btnAgregarM.Name = "btnAgregarM";
             this.btnAgregarM.Size = new System.Drawing.Size(115, 23);
             this.btnAgregarM.TabIndex = 6;
@@ -1154,7 +1145,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             // btnEliminarM
             // 
             this.btnEliminarM.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarM.Location = new System.Drawing.Point(555, 337);
+            this.btnEliminarM.Location = new System.Drawing.Point(519, 262);
             this.btnEliminarM.Name = "btnEliminarM";
             this.btnEliminarM.Size = new System.Drawing.Size(160, 23);
             this.btnEliminarM.TabIndex = 7;
@@ -1174,7 +1165,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.gbOrigen.Controls.Add(this.txtDireccionOM);
             this.gbOrigen.Controls.Add(this.txtBuscarOrigenM);
             this.gbOrigen.ForeColor = System.Drawing.Color.White;
-            this.gbOrigen.Location = new System.Drawing.Point(47, 122);
+            this.gbOrigen.Location = new System.Drawing.Point(8, 85);
             this.gbOrigen.Name = "gbOrigen";
             this.gbOrigen.Size = new System.Drawing.Size(339, 143);
             this.gbOrigen.TabIndex = 18;
@@ -1273,141 +1264,13 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.txtBuscarOrigenM.UseVisualStyleBackColor = true;
             this.txtBuscarOrigenM.Click += new System.EventHandler(this.txtBuscarOrigenM_Click);
             // 
-            // gbEmpleados
-            // 
-            this.gbEmpleados.Controls.Add(this.btnBuscarEmpleado);
-            this.gbEmpleados.Controls.Add(this.txtApellidoEmpleado);
-            this.gbEmpleados.Controls.Add(this.txtNombreEmpleado);
-            this.gbEmpleados.Controls.Add(this.txtIDEmpleado);
-            this.gbEmpleados.Controls.Add(this.label23);
-            this.gbEmpleados.Controls.Add(this.label24);
-            this.gbEmpleados.Controls.Add(this.label34);
-            this.gbEmpleados.Location = new System.Drawing.Point(608, 157);
-            this.gbEmpleados.Name = "gbEmpleados";
-            this.gbEmpleados.Size = new System.Drawing.Size(295, 118);
-            this.gbEmpleados.TabIndex = 35;
-            this.gbEmpleados.TabStop = false;
-            this.gbEmpleados.Text = "Empleado";
-            // 
-            // btnBuscarEmpleado
-            // 
-            this.btnBuscarEmpleado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarEmpleado.Image = global::CapaVista.Properties.Resources.Consultar;
-            this.btnBuscarEmpleado.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(207, 19);
-            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
-            this.btnBuscarEmpleado.Size = new System.Drawing.Size(82, 54);
-            this.btnBuscarEmpleado.TabIndex = 21;
-            this.btnBuscarEmpleado.Text = "Buscar";
-            this.btnBuscarEmpleado.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBuscarEmpleado.UseVisualStyleBackColor = true;
-            // 
-            // txtApellidoEmpleado
-            // 
-            this.txtApellidoEmpleado.Enabled = false;
-            this.txtApellidoEmpleado.Location = new System.Drawing.Point(101, 86);
-            this.txtApellidoEmpleado.Name = "txtApellidoEmpleado";
-            this.txtApellidoEmpleado.Size = new System.Drawing.Size(100, 23);
-            this.txtApellidoEmpleado.TabIndex = 5;
-            // 
-            // txtNombreEmpleado
-            // 
-            this.txtNombreEmpleado.Enabled = false;
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(101, 57);
-            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(100, 23);
-            this.txtNombreEmpleado.TabIndex = 4;
-            // 
-            // txtIDEmpleado
-            // 
-            this.txtIDEmpleado.Enabled = false;
-            this.txtIDEmpleado.Location = new System.Drawing.Point(101, 28);
-            this.txtIDEmpleado.Name = "txtIDEmpleado";
-            this.txtIDEmpleado.Size = new System.Drawing.Size(37, 23);
-            this.txtIDEmpleado.TabIndex = 3;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(30, 89);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(61, 15);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Apellido";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(33, 60);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(58, 15);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Nombre";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 28);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(90, 15);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "ID Empleado";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(14, 82);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(152, 15);
-            this.label35.TabIndex = 36;
-            this.label35.Text = "Razon Del Movimiento";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(107, 122);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(59, 15);
-            this.label36.TabIndex = 38;
-            this.label36.Text = "Persona";
-            // 
-            // btnBuscarRazon
-            // 
-            this.btnBuscarRazon.Location = new System.Drawing.Point(277, 75);
-            this.btnBuscarRazon.Name = "btnBuscarRazon";
-            this.btnBuscarRazon.Size = new System.Drawing.Size(37, 29);
-            this.btnBuscarRazon.TabIndex = 39;
-            this.btnBuscarRazon.Text = "?";
-            this.btnBuscarRazon.UseVisualStyleBackColor = true;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(171, 79);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 23);
-            this.txtNombre.TabIndex = 40;
-            // 
-            // txtIDRazon
-            // 
-            this.txtIDRazon.Location = new System.Drawing.Point(320, 79);
-            this.txtIDRazon.Name = "txtIDRazon";
-            this.txtIDRazon.Size = new System.Drawing.Size(100, 23);
-            this.txtIDRazon.TabIndex = 41;
-            // 
-            // txtAccionRazon
-            // 
-            this.txtAccionRazon.Location = new System.Drawing.Point(426, 79);
-            this.txtAccionRazon.Name = "txtAccionRazon";
-            this.txtAccionRazon.Size = new System.Drawing.Size(100, 23);
-            this.txtAccionRazon.TabIndex = 42;
-            // 
             // frmMovimientoInventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(929, 686);
+            this.ClientSize = new System.Drawing.Size(998, 564);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1439,8 +1302,6 @@ namespace CapaVista.Procesos.MovimientoInventarios
             this.groupBox7.PerformLayout();
             this.gbOrigen.ResumeLayout(false);
             this.gbOrigen.PerformLayout();
-            this.gbEmpleados.ResumeLayout(false);
-            this.gbEmpleados.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1488,8 +1349,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton rbCliente;
-        private System.Windows.Forms.RadioButton rbProveedor;
+        private System.Windows.Forms.RadioButton rbVenta;
+        private System.Windows.Forms.RadioButton rbCompra;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtFechaCV;
         private System.Windows.Forms.Label lblfecha;
@@ -1503,7 +1364,8 @@ namespace CapaVista.Procesos.MovimientoInventarios
         private System.Windows.Forms.TextBox txtIdMovimiento;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btnGuardarRegistros;
-        private System.Windows.Forms.RadioButton rbEmpleado;
+        private System.Windows.Forms.RadioButton rbDevVenta;
+        private System.Windows.Forms.RadioButton rbDevCompra;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox gbDestino;
         private System.Windows.Forms.TextBox txtIdEmpresaDM;
@@ -1547,19 +1409,5 @@ namespace CapaVista.Procesos.MovimientoInventarios
         private System.Windows.Forms.TextBox txtIdBodegaOM;
         private System.Windows.Forms.TextBox txtDireccionOM;
         private System.Windows.Forms.Button txtBuscarOrigenM;
-        private System.Windows.Forms.GroupBox gbEmpleados;
-        private System.Windows.Forms.Button btnBuscarEmpleado;
-        private System.Windows.Forms.TextBox txtApellidoEmpleado;
-        private System.Windows.Forms.TextBox txtNombreEmpleado;
-        private System.Windows.Forms.TextBox txtIDEmpleado;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox txtAccionRazon;
-        private System.Windows.Forms.TextBox txtIDRazon;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnBuscarRazon;
     }
 }

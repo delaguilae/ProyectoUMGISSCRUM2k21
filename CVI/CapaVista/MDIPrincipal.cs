@@ -408,7 +408,9 @@ namespace CapaVista
 
         private void movimientoDeInventariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Procesos.MovimientoInventarios.frmMovimientoInventarios MovInventario = new Procesos.MovimientoInventarios.frmMovimientoInventarios();
+            MovInventario.MdiParent = this;
+            MovInventario.Show();
         }
 
         private void visualizarMovimientosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -552,24 +554,6 @@ namespace CapaVista
             moverAExistencia.Show();
         }
 
-<<<<<<< HEAD
-        private void movimientosDeInventariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Procesos.MovimientoInventarios.frmMovimientoInventarios MovInventario = new Procesos.MovimientoInventarios.frmMovimientoInventarios();
-            MovInventario.MdiParent = this;
-            MovInventario.Show();
-        }
-
-        private void manrtenimientoRazonDeMovimientoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (seguridad.PermisosAcceso("8", txtusuario.Text) == 1)
-            {
-                bit.user(txtusuario.Text);
-                bit.insert("ingreso a Mantenimiento Razon De Movimiento", 8);
-                frmRazonMovimiento modulo = new frmRazonMovimiento(txtusuario.Text);
-                modulo.MdiParent = this;
-                modulo.Show();
-=======
         private void reciboDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (seguridad.PermisosAcceso("303", txtusuario.Text) == 1)
@@ -579,16 +563,11 @@ namespace CapaVista
                 Procesos.Saldos.frmReciboCompras mantenimiento = new Procesos.Saldos.frmReciboCompras(txtusuario.Text);
                 mantenimiento.MdiParent = this;
                 mantenimiento.Show();
->>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
             }
             else
             {
                 bit.user(txtusuario.Text);
-<<<<<<< HEAD
-                bit.insert("Trato de Ingresar A Mantenimiento Razon De Movimiento", 8);
-=======
                 bit.insert("Trato de Ingresar A Mantenimiento Productos", 303);
->>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
                 MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
             }
         }
