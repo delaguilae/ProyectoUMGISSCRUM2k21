@@ -56,7 +56,6 @@ namespace CapaVista
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeInventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.movimientoDeInventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visualizarMovimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compraDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +82,13 @@ namespace CapaVista
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.txtusuario = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
+            this.movimientoDeInventariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.manrtenimientoRazonDeMovimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimientosDeInventariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
             this.reciboDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -286,8 +291,8 @@ namespace CapaVista
             // 
             this.gestionDeInventariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visualizarToolStripMenuItem,
-            this.movimientoDeInventariosToolStripMenuItem,
-            this.visualizarMovimientosToolStripMenuItem});
+            this.visualizarMovimientosToolStripMenuItem,
+            this.movimientoDeInventariosToolStripMenuItem1});
             this.gestionDeInventariosToolStripMenuItem.Name = "gestionDeInventariosToolStripMenuItem";
             this.gestionDeInventariosToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
             this.gestionDeInventariosToolStripMenuItem.Text = "Gestion De Inventarios";
@@ -299,6 +304,8 @@ namespace CapaVista
             this.visualizarToolStripMenuItem.Text = "Visualizar";
             this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
             // 
+<<<<<<< HEAD
+=======
             // movimientoDeInventariosToolStripMenuItem
             // 
             this.movimientoDeInventariosToolStripMenuItem.Name = "movimientoDeInventariosToolStripMenuItem";
@@ -306,6 +313,7 @@ namespace CapaVista
             this.movimientoDeInventariosToolStripMenuItem.Text = "Movimiento De Inventarios";
             this.movimientoDeInventariosToolStripMenuItem.Click += new System.EventHandler(this.movimientoDeInventariosToolStripMenuItem_Click);
             // 
+>>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
             // visualizarMovimientosToolStripMenuItem
             // 
             this.visualizarMovimientosToolStripMenuItem.Name = "visualizarMovimientosToolStripMenuItem";
@@ -356,7 +364,11 @@ namespace CapaVista
             // moverABodegasToolStripMenuItem
             // 
             this.moverABodegasToolStripMenuItem.Name = "moverABodegasToolStripMenuItem";
+<<<<<<< HEAD
+            this.moverABodegasToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+=======
             this.moverABodegasToolStripMenuItem.Size = new System.Drawing.Size(290, 26);
+>>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
             this.moverABodegasToolStripMenuItem.Text = "0804-Mover A Bodegas";
             this.moverABodegasToolStripMenuItem.Click += new System.EventHandler(this.moverABodegasToolStripMenuItem_Click);
             // 
@@ -500,12 +512,37 @@ namespace CapaVista
             this.txtusuario.Size = new System.Drawing.Size(132, 22);
             this.txtusuario.TabIndex = 4;
             // 
+<<<<<<< HEAD
+            // movimientoDeInventariosToolStripMenuItem1
+            // 
+            this.movimientoDeInventariosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manrtenimientoRazonDeMovimientoToolStripMenuItem,
+            this.movimientosDeInventariosToolStripMenuItem});
+            this.movimientoDeInventariosToolStripMenuItem1.Name = "movimientoDeInventariosToolStripMenuItem1";
+            this.movimientoDeInventariosToolStripMenuItem1.Size = new System.Drawing.Size(217, 22);
+            this.movimientoDeInventariosToolStripMenuItem1.Text = "Movimiento De Inventarios";
+            // 
+            // manrtenimientoRazonDeMovimientoToolStripMenuItem
+            // 
+            this.manrtenimientoRazonDeMovimientoToolStripMenuItem.Name = "manrtenimientoRazonDeMovimientoToolStripMenuItem";
+            this.manrtenimientoRazonDeMovimientoToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.manrtenimientoRazonDeMovimientoToolStripMenuItem.Text = "Manrtenimiento Razon De Movimiento";
+            this.manrtenimientoRazonDeMovimientoToolStripMenuItem.Click += new System.EventHandler(this.manrtenimientoRazonDeMovimientoToolStripMenuItem_Click);
+            // 
+            // movimientosDeInventariosToolStripMenuItem
+            // 
+            this.movimientosDeInventariosToolStripMenuItem.Name = "movimientosDeInventariosToolStripMenuItem";
+            this.movimientosDeInventariosToolStripMenuItem.Size = new System.Drawing.Size(280, 22);
+            this.movimientosDeInventariosToolStripMenuItem.Text = "Movimientos De Inventarios";
+            this.movimientosDeInventariosToolStripMenuItem.Click += new System.EventHandler(this.movimientosDeInventariosToolStripMenuItem_Click);
+=======
             // reciboDeComprasToolStripMenuItem
             // 
             this.reciboDeComprasToolStripMenuItem.Name = "reciboDeComprasToolStripMenuItem";
             this.reciboDeComprasToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
             this.reciboDeComprasToolStripMenuItem.Text = "0901-Recibo de Compras";
             this.reciboDeComprasToolStripMenuItem.Click += new System.EventHandler(this.reciboDeComprasToolStripMenuItem_Click);
+>>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
             // 
             // MDIPrincipal
             // 
@@ -577,7 +614,6 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem bodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoBodegaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem movimientoDeInventariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visualizarMovimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mantenimientoExistenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem compraDeProveedoresToolStripMenuItem;
@@ -586,7 +622,13 @@ namespace CapaVista
         private System.Windows.Forms.ToolStripMenuItem abonoCuentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem moverABodegasToolStripMenuItem;
+<<<<<<< HEAD
+        private System.Windows.Forms.ToolStripMenuItem movimientoDeInventariosToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem manrtenimientoRazonDeMovimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem movimientosDeInventariosToolStripMenuItem;
+=======
         private System.Windows.Forms.ToolStripMenuItem reciboDeComprasToolStripMenuItem;
+>>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
     }
 }
 

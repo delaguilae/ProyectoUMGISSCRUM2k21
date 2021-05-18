@@ -337,6 +337,9 @@ D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmImpresionfacturaCompras.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmGuardar1.resources
 D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmVisualizarTodo.resources
+<<<<<<< HEAD
+D:\Documentos\Proyectos-Software\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Mantenimientos.frmRazonMovimiento.resources
+=======
 C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaVista.dll
 C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaVista.pdb
 C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\bin\Debug\CapaControlador.dll
@@ -409,3 +412,4 @@ C:\Users\brian\Desktop\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmGuardar1.resources
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.OrdenesCompra.frmVisualizarTodo.resources
 C:\Users\brian\Desktop\Nueva carpeta\ProyectoUMGISSCRUM2k21\CVI\CapaVista\obj\Debug\CapaVista.Procesos.Saldos.frmReciboCompras.resources
+>>>>>>> 1b915d6ca080cd1997fc88a3430c4be8fca4087a
