@@ -195,5 +195,10 @@ namespace CapaVista.Procesos.OrdenesCompra
         {
             vali.CampoNumerico(e);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayuda/AyudasPC.chm", "AyudaEstadoDeCompra_1.html");
+        }
     }
 }

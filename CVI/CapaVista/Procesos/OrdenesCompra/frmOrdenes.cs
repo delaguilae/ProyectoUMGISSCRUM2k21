@@ -419,6 +419,11 @@ namespace CapaVista.Procesos.Ordenes
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "Ayuda/AyudasPC.chm", "AyudaOrdenes_1.html");
+        }
+
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (rbProducto.Checked == false && rbProducto2.Checked == false)

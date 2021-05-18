@@ -57,7 +57,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
                 dgvProveedor.DataSource = Dt;
                 return;
             }
-            Dt.DefaultView.RowFilter = $"fkIdEmpresa LIKE '{txtIdProveedor.Text}%'";
+            Dt.DefaultView.RowFilter = $"pkIdProv LIKE '{txtIdProveedor.Text}%'";
         }
 
         private void txtNIT_TextChanged(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
                 dgvProveedor.DataSource = Dt;
                 return;
             }
-            Dt.DefaultView.RowFilter = $"fkIdEmpresa LIKE '{txtNIT.Text}%'";
+            Dt.DefaultView.RowFilter = $"nitProv LIKE '{txtNIT.Text}%'";
         }
 
         private void txtTelefono_TextChanged(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
                 dgvProveedor.DataSource = Dt;
                 return;
             }
-            Dt.DefaultView.RowFilter = $"fkIdEmpresa LIKE '{txtTelefono.Text}%'";
+            Dt.DefaultView.RowFilter = $"telProv LIKE '{txtTelefono.Text}%'";
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

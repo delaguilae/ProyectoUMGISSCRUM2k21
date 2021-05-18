@@ -77,12 +77,13 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvmorosos.Location = new System.Drawing.Point(25, 92);
+            this.dgvmorosos.Location = new System.Drawing.Point(19, 75);
+            this.dgvmorosos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvmorosos.Name = "dgvmorosos";
             this.dgvmorosos.ReadOnly = true;
             this.dgvmorosos.RowHeadersWidth = 51;
             this.dgvmorosos.RowTemplate.Height = 24;
-            this.dgvmorosos.Size = new System.Drawing.Size(1306, 212);
+            this.dgvmorosos.Size = new System.Drawing.Size(980, 172);
             this.dgvmorosos.TabIndex = 0;
             this.dgvmorosos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmorosos_CellContentClick);
             // 
@@ -91,24 +92,28 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column1.HeaderText = "CODIGO";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "PROVEEDOR";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "FECHA";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "TOTAL";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // panel1
             // 
@@ -117,18 +122,21 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 46);
+            this.panel1.Size = new System.Drawing.Size(1010, 37);
             this.panel1.TabIndex = 57;
             // 
             // button5
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(1281, -1);
+            this.button5.Location = new System.Drawing.Point(961, -1);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(50, 47);
+            this.button5.Size = new System.Drawing.Size(38, 38);
             this.button5.TabIndex = 55;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label8
             // 
@@ -136,10 +144,9 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(48, 9);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(36, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 22);
+            this.label8.Size = new System.Drawing.Size(145, 19);
             this.label8.TabIndex = 3;
             this.label8.Text = "ABONO CUENTAS";
             // 
@@ -154,12 +161,13 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column8,
             this.Column9,
             this.Column10});
-            this.dgvhistorico.Location = new System.Drawing.Point(632, 321);
+            this.dgvhistorico.Location = new System.Drawing.Point(474, 261);
+            this.dgvhistorico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvhistorico.Name = "dgvhistorico";
             this.dgvhistorico.ReadOnly = true;
             this.dgvhistorico.RowHeadersWidth = 51;
             this.dgvhistorico.RowTemplate.Height = 24;
-            this.dgvhistorico.Size = new System.Drawing.Size(699, 315);
+            this.dgvhistorico.Size = new System.Drawing.Size(524, 256);
             this.dgvhistorico.TabIndex = 58;
             // 
             // Column5
@@ -167,36 +175,42 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.Column5.HeaderText = "CODIGO";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "FECHA";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "CODIGO ENCA";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "SALDO ANTERIOR";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "ABONO";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "SALDO ACTUAL";
             this.Column10.MinimumWidth = 6;
             this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // label1
             // 
@@ -204,19 +218,19 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(18, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 20);
+            this.label1.Size = new System.Drawing.Size(138, 17);
             this.label1.TabIndex = 59;
             this.label1.Text = "ID ORDEN COMPRA";
             // 
             // txtordencompra
             // 
             this.txtordencompra.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtordencompra.Location = new System.Drawing.Point(202, 23);
+            this.txtordencompra.Location = new System.Drawing.Point(152, 19);
+            this.txtordencompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtordencompra.Name = "txtordencompra";
-            this.txtordencompra.Size = new System.Drawing.Size(131, 27);
+            this.txtordencompra.Size = new System.Drawing.Size(99, 23);
             this.txtordencompra.TabIndex = 65;
             this.txtordencompra.TextChanged += new System.EventHandler(this.txtordencompra_TextChanged);
             this.txtordencompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtordencompra_KeyPress);
@@ -226,9 +240,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(339, 21);
+            this.button1.Location = new System.Drawing.Point(254, 17);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 30);
+            this.button1.Size = new System.Drawing.Size(97, 24);
             this.button1.TabIndex = 66;
             this.button1.Text = "BUSCAR ORDEN";
             this.button1.UseVisualStyleBackColor = false;
@@ -241,9 +256,11 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.txtordencompra);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(21, 326);
+            this.groupBox1.Location = new System.Drawing.Point(16, 265);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(590, 61);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(442, 50);
             this.groupBox1.TabIndex = 67;
             this.groupBox1.TabStop = false;
             // 
@@ -252,9 +269,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(474, 26);
+            this.checkBox1.Location = new System.Drawing.Point(356, 21);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 24);
+            this.checkBox1.Size = new System.Drawing.Size(84, 21);
             this.checkBox1.TabIndex = 67;
             this.checkBox1.Text = "ABONAR";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -272,9 +290,11 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.txtcodigo);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(21, 393);
+            this.groupBox2.Location = new System.Drawing.Point(16, 319);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(590, 243);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(442, 197);
             this.groupBox2.TabIndex = 68;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -285,9 +305,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.button4.Enabled = false;
             this.button4.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(77, 180);
+            this.button4.Location = new System.Drawing.Point(58, 146);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 30);
+            this.button4.Size = new System.Drawing.Size(129, 24);
             this.button4.TabIndex = 82;
             this.button4.Text = "LIMPIAR";
             this.button4.UseVisualStyleBackColor = false;
@@ -297,9 +318,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             this.txtmetodopago.Enabled = false;
             this.txtmetodopago.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmetodopago.Location = new System.Drawing.Point(530, 83);
+            this.txtmetodopago.Location = new System.Drawing.Point(398, 67);
+            this.txtmetodopago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtmetodopago.Name = "txtmetodopago";
-            this.txtmetodopago.Size = new System.Drawing.Size(32, 27);
+            this.txtmetodopago.Size = new System.Drawing.Size(25, 23);
             this.txtmetodopago.TabIndex = 81;
             this.txtmetodopago.Visible = false;
             this.txtmetodopago.TextChanged += new System.EventHandler(this.txtmetodopago_TextChanged);
@@ -308,9 +330,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             this.txtabono.Enabled = false;
             this.txtabono.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtabono.Location = new System.Drawing.Point(210, 129);
+            this.txtabono.Location = new System.Drawing.Point(158, 105);
+            this.txtabono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtabono.Name = "txtabono";
-            this.txtabono.Size = new System.Drawing.Size(314, 27);
+            this.txtabono.Size = new System.Drawing.Size(236, 23);
             this.txtabono.TabIndex = 80;
             this.txtabono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtabono_KeyPress);
             // 
@@ -320,10 +343,9 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(37, 132);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(28, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 79;
             this.label3.Text = "ABONO";
             // 
@@ -333,9 +355,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.cmbmetodopago.Enabled = false;
             this.cmbmetodopago.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbmetodopago.FormattingEnabled = true;
-            this.cmbmetodopago.Location = new System.Drawing.Point(210, 83);
+            this.cmbmetodopago.Location = new System.Drawing.Point(158, 67);
+            this.cmbmetodopago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbmetodopago.Name = "cmbmetodopago";
-            this.cmbmetodopago.Size = new System.Drawing.Size(314, 28);
+            this.cmbmetodopago.Size = new System.Drawing.Size(236, 25);
             this.cmbmetodopago.TabIndex = 78;
             this.cmbmetodopago.SelectedIndexChanged += new System.EventHandler(this.cmbmetodopago_SelectedIndexChanged);
             // 
@@ -345,10 +368,9 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(37, 86);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(28, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 20);
+            this.label7.Size = new System.Drawing.Size(136, 17);
             this.label7.TabIndex = 77;
             this.label7.Text = "METODO DE PAGO";
             // 
@@ -358,9 +380,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.button2.Enabled = false;
             this.button2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(352, 180);
+            this.button2.Location = new System.Drawing.Point(264, 146);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 30);
+            this.button2.Size = new System.Drawing.Size(129, 24);
             this.button2.TabIndex = 66;
             this.button2.Text = "REALIZAR PAGO";
             this.button2.UseVisualStyleBackColor = false;
@@ -370,9 +393,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             this.txtcodigo.Enabled = false;
             this.txtcodigo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcodigo.Location = new System.Drawing.Point(210, 43);
+            this.txtcodigo.Location = new System.Drawing.Point(158, 35);
+            this.txtcodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(314, 27);
+            this.txtcodigo.Size = new System.Drawing.Size(236, 23);
             this.txtcodigo.TabIndex = 65;
             this.txtcodigo.TextChanged += new System.EventHandler(this.txtcodigo_TextChanged);
             this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
@@ -383,10 +407,9 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(28, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 59;
             this.label2.Text = "CODIGO";
             // 
@@ -395,9 +418,10 @@ namespace CapaVista.Procesos.OrdenesCompra
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(1119, 56);
+            this.button3.Location = new System.Drawing.Point(839, 46);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 30);
+            this.button3.Size = new System.Drawing.Size(129, 24);
             this.button3.TabIndex = 69;
             this.button3.Text = "ACTUALIZAR";
             this.button3.UseVisualStyleBackColor = false;
@@ -405,16 +429,17 @@ namespace CapaVista.Procesos.OrdenesCompra
             // 
             // frmAbonoCuentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CapaVista.Properties.Resources.fondo3;
-            this.ClientSize = new System.Drawing.Size(1346, 648);
+            this.ClientSize = new System.Drawing.Size(1010, 526);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvhistorico);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvmorosos);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAbonoCuentas";
             this.Text = "frmAbonoCuentas";
             this.Load += new System.EventHandler(this.frmAbonoCuentas_Load);

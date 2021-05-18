@@ -370,7 +370,7 @@ namespace CapaVista.Procesos.OrdenesCompra
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, "Ayuda/AyudaME.chm", "Ayuda-GuardarEnExistencia.html");
+            Help.ShowHelp(this, "Ayuda/AyudasPC.chm", "Ayuda-GuardarEnExistencia_1.html");
         }
     }
 }
