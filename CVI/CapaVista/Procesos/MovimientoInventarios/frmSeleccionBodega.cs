@@ -16,6 +16,7 @@ namespace CapaVista.Procesos.MovimientoInventarios
     {
         DataTable Dt = new DataTable();
         clsMovInventariosCon Controlador = new clsMovInventariosCon();
+        clsValidaciones vali = new clsValidaciones();
         public frmSeleccionBodega()
         {
             InitializeComponent();
@@ -107,6 +108,21 @@ namespace CapaVista.Procesos.MovimientoInventarios
         private void dgvBodega_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtSucursal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
+        }
+
+        private void txtIdBodega_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            vali.CampoNumerico(e);
         }
     }
 }
